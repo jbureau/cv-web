@@ -1,0 +1,89 @@
+.curve:before {
+	top: 52px;
+	left: 5px;
+	transform: rotate(-5deg);
+	box-shadow: 7px 6px 15px #333;
+}
+.curve:after {
+	top: 52px;
+	right: 5px;	
+	transform: rotate(5deg);
+	box-shadow: -7px 6px 15px #333;
+}
+
+.header {
+	width: 100%;
+	margin: 30px 0 10px 0;
+}
+
+.header .circlePhoto {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	background-image: url('../images/poune.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	border: #fff 10px solid;
+	box-shadow: 0 0 7px #ccc;
+	margin: auto;
+}
+
+.header .name {
+	text-transform: uppercase;
+	text-align: center;
+	color: #333;
+	margin-top: 10px;
+	font-size: 2.9em;
+}
+
+@media screen and (max-width: 65.375em) {
+
+	.experiences_liste > li .cbp_tmtime span:last-child {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (max-width: 47.2em) {
+	.experiences_liste:before {
+		display: none;
+	}
+
+	.experiences_liste > li .cbp_tmtime {
+		width: 100%;
+		position: relative;
+		padding: 0 0 20px 0;
+	}
+
+	.experiences_liste > li .cbp_tmtime span {
+		text-align: left;
+	}
+
+	.experiences_liste > li .desc {
+		margin: 0 0 30px 0;
+		padding: 1em;
+		font-weight: 400;
+		font-size: 95%;
+		cursor: pointer;
+	}
+
+	.experiences_liste > li .desc:after {
+		right: auto;
+		left: 20px;
+		border-right-color: transparent;
+		border-bottom-color: #3594cb;
+		top: -20px;
+	}
+
+	.experiences_liste > li:nth-child(odd) .desc:after {
+		border-right-color: transparent;
+		border-bottom-color: #6cbfee;
+	}
+
+	.experiences_liste > li .dates {
+		position: relative;
+		float: right;
+		left: auto;
+		margin: -55px 5px 0 0px;
+	}	
+}

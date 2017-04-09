@@ -1,0 +1,22 @@
+@color: #333;
+@background_color: #eee;
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Calibri';
+	background-color: @background_color;
+  color: @color;
+}
+
+.container > header,
+.container > .main {
+	width: 60%;
+	max-width: 69em;
+	margin: 0 0 auto auto;
+	padding: 0 1.875em 3.125em;
+}
