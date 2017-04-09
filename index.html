@@ -1,95 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>CV app</title>
-		<link rel="stylesheet/less" type="text/css" href="css/experiences.less" />
-        <link rel="stylesheet/less" type="text/css" href="css/styles.less" />
-        <script src="js/less.js" type="text/javascript"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="header">
-				<div class="circlePhoto"> </div>
-				<div class="name">Olivier Bureau</div>
-			</div>
-			<div class="main">
-                <div id="experiences">
-                    <div class="experiences_tri">
-                        <input type="button" data-domaine="PS" class="btn curve" value="PS" />
-                    </div>
-                    <ul class="experiences_liste">
-                    </ul>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>CV app</title>
+    <link rel="stylesheet/less" type="text/css" href="less/experiences.less" />
+    <link rel="stylesheet/less" type="text/css" href="less/styles.less" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/less.js" type="text/javascript"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="circlePhoto"> </div>
+            <div class="name">Olivier Bureau</div>
+        </div>
+        <div class="main">
+            <div id="experiences">
+                <div class="experiences_tri">
+                    <input type="button" data-domaine="PS" class="btn curve" value="PS" />
                 </div>
-			</div>
-		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>     
-		<script type="text/javascript">
-            var missions = [{
-                "id": 1,
-                "intitule": "intitule",
-                "date_deb": "juin 2016",
-                "date_fin": "encours",
-                "entreprise": {
-                    "nom": "Schneider Electrics",
-                    "url_logo": "/images/schneider-electric.gif"
-                },
-                "desc": "Localisation de la solution Bridge, formation des Key users, assistance aux reprises de données sur le site de Limoges (87).",
-                "domaine": ['PS'],
-                "type": "Déploiement"
-            }, {
-                "id": 2,
-                "intitule": "intitule",
-                "date_deb": "juin 2016",
-                "date_fin": "encours",
-                "entreprise": {
-                    "nom": "Schneider Electrics",
-                    "url_logo": "/images/schneider-electric.gif"
-                },
-                "desc": "desc",
-                "domaine": ['QM', 'PS'],
-                "type": "Déploiement"
-            }, {
-                "id": 3,
-                "intitule": "intitule",
-                "date_deb": "juin 2016",
-                "date_fin": "encours",
-                "entreprise": {
-                    "nom": "Schneider Electrics",
-                    "url_logo": "/images/schneider-electric.gif"
-                },
-                "desc": "desc",
-                "domaine": ['PS'],
-                "type": "Déploiement"
-            }];
+                <ul class="experiences_liste">
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
 
-            missions.forEach(function (mission) {
-                $(".experiences_liste").append("<li data-domaine=\"" + mission.domaine + "\" style=\"position: relative;\">"
-                    + "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" 
-                    + "<div class=\"date_fin\">" + mission.date_fin + "</div></div>"
-                    + "<div id=\"label_" + mission.id + "\" class=\"desc\">"
-                    + "<h2 class=\"type_mission\">" + mission.type + "</h2>"
-                    + "<p>" + mission.desc + "</p>"
-                    + "</div></li>");
-                $("#label_" + mission.id + " > p").slideUp();
-                $("#label_" + mission.id + " > p").addClass("up");
-                
-                $("#label_" + mission.id).click(function(){
-                    if ($("#label_" + mission.id + " > p").attr("class") === "up") {
-                        $("#label_" + mission.id + " > p").slideDown(500, function() {		
-                            $("#label_" + mission.id + " > p").attr("class", "");
-                        });
-                    } else {
-                        $("#label_" + mission.id + " > p").slideUp(500, function() {			
-                            $("#label_" + mission.id + " > p").attr("class", "up");
-                        });
-                    }
-                });
-            });
-
-            $('.expe_tri .btn').click(event, function() {
-                $(this).attr("data-domaine")
-            });
-        </script>
-	</body>
 </html>
