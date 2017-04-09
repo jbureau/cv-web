@@ -1,0 +1,136 @@
+@import "utils.less";
+
+#experiences  {
+
+    /* ---------- EXPERIENCES TRI ---------- */
+    .experiences_tri {
+        width: 100%;
+
+        .btn {
+            width: 100px;
+            text-align: center;
+            background: #fff;
+            border-radius: 4px;
+            border: 0;
+            padding: 6px;
+            margin: auto;
+            box-shadow: 0px 0px 4px @md-color;
+            color: @color;
+            cursor: pointer;
+        }
+    }
+
+    /* ---------- EXPERIENCES LISTE ---------- */
+    .experiences_liste > li {
+        margin: 30px 0 0 0;
+        padding: 0;
+        list-style: none;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: @md-color;
+            margin-left: -6px;   
+        }
+
+        /* ---------- DATES ---------- */
+        .dates {    
+            background-color: @bg-color;
+            margin: 0 -40px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            width: 70px;
+            text-transform: uppercase;
+            font-family: @title-font;
+
+            .date_fin {
+                color: @color;
+                font-weight: bold;
+            }
+        }
+
+        /* ---------- DESCRIPTION ---------- */
+        .desc {
+            margin: 0 0 15px 10%;
+            background: @even-color;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px 15px;
+            font-size: 1em;
+            font-weight: 300;
+            line-height: 1.4;
+            position: relative;
+            border-radius: 5px;
+
+            h2.type_mission { 
+                font-size: 26px;
+                margin-top: 0px;
+                text-transform: uppercase;
+                font-weight: normal;
+                font-family: @title-font;
+            }
+
+            &:after {
+                right: 100%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                border-right-color: @even-color;
+                border-width: 10px;
+                top: 10px;
+            }
+        }
+
+        &:nth-child(odd)  {
+            .desc {
+                background: @odd-color;
+                &:after {
+                    border-right-color: @odd-color;
+                }
+            }
+        }
+    } 
+}
+
+@media screen {
+    @media (max-width: 750px) {
+        #experiences  {
+            .experiences_liste > li {
+                &:before {
+                    display: none;
+                }
+                .dates {    
+                    position: relative;
+                    float: right;
+                    left: auto;
+                    margin: -55px 5px 0 0px;
+                }
+                .desc {
+                    margin: 0 0 30px 0;
+                    padding: 1em;
+                    font-weight: 400;
+                    font-size: 95%;
+                    cursor: pointer;
+                    &:after {
+                        right: auto;
+                        left: 20px;
+                        border-right-color: transparent;
+                        border-bottom-color: @even-color;
+                        top: -20px;
+                    }
+                }
+                &:nth-child(odd) .desc:after {                       
+                    border-right-color: transparent;
+                    border-bottom-color: @odd-color;
+                }
+            } 
+        }
+    }
+}
