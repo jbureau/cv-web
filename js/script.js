@@ -36,6 +36,30 @@ $(document).ready(function () {
         "desc": "desc",
         "domaine": ['PS'],
         "type": "Déploiement"
+    }, {
+        "id": 4,
+        "intitule": "intitule",
+        "date_deb": "juin 2016",
+        "date_fin": "encours",
+        "entreprise": {
+            "nom": "Schneider Electrics",
+            "url_logo": "/images/schneider-electric.gif"
+        },
+        "desc": "desc",
+        "domaine": ['QM'],
+        "type": "Déploiement"
+    }, {
+        "id": 4,
+        "intitule": "intitule",
+        "date_deb": "juin 2016",
+        "date_fin": "encours",
+        "entreprise": {
+            "nom": "Schneider Electrics",
+            "url_logo": "/images/schneider-electric.gif"
+        },
+        "desc": "desc",
+        "domaine": ['QM'],
+        "type": "Déploiement"
     }];
 
     missions.forEach(function (mission) {
@@ -47,10 +71,7 @@ $(document).ready(function () {
             + "<p class=\"details\">" + mission.desc + "</p>"
             + "</div></li>");
     });
-
-    $('.expe_tri .btn').click(event, function () {
-        $(this).attr("data-domaine")
-    });
     
     $('.mission', $(this)).mission();
+    $('.domaine', $(this)).domaine();
 });
