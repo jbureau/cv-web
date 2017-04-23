@@ -1,0 +1,22 @@
+{
+  "name": "cv-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbureau/cv-web.git"
+  },
+  "author": "jbureau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbureau/cv-web/issues"
+  },
+  "homepage": "https://github.com/jbureau/cv-web#readme",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

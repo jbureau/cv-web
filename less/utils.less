@@ -1,0 +1,28 @@
+/* ---------- COLORS ---------- */
+@color: #333;
+@md-color: darken(@bg-color, 25%);
+@bg-color: #eee;
+@even-color: #3594cb;
+@odd-color: #6cbfee;
+
+/* ---------- FONTS --------- */
+@import url("https://fonts.googleapis.com/css?family=Marvel");
+@global-font: "Calibri", "arial";
+@title-font: "Marvel", @global-font;
+
+/* ---------- SCREEN SIZE ---------- */
+
+.curve {
+	&:before {
+		top: 52px;
+		left: 5px;
+		transform: rotate(-5deg);
+		box-shadow: 7px 6px 15px @color;
+	}
+	&:after {
+		top: 52px;
+		right: 5px;	
+		transform: rotate(5deg);
+		box-shadow: -7px 6px 15px @color;
+	}
+}
