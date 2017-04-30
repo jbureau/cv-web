@@ -8,18 +8,10 @@ $.fn.mission = function (options) {
             };
 
             elem.on("filter-domaine", function (event, domaine) {
-                  if (elem.attr("data-domaine").indexOf(domaine) != -1) {
-                        // $.when($(".dates", elem).show(500))
-                        // .then(function() {
-                        //       $(".desc", elem).show(500);
-                        // });
+                  if (elem.attr("data-domaine").indexOf(domaine) != -1 || domaine === "*") {
                         elem.show(500);
                   } else {
-                        // $.when($(".desc", elem).toggle(500))
-                        // .then(function() {
-                        //       $(".dates", elem).toggle(500);
-                        // });
-                        elem.toggle(500);
+                        elem.hide(500);
                   }
             });
 
@@ -50,12 +42,16 @@ $.fn.domaine = function (options) {
             var self = this;
 
             elem.on('click', function (event) {
-                  if (elem.hasClass("filter-selected")) {
+                  $('.mission').trigger("filter-domaine", elem.attr("data-domaine"));
+                  $('.domaine').trigger("filter-domaine", elem.attr("data-domaine"));
+            });
+            
+            elem.on('filter-domaine', function (event, domaine) {
+                  if (elem.attr("data-domaine") !== domaine && elem.hasClass("filter-selected")) {
                         elem.removeClass("filter-selected");
-                  } else {
+                  } else if (elem.attr("data-domaine") === domaine && !elem.hasClass("filter-selected")) {
                         elem.addClass("filter-selected");
                   }
-                  $('.mission').trigger("filter-domaine", elem.attr("data-domaine"));
             });
       }
       return $(this).each(function () {
