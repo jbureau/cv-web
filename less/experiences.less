@@ -13,7 +13,6 @@
             border-radius: 50%;
             border: 0;
             color: @color;
-            cursor: pointer;
             display: inline-block;
             cursor: pointer;
             min-height: 60px;
@@ -84,8 +83,8 @@
         /* ---------- DESCRIPTION ---------- */
         .desc {
             margin: 0 0 15px 10%;
-            background: @even-color;
-            color: #fff;
+            background: darken(@bg-color, 2%);
+            color: @color;
             cursor: pointer;
             padding: 10px 15px;
             font-size: 1em;
@@ -93,6 +92,25 @@
             line-height: 1.4;
             position: relative;
             border-radius: 5px;
+
+            .domaines div.little_domaine {
+                height: 20px;
+                width: 20px;
+                background: darken(@bg-color, 10%);
+                border-radius: 50%;
+                font-family: @title-font;
+                font-size: 12px;
+                vertical-align: middle;
+                text-align: center;
+                display: inline-block;
+                box-sizing: border-box;
+                margin: 6px;
+                text-transform: uppercase;
+                font-variant: inherit;
+                text-decoration: none;
+                overflow: hidden;
+                line-height: 20px;
+            }
 
             h2.type_mission { 
                 font-size: 26px;
@@ -109,7 +127,7 @@
                 height: 0;
                 width: 0;
                 position: absolute;
-                border-right-color: @even-color;
+                border-right-color: darken(@bg-color, 2%);
                 border-width: 10px;
                 top: 10px;
             }

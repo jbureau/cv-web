@@ -8,6 +8,10 @@ $(document).ready(function () {
         "id": 2,
         "intitule": "QM",
         "color": "#ccc"
+    }, {
+        "id": 3,
+        "intitule": "PM",
+        "color": "#6e97be"
     }];
 
     var missions = [{
@@ -20,7 +24,7 @@ $(document).ready(function () {
             "url_logo": "/images/schneider-electric.gif"
         },
         "desc": "Localisation de la solution Bridge, formation des Key users, assistance aux reprises de données sur le site de Limoges (87).",
-        "domaine": ['PS'],
+        "domaine": ['PS', 'PM'],
         "type": "Déploiement"
     }, {
         "id": 2,
@@ -76,16 +80,18 @@ $(document).ready(function () {
         $(".experiences_liste").append("<li class=\"mission\" data-domaine=\"" + mission.domaine + "\" style=\"position: relative;\">"
             + "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>"
             + "<div class=\"date_fin\">" + mission.date_fin + "</div></div>"
-            + "<div class=\"desc\">"
+            + "<div class=\"desc\"><div class=\"domaines\"></div>"
             + "<h2 class=\"type_mission\">" + mission.type + "</h2>"
             + "<p class=\"details\">" + mission.desc + "</p>"
             + "</div></li>");
     });
         
     domaines.forEach(function (domaine) {
-        $(".experiences_tri").append(" <input type=\"button\" data-domaine=\"" 
-            + domaine.intitule + "\" class=\"btn curve domaine\" value=\"" 
-            + domaine.intitule + "\" />");
+        $(".experiences_tri").append(" <input type=\"button\" "
+            + "data-domaine=\"" + domaine.intitule + "\" "
+            + "data-color=\"" + domaine.color + "\" "
+            + "class=\"btn curve domaine\" "
+            + "value=\"" + domaine.intitule + "\" />");
         });
     
     $('.mission', $(this)).mission();
