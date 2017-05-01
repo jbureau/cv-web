@@ -82,7 +82,7 @@
 
         /* ---------- DESCRIPTION ---------- */
         .desc {
-            margin: 0 0 15px 10%;
+            margin: 0 0 0 11%;
             background: darken(@bg-color, 2%);
             color: @color;
             cursor: pointer;
@@ -92,6 +92,13 @@
             line-height: 1.4;
             position: relative;
             border-radius: 5px;
+
+            &:hover {
+                background: darken(@bg-color, 5%);
+                &:after {
+                    border-right-color: darken(@bg-color, 5%);
+                }
+            }
 
             .domaines div.little_domaine {
                 height: 20px;
