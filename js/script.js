@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+    var domaines = [{
+        "id": 1,
+        "intitule": "PS",
+        "color": "#d6e87c"
+    }, {
+        "id": 2,
+        "intitule": "QM",
+        "color": "#ccc"
+    }];
+
     var missions = [{
         "id": 1,
         "intitule": "intitule",
@@ -71,6 +81,12 @@ $(document).ready(function () {
             + "<p class=\"details\">" + mission.desc + "</p>"
             + "</div></li>");
     });
+        
+    domaines.forEach(function (domaine) {
+        $(".experiences_tri").append(" <input type=\"button\" data-domaine=\"" 
+            + domaine.intitule + "\" class=\"btn curve domaine\" value=\"" 
+            + domaine.intitule + "\" />");
+        });
     
     $('.mission', $(this)).mission();
     $('.domaine', $(this)).domaine();
