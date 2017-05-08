@@ -2,9 +2,9 @@
   "name": "cv-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "server": "live-server"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jbureau/cv-web#readme",
   "devDependencies": {
-    "live-server": "^1.2.0"
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0",
+    "wpapi": "^1.0.3"
   }
 }

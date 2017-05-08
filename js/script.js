@@ -77,25 +77,26 @@ $(document).ready(function () {
     }];
 
     missions.forEach(function (mission) {
-        $(".experiences_liste").append("<li class=\"mission\" data-domaine=\"" + mission.domaine + "\" style=\"position: relative;\">"
-            + "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>"
-            + "<div class=\"date_fin\">" + mission.date_fin + "</div></div>"
-            + "<div class=\"desc\">"
-            + "<div class=\"domaines\"></div>"
+        $(".experiences_liste").append("<li class=\"mission\" data-domaine=\"" + mission.domaine + "\" style=\"position: relative;\">" +
+            "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" +
+            "<div class=\"date_fin\">" + mission.date_fin + "</div></div>" +
+            "<div class=\"desc\">" +
+            "<div class=\"domaines\"></div>"
             // + "<h2 class=\"type_mission\">" + mission.type + "</h2>"
-            + "<h2 class=\"type_mission\">" + mission.intitule + "</h2>"
-            + "<p class=\"details\">" + mission.desc + "</p>"
-            + "</div></li>");
+            +
+            "<h2 class=\"type_mission\">" + mission.intitule + "</h2>" +
+            "<p class=\"details\">" + mission.desc + "</p>" +
+            "</div></li>");
     });
-        
+
     domaines.forEach(function (domaine) {
-        $(".experiences_tri").append(" <input type=\"button\" "
-            + "data-domaine=\"" + domaine.intitule + "\" "
-            + "data-color=\"" + domaine.color + "\" "
-            + "class=\"btn curve domaine\" "
-            + "value=\"" + domaine.intitule + "\" />");
-        });
-    
+        $(".experiences_tri").append(" <input type=\"button\" " +
+            "data-domaine=\"" + domaine.intitule + "\" " +
+            "data-color=\"" + domaine.color + "\" " +
+            "class=\"btn curve domaine\" " +
+            "value=\"" + domaine.intitule + "\" />");
+    });
+
     $('.mission', $(this)).mission();
     $('.domaine', $(this)).domaine();
 });
