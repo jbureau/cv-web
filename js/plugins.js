@@ -7,10 +7,10 @@ $.fn.mission = function (options) {
                   $(elem).find(".details").addClass("up");
             };
 
-             elem.on("load-domaine", function (event, domaine, color) {
+            elem.on("load-domaine", function (event, domaine, color) {
                   if (elem.attr("data-domaine").indexOf(domaine) != -1 && domaine !== "*") {
-                        $(elem).find(".domaines").append("<div class=\"little_domaine\" "
-                              + "style=\"background: " + color + ";\">" + domaine + "</div>");
+                        $(elem).find(".domaines").append("<div class=\"little_domaine\" " +
+                              "style=\"background: " + color + ";\">" + domaine + "</div>");
                   }
             });
 
@@ -48,7 +48,7 @@ $.fn.domaine = function (options) {
       function Domaine(elem) {
             var self = this;
 
-            this.load = function (params) {                  
+            this.load = function (params) {
                   $('.mission').trigger("load-domaine", [elem.attr("data-domaine"), elem.attr("data-color")]);
             };
 
@@ -56,7 +56,7 @@ $.fn.domaine = function (options) {
                   $('.mission').trigger("filter-domaine", elem.attr("data-domaine"));
                   $('.domaine').trigger("filter-domaine", elem.attr("data-domaine"));
             });
-            
+
             elem.on('filter-domaine', function (event, domaine) {
                   if (elem.attr("data-domaine") !== domaine && elem.hasClass("filter-selected")) {
                         elem.removeClass("filter-selected");
