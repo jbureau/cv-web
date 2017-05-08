@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/missions', function (req, res) {
-  wp.posts().id(145).then(function (response) {
+  wp.missions().then(function (response) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(response));
   })
@@ -26,3 +26,4 @@ var wp = new WPAPI({
   username: 'XAmCKmp4qHMTeaPTyEmA7obq',
   password: 'r3rmLdQIsZdBRwDE2tCk9TlbB3MUudfD7L2xThbovAYwr1jn'
 });
+wp.missions = wp.registerRoute('wp/v2', '/mission/(?P<id>)');
