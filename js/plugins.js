@@ -1,8 +1,8 @@
-$.fn.mission = function (options) {
+$.fn.mission = function () {
       function Mission(elem) {
             var self = this;
 
-            this.load = function (params) {
+            this.load = function () {
                   $(elem).find(".details").slideUp();
                   $(elem).find(".details").addClass("up");
             };
@@ -44,11 +44,11 @@ $.fn.mission = function (options) {
       }).data('Mission');
 };
 
-$.fn.domaine = function (options) {
+$.fn.domaine = function () {
       function Domaine(elem) {
             var self = this;
 
-            this.load = function (params) {
+            this.load = function () {
                   $('.mission').trigger("load-domaine", [elem.attr("data-domaine"), elem.attr("data-color")]);
             };
 

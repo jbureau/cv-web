@@ -1,83 +1,41 @@
+
+var colors = ["#d6e87c", "#ccc", "#6e97be"];
+
 $(document).ready(function () {
+    var self = $(this);
 
-    var domaines = [{
-        "id": 1,
-        "intitule": "PS",
-        "color": "#d6e87c"
-    }, {
-        "id": 2,
-        "intitule": "QM",
-        "color": "#ccc"
-    }, {
-        "id": 3,
-        "intitule": "PM",
-        "color": "#6e97be"
-    }];
+    $.getJSON("/missions").done(missions => {
+        let promises = [];
+        missions.forEach(m => {
+            promises.push(getMission(m));
+        });
+        Promise.all(promises).then(() => {
+            $('.mission', self).mission();
+            $.getJSON("/domaines").done(domaines => {
+                let promises = [];
+                let i = -1;
+                domaines.forEach(d => {
+                    promises.push(getDomaine(d, i++));
+                });
+                Promise.all(promises).then(() => {
+                    $('.domaine', self).domaine();
+                });
+            });
+        });
+    });
 
-    var missions = [{
-        "id": 1,
-        "intitule": "intitule",
-        "date_deb": "juin 2016",
-        "date_fin": "encours",
-        "entreprise": {
-            "nom": "Schneider Electrics",
-            "url_logo": "/images/schneider-electric.gif"
-        },
-        "desc": "Localisation de la solution Bridge, formation des Key users, assistance aux reprises de données sur le site de Limoges (87).",
-        "domaine": ['PS', 'PM'],
-        "type": "Déploiement"
-    }, {
-        "id": 2,
-        "intitule": "intitule",
-        "date_deb": "juin 2016",
-        "date_fin": "encours",
-        "entreprise": {
-            "nom": "Schneider Electrics",
-            "url_logo": "/images/schneider-electric.gif"
-        },
-        "desc": "desc",
-        "domaine": ['QM', 'PS'],
-        "type": "Déploiement"
-    }, {
-        "id": 3,
-        "intitule": "intitule",
-        "date_deb": "juin 2016",
-        "date_fin": "encours",
-        "entreprise": {
-            "nom": "Schneider Electrics",
-            "url_logo": "/images/schneider-electric.gif"
-        },
-        "desc": "desc",
-        "domaine": ['PS'],
-        "type": "Déploiement"
-    }, {
-        "id": 4,
-        "intitule": "intitule",
-        "date_deb": "juin 2016",
-        "date_fin": "encours",
-        "entreprise": {
-            "nom": "Schneider Electrics",
-            "url_logo": "/images/schneider-electric.gif"
-        },
-        "desc": "desc",
-        "domaine": ['QM'],
-        "type": "Déploiement"
-    }, {
-        "id": 4,
-        "intitule": "intitule",
-        "date_deb": "juin 2016",
-        "date_fin": "encours",
-        "entreprise": {
-            "nom": "Schneider Electrics",
-            "url_logo": "/images/schneider-electric.gif"
-        },
-        "desc": "desc",
-        "domaine": ['QM'],
-        "type": "Déploiement"
-    }];
+});
 
-    missions.forEach(function (mission) {
-        $(".experiences_liste").append("<li class=\"mission\" data-domaine=\"" + mission.domaine + "\" style=\"position: relative;\">" +
+function getMission(m) {
+    return new Promise((resolve, reject) => {
+        let mission = {};
+        mission.date_deb = m.acf.date_debut;
+        mission.date_fin = (m.acf.date_fin === "") ? "en cours" : m.acf.date_fin;
+        mission.intitule = m.title.rendered;
+        mission.desc = m.acf.description;
+        mission.domaine = (m.acf.domaines) ? m.acf.domaines.map(d => { return d.name }) : [];
+        $(".experiences_liste").append("<li class=\"mission\" data-domaine=\"" + mission.domaine +
+            "\" style=\"position: relative;\">" +
             "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" +
             "<div class=\"date_fin\">" + mission.date_fin + "</div></div>" +
             "<div class=\"desc\">" +
@@ -87,16 +45,20 @@ $(document).ready(function () {
             "<h2 class=\"type_mission\">" + mission.intitule + "</h2>" +
             "<p class=\"details\">" + mission.desc + "</p>" +
             "</div></li>");
+        resolve();
     });
+}
 
-    domaines.forEach(function (domaine) {
+function getDomaine(d, i) {
+    return new Promise((resolve, reject) => {
+        let domaine = {};
+        domaine.intitule = d.name;
+        domaine.color = colors[i % colors.length];
         $(".experiences_tri").append(" <input type=\"button\" " +
             "data-domaine=\"" + domaine.intitule + "\" " +
             "data-color=\"" + domaine.color + "\" " +
             "class=\"btn curve domaine\" " +
             "value=\"" + domaine.intitule + "\" />");
+        resolve();
     });
-
-    $('.mission', $(this)).mission();
-    $('.domaine', $(this)).domaine();
-});
+}

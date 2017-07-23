@@ -15,6 +15,13 @@ app.get('/missions', function (req, res) {
   })
 });
 
+app.get('/domaines', function (req, res) {
+  wp.domaines().then(function (response) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(response));
+  })
+});
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
@@ -27,3 +34,4 @@ var wp = new WPAPI({
   password: 'r3rmLdQIsZdBRwDE2tCk9TlbB3MUudfD7L2xThbovAYwr1jn'
 });
 wp.missions = wp.registerRoute('wp/v2', '/mission/(?P<id>)');
+wp.domaines = wp.registerRoute('wp/v2', '/domaine/(?P<id>)');
