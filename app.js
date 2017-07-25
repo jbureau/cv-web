@@ -1,5 +1,6 @@
-var express = require('express');
-var WPAPI = require('wpapi');
+var express = require('./node_modules/express/index.js');
+var WPAPI = require('./node_modules/wpapi/wpapi.js');
+var port = process.env.PORT || 3000;
 
 var app = express();
 app.use(express.static('.'));
