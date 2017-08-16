@@ -1,5 +1,6 @@
-var express = require('express');
-var WPAPI = require('wpapi');
+var express = require('./node_modules/express/index.js');
+var WPAPI = require('./node_modules/wpapi/wpapi.js');
+var port = process.env.PORT || 3000;
 
 var app = express();
 app.use(express.static('.'));
@@ -22,8 +23,8 @@ app.get('/domaines', function (req, res) {
   })
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(port, function () {
+  console.log('Listening on port 3000!');
 });
 
 // You must authenticate to be able to POST (create) a post
