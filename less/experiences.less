@@ -7,6 +7,8 @@
         width: 100%;
 
         .btn {
+            &:extend(.whiteframe-shadow-1dp);
+
             text-align: center;
             font-family: @title-font;
             background: darken(@bg-color, 2%);
@@ -29,14 +31,16 @@
             -webkit-transition: all 0.5s ease;
             -moz-transition: all 0.5s ease;
             -o-transition: all 0.5s ease;
-            transition: all 0.5s ease;
+            transition: all 0.5s ease, all 0.3s cubic-bezier(.25,.8,.25,1);
 
             &:hover {
-                background: darken(@bg-color, 5%);
+                background: darken(@bg-color, 1%);
+                &:extend(.whiteframe-shadow-2dp);
             }
         }
         
         .filter-selected {
+            &:extend(.whiteframe-shadow-2dp);
             background-color: @main-color2;
             color: #fff;
 
@@ -58,7 +62,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            width: 2px;
+            width: 1px;
             background: @md-color;
             margin-left: -6px;   
         }
@@ -87,7 +91,7 @@
             color: @color;
             cursor: pointer;
             padding: 10px 15px;
-            font-size: 1em;
+            font-size: 0.8em;
             font-weight: 300;
             line-height: 1.4;
             position: relative;
