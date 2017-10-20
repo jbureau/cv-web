@@ -24,7 +24,7 @@ app.get('/domaines', function (req, res) {
 });
 
 app.listen(port, function () {
-  console.log('Example app listening on port 3000!');
+  console.log('Listening on port 3000!');
 });
 
 // You must authenticate to be able to POST (create) a post
