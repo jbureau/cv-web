@@ -44,3 +44,23 @@
 .whiteframe-shadow-8dp {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
+@keyframes spinner {
+	to {transform: rotate(360deg);}
+  }
+   
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	border: 2px solid darken(@bg-color, 2%);
+	border-top-color: @main-color2;
+	animation: spinner 2s linear infinite;
+}
