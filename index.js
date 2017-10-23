@@ -1,34 +1,42 @@
-var express = require('./node_modules/express/index.js');
-var WPAPI = require('./node_modules/wpapi/wpapi.js');
-var port = process.env.PORT || 3000;
+const express = require('express');
+const WPAPI = require('wpapi');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
 
-var app = express();
-app.use(express.static('.'));
+const port = process.env.PORT || 3000;
 
-app.get('/', function (req, res) {
-  res.sendFile('./index.html');
+const app = express();
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
+
+app.use(webpackDevMiddleware(compiler, {
+  publicPath: config.output.publicPath
+}));
+
+app.get('/', (req, res) => {
+  res.sendFile('./dist/index.html');
 });
 
-app.get('/missions', function (req, res) {
+app.get('/missions', (req, res) => {
   wp.missions().then(function (response) {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(response));
   })
 });
 
-app.get('/domaines', function (req, res) {
-  wp.domaines().then(function (response) {
+app.get('/domaines', (req, res) => {
+  wp.domaines().then(response => {
     res.setHeader('Content-Type', 'application/json');
     res.send(JSON.stringify(response));
   })
 });
 
-app.listen(port, function () {
+app.listen(port, () => {
   console.log('Listening on port 3000!');
 });
 
 // You must authenticate to be able to POST (create) a post
-var wp = new WPAPI({
+const wp = new WPAPI({
   endpoint: 'http://orchisconseil.fr/wp-json',
   // This assumes you are using basic auth, as described further below
   username: 'XAmCKmp4qHMTeaPTyEmA7obq',

@@ -1,4 +1,10 @@
-$.fn.mission = function () {
+import $ from 'jquery';
+
+/**
+ * Plugins for cv-app: JQuery events
+ */
+
+export function mission() {
       function Mission(elem) {
             var self = this;
 
@@ -44,7 +50,7 @@ $.fn.mission = function () {
       }).data('Mission');
 };
 
-$.fn.domaine = function () {
+export function domaine() {
       function Domaine(elem) {
             var self = this;
 

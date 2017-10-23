@@ -1,8 +1,18 @@
 
-var colors = ["#d6e87c", "#ccc", "#6e97be"];
+import $ from 'jquery';
+import { mission, domaine } from './plugins';
+import '../less/utils.less';
+import '../less/styles.less';
+import '../less/experiences.less';
+
+import { COLORS } from './utils';
 
 $(document).ready(function () {
     var self = $(this);
+
+    $.fn.mission = mission;
+    $.fn.domaine = domaine;
+    
 
     $('#experiences .sorting').hide();
     $('#experiences .content').hide();
@@ -33,9 +43,6 @@ $(document).ready(function () {
 
 });
 
-function loadingExperiencesTri() {
-}
-
 function getMission(m) {
     return new Promise((resolve, reject) => {
         let mission = {};
@@ -49,9 +56,7 @@ function getMission(m) {
             "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" +
             "<div class=\"date_fin\">" + mission.date_fin + "</div></div>" +
             "<div class=\"desc\">" +
-            "<div class=\"domaines\"></div>"
-            // + "<h2 class=\"type_mission\">" + mission.type + "</h2>"
-            +
+            "<div class=\"domaines\"></div>" +
             "<h2 class=\"type_mission\">" + mission.intitule + "</h2>" +
             "<p class=\"details\">" + mission.desc + "</p>" +
             "</div></li>");
@@ -63,7 +68,7 @@ function getDomaine(d, i) {
     return new Promise((resolve, reject) => {
         let domaine = {};
         domaine.intitule = d.name;
-        domaine.color = colors[i % colors.length];
+        domaine.color = COLORS[i % COLORS.length];
         $("#experiences .sorting").append(" <input type=\"button\" " +
             "data-domaine=\"" + domaine.intitule + "\" " +
             "data-color=\"" + domaine.color + "\" " +
