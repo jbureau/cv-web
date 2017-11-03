@@ -93,24 +93,27 @@ body {
 				display: flex;
 				flex-direction: row;
 				padding: 15px 10px;
+				flex-wrap: wrap;
+				align-items: center;
 
 				.circlePhoto {
-					flex: 2 0 auto;
-					width: 25vw;
-					height: 25vw;
-					border-width: 5px;
-					margin: auto 5px auto 10px;
+					flex: initial;
+					width: 10vw;
+					height: 10vw;
+					border-width: 2px;
+					margin: auto 20px auto 20vw;
 				}
 
 				.name {
-					margin: 10px 0 0;
+					flex: 4 0 auto;
+					margin: 0;
 					font-size: 7vw;
+					text-align: left;
 				}
 		
 				.desc {
 					margin: 10px 20px;
-					font-size: 3vw;
-					text-align: left;
+					font-size: 2.5vw;
 				}
 			}
 		}
