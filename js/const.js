@@ -26,11 +26,13 @@ export const MAIN_LAY = `
             <div id="experiences">
                 <h2 class="title">${EXPERIENCES_TITLE}</h2>
                 <div class="spinner"></div>
-                <div class="sorting">
-                    <input type="button" data-domaine="*" class="btn curve domaine filter-selected" value="Tout" />
+                <div class="card">
+                    <div class="sorting">
+                        <input type="button" data-domaine="*" class="btn curve domaine filter-selected" value="Tout" />
+                    </div>
+                    <ul class="content">
+                    </ul>
                 </div>
-                <ul class="content">
-                </ul>
             </div>
         </div>
     </div>`;

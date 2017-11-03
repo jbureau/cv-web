@@ -4,27 +4,29 @@
 
     /* ---------- EXPERIENCES SORTING ---------- */
     .sorting {
+        &:extend(.whiteframe-shadow-1dp);
+
         width: 100%;
+        background-color:  @main-color2;
+        border-radius: 3px 3px 0 0;
+        padding: 5px;
 
         .btn {
-            &:extend(.whiteframe-shadow-1dp);
-
             text-align: center;
             font-family: @title-font;
-            background: darken(@bg-color, 2%);
+            background-color: darken(@main-color2, 1%);
             border-radius: 50%;
             border: 0;
-            color: @color;
+            color: #fff;
             display: inline-block;
             cursor: pointer;
-            min-height: 60px;
-            min-width: 60px;
+            min-height: 50px;
+            min-width: 50px;
             vertical-align: middle;
             box-sizing: border-box;
             margin: 6px 8px;
             text-transform: uppercase;
-            font-weight: bold;
-            font-size: 19px;
+            font-size: 14px;
             font-variant: inherit;
             text-decoration: none;
             overflow: hidden;
@@ -34,113 +36,116 @@
             transition: all 0.5s ease, all 0.3s cubic-bezier(.25,.8,.25,1);
 
             &:hover {
-                background: darken(@bg-color, 1%);
-                &:extend(.whiteframe-shadow-2dp);
+                background-color: darken(@main-color2, 5%);
             }
         }
         
         .filter-selected {
-            &:extend(.whiteframe-shadow-2dp);
-            background-color: @main-color2;
-            color: #fff;
-
+            background-color: darken(@bg-color, 1%);
+            color: @color;
+            cursor: default;
             &:hover {
-                background-color: darken(@main-color2, 5%);
+                background-color: darken(@bg-color, 1%);
             }
         }
     }
 
     /* ---------- EXPERIENCES CONTENT ---------- */
-    .content > li {
-        margin: 30px 0 0 0;
-        padding: 0;
-        list-style: none;
-        position: relative;
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: @md-color;
-            margin-left: -6px;   
-        }
-
-        /* ---------- DATES ---------- */
-        .dates {    
-            background-color: @bg-color;
-            margin: 0 -40px;
-            position: absolute;
-            text-align: center;
-            top: 0;
-            width: 70px;
-            text-transform: uppercase;
-            font-family: @title-font;
-
-            .date_fin {
-                color: @color;
-                font-weight: bold;
+    .content  {
+        & > li {
+            &:first-child {
+                margin: 0;
             }
-        }
-
-        /* ---------- DESCRIPTION ---------- */
-        .desc {
-            margin: 0 0 0 11%;
-            background: darken(@bg-color, 2%);
-            color: @color;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-size: 0.8em;
-            font-weight: 300;
-            line-height: 1.4;
+            margin: 15px 0 0 0;
+            padding: 0;
+            list-style: none;
             position: relative;
-            border-radius: 5px;
 
-            &:hover {
-                background: darken(@bg-color, 5%);
-                &:after {
-                    border-right-color: darken(@bg-color, 5%);
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                background: @md-color;
+                margin-left: -6px;   
+            }
+
+            /* ---------- DATES ---------- */
+            .dates {    
+                background-color: @bg-color;
+                margin: 0 -40px;
+                position: absolute;
+                text-align: center;
+                top: 0;
+                width: 70px;
+                text-transform: uppercase;
+                font-family: @title-font;
+
+                .date_fin {
+                    color: @color;
+                    font-weight: bold;
                 }
             }
 
-            .domaines div.little_domaine {
-                height: 20px;
-                width: 20px;
-                background: darken(@bg-color, 10%);
-                border-radius: 50%;
-                font-family: @title-font;
-                font-size: 12px;
-                vertical-align: middle;
-                text-align: center;
-                display: inline-block;
-                box-sizing: border-box;
-                margin: 6px;
-                text-transform: uppercase;
-                font-variant: inherit;
-                text-decoration: none;
-                overflow: hidden;
-                line-height: 20px;
-            }
+            /* ---------- DESCRIPTION ---------- */
+            .desc {
+                margin: 0 0 0 11%;
+                background: darken(@bg-color, 2%);
+                color: @color;
+                cursor: pointer;
+                padding: 10px 15px;
+                font-size: 0.8em;
+                font-weight: 300;
+                line-height: 1.4;
+                position: relative;
+                border-radius: 5px;
 
-            h2.type_mission { 
-                font-size: 26px;
-                margin-top: 0px;
-                text-transform: uppercase;
-                font-weight: normal;
-                font-family: @title-font;
-            }
+                &:hover {
+                    background: darken(@bg-color, 5%);
+                    &:after {
+                        border-right-color: darken(@bg-color, 5%);
+                    }
+                }
 
-            &:after {
-                right: 100%;
-                border: solid transparent;
-                content: " ";
-                height: 0;
-                width: 0;
-                position: absolute;
-                border-right-color: darken(@bg-color, 2%);
-                border-width: 10px;
-                top: 10px;
+                .domaines div.little_domaine {
+                    height: 20px;
+                    width: 20px;
+                    background: darken(@bg-color, 10%);
+                    border-radius: 50%;
+                    font-family: @title-font;
+                    font-size: 12px;
+                    vertical-align: middle;
+                    text-align: center;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    margin: 6px;
+                    text-transform: uppercase;
+                    font-variant: inherit;
+                    text-decoration: none;
+                    overflow: hidden;
+                    line-height: 20px;
+                }
+
+                h2.type_mission { 
+                    font-size: 26px;
+                    margin-top: 0px;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    font-family: @title-font;
+                }
+
+                &:after {
+                    right: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    border-right-color: darken(@bg-color, 2%);
+                    border-width: 10px;
+                    top: 10px;
+                }
             }
         }
     } 

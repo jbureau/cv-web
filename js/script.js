@@ -16,7 +16,6 @@ $(document).ready(function () {
     $.fn.mission = mission;
     $.fn.domaine = domaine;
     
-
     $('#experiences .sorting').hide();
     $('#experiences .content').hide();
     $('#experiences .spinner').show();
