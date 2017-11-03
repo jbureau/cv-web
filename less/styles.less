@@ -13,12 +13,6 @@ body {
 	height: 100%;
 	width: 100%;
 	display: flex;
-	
-	@media screen {
-		@media (max-device-width: @sm) {
-			flex-direction: column;
-		}
-	}
 
 	.main {		
 		width: 100%;
@@ -78,15 +72,8 @@ body {
 		.desc {
 			text-align: center;
 			font-style: italic;
-			font-size: 12px;
+			font-size: 0.8em;
 			margin: 10px 15px;
-	
-			@media screen {
-				@media (max-device-width: @sm) {
-					margin: 20px 40px;
-				}
-			}
-
 		}
 	}
 
@@ -94,5 +81,38 @@ body {
 		align-self: center;
 		display: flex;
 		flex: 3;
+	}
+}
+
+@media screen {
+	@media (max-device-width: @sm) {		
+		.container {
+			flex-direction: column;
+		
+			.header {
+				display: flex;
+				flex-direction: row;
+				padding: 15px 10px;
+
+				.circlePhoto {
+					flex: 2 0 auto;
+					width: 25vw;
+					height: 25vw;
+					border-width: 5px;
+					margin: auto;
+				}
+
+				.name {
+					margin: 10px 0 0;
+					font-size: 7vw;
+				}
+		
+				.desc {
+					margin: 10px 20px;
+					font-size: 3vw;
+					text-align: justify;
+				}
+			}
+		}
 	}
 }

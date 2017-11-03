@@ -53,7 +53,7 @@ function getMission(m) {
         mission.intitule = m.title.rendered;
         mission.desc = m.acf.description;
         mission.domaine = (m.acf.domaines) ? m.acf.domaines.map(d => { return d.name }) : [];
-        $(".content").append("<li class=\"mission\" data-domaine=\"" + mission.domaine +
+        $("#experiences .content").append("<li class=\"mission\" data-domaine=\"" + mission.domaine +
             "\" style=\"position: relative;\">" +
             "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" +
             "<div class=\"date_fin\">" + mission.date_fin + "</div></div>" +
