@@ -7,6 +7,7 @@ module.exports = {
     entry: {
         app: './js/script.js'
     },
+    devtool: 'inline-source-map',
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({

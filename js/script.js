@@ -6,9 +6,12 @@ import '../less/styles.less';
 import '../less/experiences.less';
 
 import { COLORS } from './utils';
+import { MAIN_LAY } from './const';
 
 $(document).ready(function () {
     var self = $(this);
+
+    $("body").append(MAIN_LAY);
 
     $.fn.mission = mission;
     $.fn.domaine = domaine;
