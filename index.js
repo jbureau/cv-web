@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const WPAPI = require('wpapi');
 const webpack = require('webpack');
@@ -9,6 +10,8 @@ const app = express();
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
 
+const local_data_path = './assets/data';
+
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
@@ -18,17 +21,25 @@ app.get('/', (req, res) => {
 });
 
 app.get('/missions', (req, res) => {
-  wp.missions().then(function (response) {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(response));
-  })
+  if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
+    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/missions.json`, 'utf8'))));
+  } else {
+    wp.missions().then(response => {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify(response));
+    });
+  }
 });
 
 app.get('/domaines', (req, res) => {
-  wp.domaines().then(response => {
-    res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(response));
-  })
+  if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
+    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/domaines.json`, 'utf8'))));
+  } else {
+    wp.domaines().then(response => {
+      res.setHeader('Content-Type', 'application/json');
+      res.send(JSON.stringify(response));
+    });
+  }
 });
 
 app.listen(port, () => {
