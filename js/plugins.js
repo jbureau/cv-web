@@ -11,6 +11,8 @@ export function mission() {
             this.load = function () {
                   $(elem).find(".details").slideUp();
                   $(elem).find(".details").addClass("up");
+                  $(elem).find(".top .plus").show();
+                  $(elem).find(".top .less").hide();
             };
 
             elem.on("load-domaine", function (event, domaine, color) {
@@ -29,14 +31,20 @@ export function mission() {
             });
 
             elem.on('click', '.desc', function (event) {
-                  var elem = $(event.target).closest(".desc").find(".details");
-                  if (elem.hasClass("up")) {
-                        elem.slideDown(500, function () {
-                              elem.removeClass("up");
+                  const elem = $(event.target).closest(".desc");
+                  const details = elem.find(".details");
+                  if (details.hasClass("up")) {
+                        /* TODO css */
+                        $('.plus', elem).hide();
+                        $('.less', elem).show();
+                        details.slideDown(500, function () {
+                              details.removeClass("up");
                         });
                   } else {
-                        elem.slideUp(500, function () {
-                              elem.addClass("up");
+                        $('.less', elem).hide();
+                        $('.plus', elem).show();
+                        details.slideUp(500, function () {
+                              details.addClass("up");
                         });
                   }
             });

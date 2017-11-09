@@ -53,95 +53,98 @@
     /* ---------- EXPERIENCES CONTENT ---------- */
     .content  {
         & > li {
-            margin: 0 0 0 55px;
+            &:first-child {
+                margin: 0;
+            }
+            margin: 15px 0 0 0;
+            padding: 0;
             list-style: none;
             position: relative;
-            display: flex;
-            flex-direction: row;
-            padding: 10px 0;
 
             &:before {
                 content: '';
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                width: 3px;
-                background: @main-color1;
+                width: 1px;
+                background: @md-color;
                 margin-left: -6px;   
             }
 
-            .round {
-                width: 7px;
-                height: 7px;
-                border: 3px solid @main-color1;
-                border-radius: 50%;
+            /* ---------- DATES ---------- */
+            .dates {    
                 background-color: @bg-color;
-                margin: 14px -11px 0;
+                margin: 0 -40px;
                 position: absolute;
-            }
-            
-            .dates {
+                text-align: center;
+                top: 0;
+                width: 70px;
+                text-transform: uppercase;
                 font-family: @title-font;
-                margin: 0 0 0 -75px;
+
+                .date_fin {
+                    color: @color;
+                    font-weight: bold;
+                }
             }
 
             /* ---------- DESCRIPTION ---------- */
             .desc {
-                margin: 0 0 0 4%;
-                // background: darken(@bg-color, 2%);
+                margin: 0 0 0 11%;
+                background: darken(@bg-color, 2%);
                 color: @color;
                 cursor: pointer;
+                padding: 10px 15px;
                 font-size: 0.8em;
                 font-weight: 300;
                 line-height: 1.4;
                 position: relative;
                 border-radius: 5px;
-                flex: 1;
 
-
-
-                & > .top {
-                    display: flex;
-                    flex-direction: row;   
-                    align-items: center;                 
-
-                    & > .logo {
-                        width: 40px;
-                        height: 40px;
-                        border: 1px solid @md-color;
-                        border-radius: 50%;
-                    }
-                    
-                    & > .domaines div.little_domaine {
-                        height: 20px;
-                        width: 20px;
-                        background: darken(@bg-color, 10%);
-                        border-radius: 50%;
-                        font-family: @title-font;
-                        font-size: 12px;
-                        vertical-align: middle;
-                        text-align: center;
-                        display: inline-block;
-                        box-sizing: border-box;
-                        margin: 6px;
-                        text-transform: uppercase;
-                        font-variant: inherit;
-                        text-decoration: none;
-                        overflow: hidden;
-                        line-height: 20px;
-                    }
-
-                    & > h2.type_mission { 
-                        font-size: 26px;
-                        margin: 0 10px;
-                        text-transform: uppercase;
-                        font-weight: normal;
-                        font-family: @title-font;
+                &:hover {
+                    background: darken(@bg-color, 5%);
+                    &:after {
+                        border-right-color: darken(@bg-color, 5%);
                     }
                 }
 
-                &:hover {
-                    background: darken(@bg-color, 1%);
+                .domaines div.little_domaine {
+                    height: 20px;
+                    width: 20px;
+                    background: darken(@bg-color, 10%);
+                    border-radius: 50%;
+                    font-family: @title-font;
+                    font-size: 12px;
+                    vertical-align: middle;
+                    text-align: center;
+                    display: inline-block;
+                    box-sizing: border-box;
+                    margin: 6px;
+                    text-transform: uppercase;
+                    font-variant: inherit;
+                    text-decoration: none;
+                    overflow: hidden;
+                    line-height: 20px;
+                }
+
+                h2.type_mission { 
+                    font-size: 26px;
+                    margin-top: 0px;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    font-family: @title-font;
+                }
+
+                &:after {
+                    right: 100%;
+                    border: solid transparent;
+                    content: " ";
+                    height: 0;
+                    width: 0;
+                    position: absolute;
+                    border-right-color: darken(@bg-color, 2%);
+                    border-width: 10px;
+                    top: 10px;
                 }
             }
         }

@@ -6,7 +6,7 @@ import '../less/styles.less';
 import '../less/experiences.less';
 
 import { COLORS } from './utils';
-import { MAIN_LAY } from './const';
+import { MAIN_LAY, htmlMission } from './const';
 
 $(document).ready(function () {
     var self = $(this);
@@ -23,7 +23,12 @@ $(document).ready(function () {
     $.getJSON("/missions").done(missions => {
         let promises = [];
         missions.forEach(m => {
-            promises.push(getMission(m));
+            promises.push(new Promise((resolve, reject) => {
+                $('#experiences .content').append(htmlMission(m.title.rendered, m.acf.description, 
+                    m.acf.domaines ? m.acf.domaines.map(d => { return d.name }) : [], m.acf.date_debut, 
+                    m.acf.date_fin !== "" ? m.acf.date_fin : "en cours"));
+                resolve();
+            }));
         });
         Promise.all(promises).then(() => {
             $('.mission', self).mission();
@@ -44,27 +49,6 @@ $(document).ready(function () {
     });
 
 });
-
-function getMission(m) {
-    return new Promise((resolve, reject) => {
-        let mission = {};
-        mission.date_deb = m.acf.date_debut;
-        mission.date_fin = (m.acf.date_fin === "") ? "en cours" : m.acf.date_fin;
-        mission.intitule = m.title.rendered;
-        mission.desc = m.acf.description;
-        mission.domaine = (m.acf.domaines) ? m.acf.domaines.map(d => { return d.name }) : [];
-        $("#experiences .content").append("<li class=\"mission\" data-domaine=\"" + mission.domaine +
-            "\" style=\"position: relative;\">" +
-            "<div class=\"dates\"><div class=\"date_deb\">" + mission.date_deb + "</div>" +
-            "<div class=\"date_fin\">" + mission.date_fin + "</div></div>" +
-            "<div class=\"desc\">" +
-            "<div class=\"domaines\"></div>" +
-            "<h2 class=\"type_mission\">" + mission.intitule + "</h2>" +
-            "<p class=\"details\">" + mission.desc + "</p>" +
-            "</div></li>");
-        resolve();
-    });
-}
 
 function getDomaine(d, i) {
     return new Promise((resolve, reject) => {
