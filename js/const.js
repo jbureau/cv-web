@@ -69,12 +69,14 @@ export function htmlMission(title, desc, domaines, bDate, eDate = 'en cours') {
         <div class="desc">
             <div class="top">            
                 <div class="logo"></div>
-                <div class="domaines"></div>
-                <h2 class="type_mission">${title}</h2>
-                <div class="plus">[+]</div>
-                <div class="less">[-]</div>
+                <div class="title">
+                    <h2 class="type_mission">${title}</h2>
+                    <div class="domaines"></div>
+                </div>
             </div>
             <div class="more">
+            <div class="plus">[+]</div>
+            <div class="less">[-]</div>
                 <p class="details">${desc}</p>
             </div>
         </div></li>`;

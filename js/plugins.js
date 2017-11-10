@@ -11,8 +11,8 @@ export function mission() {
             this.load = function () {
                   $(elem).find(".details").slideUp();
                   $(elem).find(".details").addClass("up");
-                  $(elem).find(".top .plus").show();
-                  $(elem).find(".top .less").hide();
+                  $(elem).find(".plus").show();
+                  $(elem).find(".less").hide();
             };
 
             elem.on("load-domaine", function (event, domaine, color) {

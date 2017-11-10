@@ -110,40 +110,62 @@
                         height: 40px;
                         border: 1px solid @md-color;
                         border-radius: 50%;
-                    }
-                    
-                    & > .domaines div.little_domaine {
-                        height: 20px;
-                        width: 20px;
-                        background: darken(@bg-color, 10%);
-                        border-radius: 50%;
-                        font-family: @title-font;
-                        font-size: 12px;
-                        vertical-align: middle;
-                        text-align: center;
-                        display: inline-block;
-                        box-sizing: border-box;
-                        margin: 6px;
-                        text-transform: uppercase;
-                        font-variant: inherit;
-                        text-decoration: none;
-                        overflow: hidden;
-                        line-height: 20px;
+                        display: none; // TODO get logo
                     }
 
-                    & > h2.type_mission { 
-                        font-size: 26px;
+                    & > .title {
                         margin: 0 10px;
-                        text-transform: uppercase;
-                        font-weight: normal;
-                        font-family: @title-font;
+                        
+                        & > h2.type_mission { 
+                            margin: 0;
+                            font-size: 26px;
+                            text-transform: uppercase;
+                            font-weight: normal;
+                            font-family: @title-font;
+                        }
+                        
+                        & > .domaines {
+                            & > div.little_domaine:first-child {
+                                margin-left: 0;
+                            }
+
+                            & > div.little_domaine {
+                                height: 20px;
+                                width: 20px;
+                                background: darken(@bg-color, 10%);
+                                border-radius: 50%;
+                                font-family: @title-font;
+                                font-size: 12px;
+                                vertical-align: middle;
+                                text-align: center;
+                                display: inline-block;
+                                box-sizing: border-box;
+                                margin: 0 6px;
+                                text-transform: uppercase;
+                                font-variant: inherit;
+                                text-decoration: none;
+                                overflow: hidden;
+                                line-height: 20px;
+                            } // END div.little_domaine
+                        } // END .domaines
+
+                    }
+                } // END .top
+                
+                & > .more {
+                    margin: 5px 10px 0;
+                    display: flex;
+                    flex-direction: row;
+
+                    & > p.details {
+                        margin: 0 5px;;
                     }
                 }
 
                 &:hover {
                     background: darken(@bg-color, 1%);
                 }
-            }
+            } // END .desc
         }
     } 
 }
@@ -151,19 +173,32 @@
 @media screen {
     @media (max-device-width: @sm) {
         #experiences  {
+
+            .sorting .btn {
+                font-size: 2.2vw;
+            }
+
             .content > li {
+                margin: 0 0 0 85px;
                 display: flex;
 
-                &:before {
-                    display: none;
+                & > .dates {
+                    margin: 0 0 0 -105px;
+                    font-size: 2.5vw;
                 }
-                .desc {
-                    margin: 0 0 0 40px;
-                    padding: 1em;
-                    font-weight: 400;
-                    font-size: 95%;
-                    cursor: pointer;
-                    width: 100%;
+
+                & > .desc {
+
+                    & > .top {
+                        & > .title > h2.type_mission {
+                            font-size: 3.3vw;
+                        }
+                    }
+
+                    & > .more {
+                        font-size: 2vw;
+                    }
+
                 }
             } 
         }
