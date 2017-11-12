@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { mission, domaine } from './plugins';
 import { MissionFactory } from './factory/MissionFactory';
 import { DomaineFactory } from './factory/DomaineFactory';
+import { Mission } from './components/mission';
 import '../less/utils.less';
 import '../less/styles.less';
 import '../less/experiences.less';
@@ -22,7 +23,13 @@ $(document).ready(function () {
     $('#experiences .spinner').show();
 
     $.getJSON("/missions").done(missions => {
-        MissionFactory.addAndCreateFromWPJsonArray($("#experiences .content"), missions);
+        missions.forEach(m => {
+            $('#experiences .content').append(`
+                <cv-mission title="${m.title.rendered}"
+                    domaines="${m.acf.domaines ? m.acf.domaines.map(d => { return d.name }) : []}" 
+                    bDate="${m.acf.date_debut}" eDate="${m.acf.date_fin !== "" ? m.acf.date_fin : "en cours"}"></cv-mission>`);
+        })
+        // MissionFactory.addAndCreateFromWPJsonArray($("#experiences .content"), missions);
         $('.mission', self).mission();
         $.getJSON("/domaines").done(domaines => {
             DomaineFactory.addAndCreateFromWPJsonArray($("#experiences .sorting"), domaines);

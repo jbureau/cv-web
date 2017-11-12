@@ -1,14 +1,11 @@
 import $ from 'jquery';
 
-// TODO WebComponent
-export class Mission {
+class Mission extends HTMLElement {
 
-    constructor(title, desc, domaines, bDate, eDate) {
-        this.title = title;
-        this.desc = desc;
-        this.domaines = domaines;
-        this.bDate = bDate;
-        this.eDate = eDate;
+    constructor() {
+        super();
+        let shadow = this.attachShadow({mode: 'open'});
+        shadow.innerHTML = this.generateTemplate();
     }
 
     generateTemplate() {    
@@ -33,9 +30,6 @@ export class Mission {
                 </div>
             </div></li>`;
     }
-        
-    get template() {
-        return this.generateTemplate();
-    }
-
 }
+
+customElements.define('cv-mission', Mission);
