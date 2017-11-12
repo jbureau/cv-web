@@ -27,7 +27,8 @@ $(document).ready(function () {
             $('#experiences .content').append(`
                 <cv-mission title="${m.title.rendered}"
                     domaines="${m.acf.domaines ? m.acf.domaines.map(d => { return d.name }) : []}" 
-                    bDate="${m.acf.date_debut}" eDate="${m.acf.date_fin !== "" ? m.acf.date_fin : "en cours"}"></cv-mission>`);
+                    desc="${m.acf.description}" begin-date="${m.acf.date_debut}" 
+                    end-date="${m.acf.date_fin !== "" ? m.acf.date_fin : "en cours"}"></cv-mission>`); // TODO Desc too long
         })
         // MissionFactory.addAndCreateFromWPJsonArray($("#experiences .content"), missions);
         $('.mission', self).mission();
