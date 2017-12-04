@@ -70,10 +70,22 @@ body {
 		}
 
 		.desc {
-			text-align: center;
+			text-align: justify;
 			font-style: italic;
 			font-size: 0.8em;
 			margin: 10px 15px;
+			quotes: "\201C" "\201D";
+			position: relative;
+			padding: 0 0 0 34px;
+		}
+		.desc:before {
+			font-family: Georgia, serif;
+			content: open-quote;
+			position: absolute;
+			left: -22px;
+			top: -28px;
+			color: darken(@bg-color, 10%);
+			font-size: 8em;
 		}
 	}
 

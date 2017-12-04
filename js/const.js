@@ -19,7 +19,7 @@ export const MAIN_LAY = `
     <div class="header">
         <div class="circlePhoto"> </div>
         <div class="name">${USER_NAME}</div>
-        <div class="desc">${USER_DESC}</div>
+        <blockquote class="desc">${USER_DESC}</blockquote>
     </div>
     <div class="main">
         <div id="experiences">
