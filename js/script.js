@@ -3,6 +3,7 @@ import $ from 'jquery';
 import { mission, domaine } from './plugins';
 import { MissionFactory } from './factory/MissionFactory';
 import { DomaineFactory } from './factory/DomaineFactory';
+import { ClientService } from './services/ClientService';
 import '../less/utils.less';
 import '../less/styles.less';
 import '../less/experiences.less';
@@ -20,6 +21,9 @@ $(document).ready(function () {
     $('#experiences .sorting').hide();
     $('#experiences .content').hide();
     $('#experiences .spinner').show();
+
+    var clientService = new ClientService();
+    clientService.clients.done(clients => console.log(clients));
 
     $.getJSON("/missions").done(missions => {
         MissionFactory.addAndCreateFromWPJsonArray($("#experiences .content"), missions);
