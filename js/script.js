@@ -23,12 +23,13 @@ $(document).ready(function () {
     $('#experiences .spinner').show();
 
     var service = new DataService();
+    var promises = [];
     service.clients.done(clients => {
         service.missions.done(missions => {
             missions.forEach(m => $("#experiences .content").append(new Mission(m.title, m.desc, m.domaines, m.bDate, m.eDate).template));
             $('.mission', self).mission();
             service.domaines.done(domaines => {
-                domaines.forEach(d => $("#experiences .sorting").append(new Domaine(d.title, d.color).template));
+                domaines.forEach(d => $("#experiences .sorting").append(new Domaine(d.intitule, d.color).template));
                 $('#experiences .sorting').show(500);
                 $('#experiences .content').show(500);
                 $('#experiences .spinner').hide(500);

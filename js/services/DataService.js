@@ -1,5 +1,8 @@
 import $ from 'jquery';
 import { COLORS } from '../utils';
+import { Mission } from '../models/Mission';
+import { Domaine } from '../models/Domaine';
+import { Client } from '../models/Client';
 
 export class DataService {
 
@@ -31,30 +34,16 @@ export class DataService {
     }
 
     mapToClient(obj) {
-        return {
-            id: obj.id, 
-            name: obj.title.rendered,
-            logo: obj.acf.logo
-        }
+        return new Client(obj.id, obj.title.rendered, obj.acf.logo);
     }
 
     mapToMission(obj) {
-        return {
-            id: obj.id,
-            title: obj.title.rendered,
-            desc: obj.acf.description,
-            domaines: obj.acf.domaines ? obj.acf.domaines.map(d => { return d.name }) : [],
-            bDate: obj.acf.date_debut,
-            eDate: obj.acf.date_fin !== "" ? obj.acf.date_fin : "en cours"
-        }
+        return new Mission(obj.id, obj.title.rendered, obj.acf.description, obj.acf.domaines ? obj.acf.domaines.map(d => { return d.name }) : [],
+            obj.acf.date_debut, obj.acf.date_fin !== "" ? obj.acf.date_fin : "en cours");
     }
 
     mapToDomaine(obj, i) {
-        return {
-            id: obj.id,
-            title: obj.name, 
-            color: COLORS[i % COLORS.length]
-        }
+        return new Domaine(obj.id, obj.name,COLORS[i % COLORS.length]);
     }
 
 }
