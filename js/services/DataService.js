@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import { DataMapper } from '../mappers/DataMapper';
+import moment from 'moment';
 
 export class DataService {
 
@@ -15,7 +16,17 @@ export class DataService {
     get missions() {
         var deferred = $.Deferred();
         $.getJSON("/missions", missions => {
-            var list = missions.map(m => DataMapper.fromWPDataToMission(m));
+            var list = missions.map(m => DataMapper.fromWPDataToMission(m))
+                .sort((a, b) => {
+                    var aDate = moment(a.bDate);
+                    var bDate = moment(b.bDate);
+                    if (aDate > bDate) {
+                        return -1;
+                    } else if (aDate < bDate) {
+                        return 1;
+                    }
+                    return 0;
+                });
             deferred.resolve(list);
         });
         return deferred.promise();   

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 export function displayMission(mission, client) { 
     var clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
     if (client !== undefined && client.logo !== undefined) {
@@ -5,8 +7,8 @@ export function displayMission(mission, client) {
     }
     return `<li class="mission" data-domaine="${mission.domaines}">
         <div class="dates">
-            <div class="date_deb">${mission.bDate}</div>
-            <div class="date_fin">${mission.eDate}</div>
+            <div class="date_deb">${moment(mission.bDate).format('DD/MM/YYYY')}</div>
+            <div class="date_fin">${moment(mission.eDate, 'YYYY-MM-DD', true).isValid() ? moment(mission.eDate).format('DD/MM/YYYY') : mission.eDate}</div>
         </div>
         <div class="round"></div>
         <div class="desc">
