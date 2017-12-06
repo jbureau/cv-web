@@ -33,17 +33,15 @@ export function mission() {
             elem.on('click', '.desc', function (event) {
                   const elem = $(event.target).closest(".desc");
                   const details = elem.find(".details");
+                  const summary = elem.find(".summary");
                   if (details.hasClass("up")) {
-                        /* TODO css */
-                        $('.plus', elem).hide();
-                        $('.less', elem).show();
-                        details.slideDown(500, function () {
+                        summary.slideUp(100, () => { // TODO animation a revoir
+                              details.slideDown(500);
                               details.removeClass("up");
                         });
                   } else {
-                        $('.less', elem).hide();
-                        $('.plus', elem).show();
-                        details.slideUp(500, function () {
+                        details.slideUp(100, () => {
+                              summary.slideDown(500);
                               details.addClass("up");
                         });
                   }

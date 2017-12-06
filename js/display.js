@@ -18,9 +18,8 @@ export function displayMission(mission, client) {
                 </div>
             </div>
             <div class="more">
-            <div class="plus">[+]</div>
-            <div class="less">[-]</div>
-                <p class="details">${mission.desc}</p>
+                <p class="summary">${mission.desc.short}</p>
+                <p class="details">${mission.desc.long}</p>
             </div>
         </div></li>`;
 }
