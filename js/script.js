@@ -25,8 +25,7 @@ $(document).ready(function () {
     service.clients.done(clients => {
         service.missions.done(missions => {
             missions.forEach(m => {
-
-                $("#experiences .content").append(displayMission(m));
+                $("#experiences .content").append(displayMission(m, clients.filter(c => c.id === m.client)[0]));
             });
             $('.mission', self).mission();
             service.domaines.done(domaines => {

@@ -1,4 +1,8 @@
-export function displayMission(mission) {    
+export function displayMission(mission, client) { 
+    var clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
+    if (client !== undefined && client.logo !== undefined) {
+        clientLogo = `<div class="logo" style="background-image: url('${client.logo}')"></div>`;
+    }
     return `<li class="mission" data-domaine="${mission.domaines}">
         <div class="dates">
             <div class="date_deb">${mission.bDate}</div>
@@ -7,7 +11,7 @@ export function displayMission(mission) {
         <div class="round"></div>
         <div class="desc">
             <div class="top">            
-                <div class="logo"></div>
+                ${clientLogo}
                 <div class="title">
                     <h2 class="type_mission">${mission.title}</h2>
                     <div class="domaines"></div>
