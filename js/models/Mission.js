@@ -1,6 +1,6 @@
 export class Mission {
 
-    constructor(id, title, desc, domaines, bDate, eDate, client) {
+    constructor(id, title, desc, domaines, type, bDate, eDate, client) {
         this.id = id;
         this.title = title;
         this.desc = {
@@ -8,6 +8,7 @@ export class Mission {
             long: desc
         };
         this.domaines = domaines;
+        this.type = type;
         this.bDate = bDate;
         this.eDate = eDate;
         this.client = client;

@@ -131,31 +131,35 @@
                             font-family: @title-font;
                         }
                         
-                        & > .domaines {
-                            & > div.little_domaine:first-child {
-                                margin-left: 0;
-                            }
+                        & > .subtitle {
+                            display: flex;
+                            
+                            & >.domaines {
+                                & > div.little_domaine:first-child {
+                                    margin-left: 0;
+                                }
 
-                            & > div.little_domaine {
-                                height: 20px;
-                                width: 20px;
-                                background: darken(@bg-color, 10%);
-                                border-radius: 50%;
-                                font-family: @title-font;
-                                font-size: 12px;
-                                vertical-align: middle;
-                                text-align: center;
-                                display: inline-block;
-                                box-sizing: border-box;
-                                margin: 0 6px;
-                                text-transform: uppercase;
-                                font-variant: inherit;
-                                text-decoration: none;
-                                overflow: hidden;
-                                line-height: 20px;
-                            } // END div.little_domaine
-                        } // END .domaines
+                                & > div.little_domaine {
+                                    height: 20px;
+                                    width: 20px;
+                                    background: darken(@bg-color, 10%);
+                                    border-radius: 50%;
+                                    font-family: @title-font;
+                                    font-size: 12px;
+                                    vertical-align: middle;
+                                    text-align: center;
+                                    display: inline-block;
+                                    box-sizing: border-box;
+                                    margin: 0 6px;
+                                    text-transform: uppercase;
+                                    font-variant: inherit;
+                                    text-decoration: none;
+                                    overflow: hidden;
+                                    line-height: 20px;
+                                } // END div.little_domaine
+                            } // END .domaines
 
+                        }
                     }
                 } // END .top
                 

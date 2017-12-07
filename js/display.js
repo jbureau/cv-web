@@ -17,7 +17,10 @@ export function displayMission(mission, client) {
                 ${clientLogo}
                 <div class="title">
                     <h2 class="type_mission">${mission.title}</h2>
-                    <div class="domaines"></div>
+                    <div class="subtitle">
+                        <div class="domaines"></div>
+                        | ${mission.type}
+                    </div>
                 </div>
             </div>
             <div class="more">
