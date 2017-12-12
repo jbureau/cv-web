@@ -1,14 +1,14 @@
 export class Mission {
 
-    constructor(id, title, contexte, mission, solution, bilam, domaines, type, bDate, eDate, client) {
+    constructor(id, title, contexte, mission, solution, bilan, domaines, type, bDate, eDate, client) {
         this.id = id;
         this.title = title;
         this.contexte = contexte;
         this.mission = mission;
         this.solution = solution;
-        this.bilan = bilam;
+        this.bilan = bilan;
         this.domaines = domaines;
-        this.type = type;
+        this.types = type;
         this.bDate = bDate;
         this.eDate = eDate;
         this.client = client;

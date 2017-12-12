@@ -2,14 +2,14 @@ import moment from 'moment';
 moment.locale('fr');
 
 export function displayMission(mission, client) { 
-    var clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
+    let clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
     if (client !== undefined && client.logo !== undefined) {
         clientLogo = `<div class="logo" style="background-image: url('${client.logo}')"></div>`;
     }
-    var contexte = '';
-    var desc = { long: '', short: '' };
-    var solution = '';
-    var bilan = '';
+    let contexte = '';
+    let desc = { long: '', short: '' };
+    let solution = '';
+    let bilan = '';
     if (mission.contexte) {
         contexte = `<h4>Contexte</h4> 
         ${mission.contexte}`;
@@ -45,7 +45,7 @@ export function displayMission(mission, client) {
                     <h2 class="type_mission">${mission.title}</h2>
                     <div class="subtitle">
                         <div class="domaines"></div>
-                        | ${mission.type}
+                        | ${mission.types.join(', ')}
                     </div>
                 </div>
             </div>
