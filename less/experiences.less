@@ -169,8 +169,15 @@
                     display: flex;
                     flex-direction: row;
 
-                    & > p.details, & > p.summary {
-                        margin: 0 5px;;
+                    & > div.details, & > p.summary {
+                        text-align: justify;
+                        margin: 0 5px;
+                        & > p {
+                            margin: 0;
+                        }
+                        & > h4 {
+                            margin-bottom: 2px;
+                        }
                     }
                 }
 

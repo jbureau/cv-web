@@ -6,6 +6,32 @@ export function displayMission(mission, client) {
     if (client !== undefined && client.logo !== undefined) {
         clientLogo = `<div class="logo" style="background-image: url('${client.logo}')"></div>`;
     }
+    var contexte = '';
+    var desc = { long: '', short: '' };
+    var solution = '';
+    var bilan = '';
+    if (mission.contexte) {
+        contexte = `<h4>Contexte</h4> 
+        ${mission.contexte}`;
+    }
+    if (mission.mission) {
+        const regExp = new RegExp('<p>|<div>|</p>|</div>', 'g');
+        desc.short = mission.mission.replace(regExp, '');
+        if (desc.short.length > 200 ) {
+            desc.short = desc.short.substring(0, 250) + '...';
+
+        }
+        desc.long = `<h4>Mission</h4> 
+        ${mission.mission}`;
+    }
+    if (mission.solution) {
+        solution = `<h4>Solution</h4> 
+        ${mission.solution}`;
+    }
+    if (mission.bilan) {
+        bilan = `<h4>Bilan</h4> 
+        ${mission.bilan}`;
+    }
     return `<li class="mission" data-domaine="${mission.domaines}">
         <div class="dates">
             <div class="date_deb">${moment(mission.bDate).format('MMMM YYYY')}</div>
@@ -24,8 +50,13 @@ export function displayMission(mission, client) {
                 </div>
             </div>
             <div class="more">
-                <p class="summary">${mission.desc.short}</p>
-                <p class="details">${mission.desc.long}</p>
+                <p class="summary">${desc.short}</p>
+                <div class="details">
+                    ${contexte}
+                    ${desc.long}
+                    ${solution}
+                    ${bilan}
+                </div>
             </div>
         </div></li>`;
 }
