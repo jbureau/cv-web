@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 
 app.get('/missions', (req, res) => {
   if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
-    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/missions.json`, 'utf8'))));
+    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/mission.json`, 'utf8'))));
   } else {
     wp.missions().then(response => {
       res.setHeader('Content-Type', 'application/json');
@@ -33,7 +33,7 @@ app.get('/missions', (req, res) => {
 
 app.get('/domaines', (req, res) => {
   if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
-    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/domaines.json`, 'utf8'))));
+    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/domaine.json`, 'utf8'))));
   } else {
     wp.domaines().then(response => {
       res.setHeader('Content-Type', 'application/json');
@@ -44,7 +44,7 @@ app.get('/domaines', (req, res) => {
 
 app.get('/clients', (req, res) => {
   if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
-    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/clients.json`, 'utf8'))));
+    res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/client.json`, 'utf8'))));
   } else {
     wp.clients().then(response => {
       res.setHeader('Content-Type', 'application/json');
