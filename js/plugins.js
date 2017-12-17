@@ -18,7 +18,7 @@ export function mission() {
             elem.on("load-domaine", function (event, domaine, color) {
                   if (elem.attr("data-domaine").indexOf(domaine) != -1 && domaine !== "*") {
                         $(elem).find(".domaines").append("<div class=\"little_domaine\" " +
-                              "style=\"background: " + color + ";\">" + domaine + "</div>");
+                              "style=\"border-left: 10px solid " + color + ";\">" + domaine + "</div>");
                   }
             });
 
