@@ -24,7 +24,7 @@ app.get('/missions', (req, res) => {
   if (process.env.NODE_ENV && process.env.NODE_ENV.trim() === 'local') {
     res.send(JSON.stringify(JSON.parse(fs.readFileSync(`${local_data_path}/mission.json`, 'utf8'))));
   } else {
-    wp.missions().then(response => {
+    wp.missions().perPage(100).then(response => {
       res.setHeader('Content-Type', 'application/json');
       res.send(JSON.stringify(response));
     });
