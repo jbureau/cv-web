@@ -3,7 +3,8 @@ moment.locale('fr');
 
 export function displayMission(mission, client) { 
     let clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
-    if (client !== undefined && client.logo !== undefined) {
+    const regExpImage = new RegExp('.jpg|.jpeg|.png|.gif', '');
+    if (client !== undefined && client.logo !== undefined && typeof client.logo === 'string' && regExpImage.test(client.logo)) {
         clientLogo = `<div class="logo" style="background-image: url('${client.logo}')"></div>`;
     }
     let contexte = '';
