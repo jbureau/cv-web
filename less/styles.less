@@ -66,13 +66,21 @@ body {
 			margin: 0 auto;
 		}
 
-		.name {
-			text-transform: uppercase;
-			font-family: @title-font;
-			text-align: center;
-			color: @main-color2;
-			margin: 30px 0 10px;
-			font-size: 2.5em;
+		.bar {
+	
+			.name {
+				text-transform: uppercase;
+				font-family: @title-font;
+				text-align: center;
+				color: @main-color2;
+				margin: 30px 0 10px;
+				font-size: 2.5em;
+			}
+
+			.logo {
+				display: none;
+			}
+
 		}
 
 		.desc {
@@ -110,28 +118,53 @@ body {
 			.header {
 				display: flex;
 				flex-direction: row;
-				padding: 15px 10px;
+				padding: 0;
 				flex-wrap: wrap;
 				align-items: center;
 
-				.circlePhoto {
-					flex: initial;
-					width: 10vw;
-					height: 10vw;
-					border-width: 2px;
-					margin: auto 20px auto 20vw;
+				.bar {
+					&:extend(.whiteframe-shadow-2dp);
+					display: flex;
+					flex-direction: row;
+					background-color: #ddd;
+					padding: 2vw 3vw;
+					width: 100%;
+	
+					.name {
+						flex: 4 0 auto;
+						margin: 0 auto;
+						font-size: 7vw;
+						text-align: center;
+						color: #fff;
+						font-weight: bold;
+					}
+
+					.logo {
+						display: block;
+						width: 103px;
+						top: 1vw;
+						position: absolute;
+					}
+
 				}
 
-				.name {
-					flex: 4 0 auto;
-					margin: 0;
-					font-size: 7vw;
-					text-align: left;
+				.circlePhoto {
+					flex: initial;
+					width: 20vw;
+					height: 27vw;
+					border-width: 2px;
+					margin: 0 0 0 4vw;
 				}
 		
 				.desc {
-					margin: 10px 20px;
+					margin: 40px 50px;
 					font-size: 2.5vw;
+					padding: 0 0 0 105px;
+					flex: 1 0;
+				}
+
+				.logo{
+					display: none;
 				}
 			}
 		}

@@ -71,8 +71,11 @@ export function display(userName, userDesc, experiencesTitle) {
     return `
     <div class="container">
         <div class="header">
+            <div class="bar">
+                <div class="logo"> </div>
+                <div class="name">${userName}</div>
+            </div>
             <div class="circlePhoto"> </div>
-            <div class="name">${userName}</div>
             <blockquote class="desc">${userDesc}</blockquote>
             <div class="logo"> </div>
         </div>
