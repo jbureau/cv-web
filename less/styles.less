@@ -58,7 +58,7 @@ body {
 
 		.circlePhoto {
 			width: 53%;
-			height: 200px;
+			height: 300px;
 			background-image: url('../assets/images/poune.jpg');
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -86,20 +86,25 @@ body {
 		.desc {
 			text-align: justify;
 			font-style: italic;
-			font-size: 0.9em;
+			font-size: 0.8em;
 			margin: 10px 15px 20px;
 			quotes: "\201C" "\201D";
 			position: relative;
 			padding: 0 0 0 42px;
+			line-height: 20px;
 		}
 		.desc:before {
 			font-family: Georgia, serif;
 			content: open-quote;
 			position: absolute;
 			left: -22px;
-			top: -28px;
+			top: 20px;
 			color: darken(@bg-color, 10%);
 			font-size: 8em;
+		}
+		.desc strong {
+			font-size: 1.1em;
+			line-height: 2em;
 		}
 	}
 
