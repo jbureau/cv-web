@@ -11,7 +11,14 @@
 /* ---------- FONTS --------- */
 @import url("https://fonts.googleapis.com/css?family=Marvel");
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-@global-font: "Calibri", "arial";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src: url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+	// font-weight: normal;
+	// font-style: normal;
+//   }
+@global-font: "Montserrat", "Calibri", "arial";
 @title-font: "Marvel", @global-font;
 
 /* ---------- SCREEN SIZE ---------- */
@@ -63,4 +70,12 @@
 	border: 2px solid darken(@bg-color, 2%);
 	border-top-color: @main-color2;
 	animation: spinner 2s linear infinite;
+
+	@media screen {
+		@media (max-device-width: @sm) {
+			top: 70%;
+		}
+	}
 }
+
+

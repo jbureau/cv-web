@@ -134,6 +134,8 @@
                         
                         & > .subtitle {
                             display: flex;
+                            font-size: 0.8em;
+                            line-height: 1.8em;
                             
                             & >.domaines {
                                 & > div.little_domaine:first-child {
@@ -174,6 +176,8 @@
                     & > div.details, & > p.summary {
                         text-align: justify;
                         margin: 0 5px;
+                        font-size: 0.9em;
+                        line-height: 1.6em;
                         & > p {
                             margin: 0;
                         }
@@ -196,28 +200,47 @@
         #experiences  {
 
             .sorting .btn {
-                font-size: 2.2vw;
+                font-size: 3vw;
+                width: 10vw;
+                height: 10vw;
+
+                &.filter-selected {
+                    opacity: 0.9;
+                }
             }
 
             .content > li {
-                margin: 0 0 0 85px;
+                margin: 0 0 0 145px;
                 display: flex;
 
                 & > .dates {
-                    margin: 0 0 0 -105px;
-                    font-size: 2.5vw;
+                    margin: 0 0 0 -155px;
+                    font-size: 2.6vw;
+                    min-width: 130px;
                 }
 
                 & > .desc {
+                    margin-right: 2vw;
+                    text-align: justify;
 
                     & > .top {
-                        & > .title > h2.type_mission {
-                            font-size: 3.3vw;
+                        & > .title {
+                            & > h2.type_mission {
+                                font-size: 3.5vw;
+                            }
+                            & > .subtitle {
+                                font-size: 2.1vw;
+                                
+                                & >.domaines div.little_domaine {
+                                    height: 30px;
+                                    line-height: 30px;
+                                }
+                            }
                         }
                     }
 
                     & > .more {
-                        font-size: 2vw;
+                        font-size: 2.3vw;
                     }
 
                 }
