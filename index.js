@@ -66,5 +66,8 @@ const wp = new WPAPI({
 });
 
 wp.missions = wp.registerRoute('wp/v2', '/mission/(?P<id>)');
-wp.domaines = wp.registerRoute('wp/v2', '/domaine/(?P<id>)');
+wp.domaines2 = wp.registerRoute('wp/v2', '/domaine/(?P<id>)');
+wp.domaines = wp.registerRoute('myroutes', '/domaines_menu');
 wp.clients = wp.registerRoute('wp/v2', '/client/(?P<id>)');
+
+// http://orchisconseil.fr/wp-json/myroutes/domaines_menu

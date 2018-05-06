@@ -18,7 +18,7 @@ export class DataMapper {
     }
 
     static fromWPDataToDomaine(obj, i) {
-        return new Domaine(obj.id, obj.name,COLORS[i % COLORS.length]);
+        return new Domaine(obj.id, obj.title, COLORS[i % COLORS.length]);
     }
 
 }
