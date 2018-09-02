@@ -6,36 +6,36 @@ import '../less/styles.less';
 import '../less/experiences.less';
 
 import { USER_NAME, USER_DESC, EXPERIENCES_TITLE } from './const';
-import { DataService } from './services/DataService';
+import DataService from './services/DataService';
 import { displayDomaine, displayMission, display } from './display';
 
-$(document).ready(function () {
-    var self = $(this);
+$(document).ready(() => {
 
     $("body").append(display(USER_NAME, USER_DESC, EXPERIENCES_TITLE));
 
     $.fn.mission = mission;
     $.fn.domaine = domaine;
-    
+
     $('#experiences .sorting').hide();
     $('#experiences .content').hide();
     $('#experiences .spinner').show();
 
-    var service = new DataService();
-    service.clients.done(clients => {
-        service.missions.done(missions => {
+    DataService.clients().then(clients => {
+        DataService.missions().then(missions => {
+
             missions.forEach(m => {
                 $("#experiences .content").append(displayMission(m, clients.filter(c => c.id === m.client)[0]));
             });
-            $('.mission', self).mission();
-            service.domaines.done(domaines => {
+            $('.mission').mission();
+
+            DataService.domaines().then(domaines => {
                 domaines.forEach(d => $("#experiences .sorting").append(displayDomaine(d)));
                 $('#experiences .sorting').show(500);
                 $('#experiences .content').show(500);
                 $('#experiences .spinner').hide(500);
-                $('.domaine', self).domaine();
-            });
-        });
+                $('.domaine').domaine();
+            })
+        })
     });
 
 });

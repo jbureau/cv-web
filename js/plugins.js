@@ -50,6 +50,7 @@ export function mission() {
             this.load();
       }
       return $(this).each(function () {
+            console.log('bon?')
             if (!$.data(this, 'Mission')) {
                   $.data(this, 'Mission', new Mission($(this)));
             }
