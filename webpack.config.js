@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
+    mode: 'none',
     entry: {
         app: './js/script.js'
     },
@@ -26,11 +27,24 @@ module.exports = {
         publicPath: '/'
     },
     module: {
-      loaders: [
-        { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-        { test: /\.jpg$/, loader: 'file-loader'},
-        { test: /\.png$/, loader: 'file-loader'},
-        { test: /\.less$/, use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "less-loader" }] }
-      ]
+        rules: [
+            { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.(jpg|png)$/, use: 'file-loader' },
+            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+            {
+                test: /\.less$/, use: [{
+                    loader: 'style-loader'
+                }, {
+                    loader: 'css-loader', options: {
+                        sourceMap: true
+                    }
+                }, {
+                    loader: 'less-loader', options: {
+                        sourceMap: true
+                    }
+
+                }]
+            }
+        ]
     }
 };
