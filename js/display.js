@@ -1,14 +1,15 @@
 import moment from 'moment';
 moment.locale('fr');
 
-export function displayMission(mission, client) { 
-    let clientLogo =  `<div class="logo" style="opacity: 0.3;"></div>`;
+export function displayMission(mission, client) {
+    let clientLogo = '<div class="logo" style="opacity: 0.3;"></div>';
     const regExpImage = new RegExp('.jpg|.jpeg|.png|.gif', '');
-    if (client !== undefined && client.logo !== undefined && typeof client.logo === 'string' && regExpImage.test(client.logo)) {
+    if (client && client.logo && typeof client.logo === 'string'
+        && regExpImage.test(client.logo)) {
         clientLogo = `<div class="logo" style="background-image: url('${client.logo}')"></div>`;
     }
     let contexte = '';
-    let desc = { long: '', short: '' };
+    const desc = { long: '', short: '' };
     let solution = '';
     let bilan = '';
     if (mission.contexte) {
@@ -18,8 +19,10 @@ export function displayMission(mission, client) {
     if (mission.mission) {
         const regExp = new RegExp('<p>|<div>|</p>|</div>', 'g');
         desc.short = mission.mission.replace(regExp, '');
-        if (desc.short.length > 200 ) {
-            desc.short = desc.short.substring(0, 250) + '...';
+        const maxLengthCondition = 200;
+        const maxLengthToShow = 250;
+        if (desc.short.length > maxLengthCondition) {
+            desc.short = desc.short.substring(0, maxLengthToShow) + '...';
 
         }
         desc.long = `<h4>Mission</h4> 
@@ -36,7 +39,9 @@ export function displayMission(mission, client) {
     return `<li class="mission" data-domaine="${mission.domaines}">
         <div class="dates">
             <div class="date_deb">${moment(mission.bDate).format('MMMM YYYY')}</div>
-            <div class="date_fin">${moment(mission.eDate, 'YYYY-MM-DD', true).isValid() ? moment(mission.eDate).format('MMMM YYYY') : mission.eDate}</div>
+            <div class="date_fin">${moment(mission.eDate, 'YYYY-MM-DD', true).isValid()
+            ? moment(mission.eDate).format('MMMM YYYY')
+            : mission.eDate}</div>
         </div>
         <div class="round"></div>
         <div class="desc">
@@ -62,7 +67,7 @@ export function displayMission(mission, client) {
         </div></li>`;
 }
 
-export function displayDomaine(domaine) {    
+export function displayDomaine(domaine) {
     return `<input type="button" data-domaine="${domaine.intitule}" data-color="${domaine.color}" 
         class="btn curve domaine" value="${domaine.intitule}" />`;
 }
@@ -85,7 +90,8 @@ export function display(userName, userDesc, experiencesTitle) {
                 <div class="spinner"></div>
                 <div class="card">
                     <div class="sorting">
-                        <input type="button" data-domaine="*" class="btn curve domaine filter-selected" value="Tout" />
+                        <input type="button" data-domaine="*" 
+                        class="btn curve domaine filter-selected" value="Tout" />
                     </div>
                     <ul class="content">
                     </ul>

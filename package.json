@@ -7,6 +7,8 @@
   },
   "main": "index.js",
   "scripts": {
+    "eslint:fix": "eslint --ext .js js/ --fix",
+    "eslint:dev": "eslint --ext .js js/ --cache",
     "build": "webpack",
     "start:dev": "webpack-dev-server",
     "start-local": "SET NODE_ENV=local & node index.js",

@@ -7,17 +7,18 @@ const clients = async () => {
         const clients = await api.clients()
         return clients.map(c => DataMapper.fromWPDataToClient(c));
     } catch (e) {
-        console.error(e);
+        // REVIEW
     }
 }
 
 const missions = async () => {
+    /* eslint-disable no-magic-numbers */
     try {
         const missions = await api.missions()
         return missions.map(m => DataMapper.fromWPDataToMission(m))
             .sort((a, b) => {
-                var aDate = moment(a.bDate);
-                var bDate = moment(b.bDate);
+                const aDate = moment(a.bDate);
+                const bDate = moment(b.bDate);
                 if (aDate > bDate) {
                     return -1;
                 } else if (aDate < bDate) {
@@ -26,8 +27,9 @@ const missions = async () => {
                 return 0;
             });
     } catch (e) {
-        console.error(e);
+        // REVIEW
     }
+    /* eslint-enable */
 }
 
 const domaines = async () => {
@@ -35,7 +37,7 @@ const domaines = async () => {
         const domaines = await api.domaines()
         return domaines.map((d, i) => DataMapper.fromWPDataToDomaine(d, i));
     } catch (e) {
-        console.error(e);
+        // REVIEW
     }
 }
 

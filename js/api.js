@@ -8,6 +8,8 @@ wp.missions = wp.registerRoute('wp/v2', '/mission/(?P<id>)');
 wp.domaines = wp.registerRoute('myroutes', '/domaines_menu');
 wp.clients = wp.registerRoute('wp/v2', '/client/(?P<id>)');
 
-export const missions = () => wp.missions().perPage(100);
+
+const maxPerPage = 100;
+export const missions = () => wp.missions().perPage(maxPerPage);
 export const domaines = () => wp.domaines();
 export const clients = () => wp.clients();

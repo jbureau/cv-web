@@ -1,0 +1,74 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "constructor-super": "warn",
+        "keyword-spacing": "warn",
+        "max-len": [
+            1,
+            100,
+            4
+        ],
+        "no-debugger": "error",
+        "no-extra-semi": "error",
+        "no-this-before-super": "warn",
+        "no-magic-numbers": [
+            "error",
+            {
+                "ignoreArrayIndexes": true,
+                "ignore": [
+                    -1,
+                    0
+                ]
+            }
+        ],
+        "no-var": "error",
+        "no-warning-comments": "error",
+        "no-undef": "error",
+        "no-undefined": "error",
+        "no-unreachable": "warn",
+        "no-unused-expressions": "warn",
+        "no-unused-vars": "error",
+        "no-useless-constructor": "error",
+        "prefer-const": [
+            "error",
+            {
+                "destructuring": "all",
+                "ignoreReadBeforeAssign": true
+            }
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "off",
+            "always"
+        ],
+        "space-before-function-paren": [
+            "warn",
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "ignore"
+            }
+        ],
+        "spaced-comment": [
+            "error",
+            "always"
+        ],
+        "valid-jsdoc": "warn",
+        "valid-typeof": "warn",
+        "vars-on-top": "error"
+    },
+    "extends": [
+        "eslint:recommended"
+    ]
+}

@@ -11,7 +11,7 @@ import { displayDomaine, displayMission, display } from './display';
 
 $(document).ready(() => {
 
-    $("body").append(display(USER_NAME, USER_DESC, EXPERIENCES_TITLE));
+    $('body').append(display(USER_NAME, USER_DESC, EXPERIENCES_TITLE));
 
     $.fn.mission = mission;
     $.fn.domaine = domaine;
@@ -24,15 +24,17 @@ $(document).ready(() => {
         DataService.missions().then(missions => {
 
             missions.forEach(m => {
-                $("#experiences .content").append(displayMission(m, clients.filter(c => c.id === m.client)[0]));
+                $('#experiences .content').append(
+                    displayMission(m, clients.filter(c => c.id === m.client)[0]));
             });
             $('.mission').mission();
 
             DataService.domaines().then(domaines => {
-                domaines.forEach(d => $("#experiences .sorting").append(displayDomaine(d)));
-                $('#experiences .sorting').show(500);
-                $('#experiences .content').show(500);
-                $('#experiences .spinner').hide(500);
+                domaines.forEach(d => $('#experiences .sorting').append(displayDomaine(d)));
+                const toggleTime = 500;
+                $('#experiences .sorting').show(toggleTime);
+                $('#experiences .content').show(toggleTime);
+                $('#experiences .spinner').hide(toggleTime);
                 $('.domaine').domaine();
             })
         })

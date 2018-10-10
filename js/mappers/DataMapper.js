@@ -14,7 +14,7 @@ export class DataMapper {
             .withBilan(obj.acf.bilan)
             .withDomaines(obj.acf.domaines ? obj.acf.domaines.map(d => d.name) : [])
             .withTypes(obj.acf.type ? obj.acf.type.map(t => t.name) : [])
-            .withDates(obj.acf.date_debut, obj.acf.date_fin !== "" ? obj.acf.date_fin : "en cours")
+            .withDates(obj.acf.date_debut, obj.acf.date_fin !== '' ? obj.acf.date_fin : 'en cours')
             .withClient(obj.acf.client.length > 0 ? obj.acf.client[0].ID : null);
     }
 
