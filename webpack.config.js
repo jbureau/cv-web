@@ -2,11 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
+const glob = require('glob');
 
 module.exports = {
     mode: 'none',
     entry: {
-        app: './js/script.js'
+        app: './app/script.js',
+        style: glob.sync('./assets/less/**/*.less')
     },
     devtool: 'inline-source-map',
     plugins: [
