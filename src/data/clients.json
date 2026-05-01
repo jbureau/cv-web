@@ -1,8 +1,227 @@
 [
-  { "id": 160, "name": "Schneider Electric",      "logo": "schneider-electric.gif" },
-  { "id": 168, "name": "LHOTELLIER-MONTRICHARD",  "logo": null },
-  { "id": 169, "name": "ITALCEMENTI GROUP",        "logo": null },
-  { "id": 183, "name": "TOTAL SA",                 "logo": null },
-  { "id": 186, "name": "PECHINEY ALUMINIUM METAL", "logo": null },
-  { "id": 188, "name": "PILOTE SA",                "logo": null }
+  {
+    "id": 450,
+    "name": "AIRBUS",
+    "logo": null
+  },
+  {
+    "id": 212,
+    "name": "AIRBUS SAFRAN LAUNCHERS (ASL)",
+    "logo": null
+  },
+  {
+    "id": 197,
+    "name": "AJINOMOTO FOODS EUROP",
+    "logo": null
+  },
+  {
+    "id": 209,
+    "name": "ALBEA Group",
+    "logo": null
+  },
+  {
+    "id": 203,
+    "name": "ARCELORMITTAL",
+    "logo": null
+  },
+  {
+    "id": 191,
+    "name": "ARMOR SA",
+    "logo": null
+  },
+  {
+    "id": 190,
+    "name": "AUTO CHASSIS INTERNATIONAL",
+    "logo": null
+  },
+  {
+    "id": 193,
+    "name": "AÉROPORTS DE PARIS",
+    "logo": null
+  },
+  {
+    "id": 343,
+    "name": "Aérospatiale",
+    "logo": null
+  },
+  {
+    "id": 213,
+    "name": "COUGNAUD Constructions",
+    "logo": null
+  },
+  {
+    "id": 218,
+    "name": "DAHER LHOTELLIER",
+    "logo": null
+  },
+  {
+    "id": 210,
+    "name": "ETAM Lingerie",
+    "logo": null
+  },
+  {
+    "id": 192,
+    "name": "FENWICK-LINDE",
+    "logo": null
+  },
+  {
+    "id": 196,
+    "name": "GAZ DE FRANCE",
+    "logo": null
+  },
+  {
+    "id": 393,
+    "name": "Groupe LACTALIS",
+    "logo": null
+  },
+  {
+    "id": 416,
+    "name": "Groupe SODIAAL",
+    "logo": null
+  },
+  {
+    "id": 169,
+    "name": "ITALCEMENTI Group",
+    "logo": null
+  },
+  {
+    "id": 200,
+    "name": "LACROIX ELECTRONIQUE",
+    "logo": null
+  },
+  {
+    "id": 168,
+    "name": "LHOTELLIER-MONTRICHARD",
+    "logo": null
+  },
+  {
+    "id": 445,
+    "name": "LVMH Group",
+    "logo": null
+  },
+  {
+    "id": 208,
+    "name": "MAISON RICHARD",
+    "logo": null
+  },
+  {
+    "id": 194,
+    "name": "NTN TRANSMISSIONS EUROPE",
+    "logo": null
+  },
+  {
+    "id": 415,
+    "name": "NUTRI'Babig (Filiale du Groupe SODIAAL)",
+    "logo": null
+  },
+  {
+    "id": 340,
+    "name": "ONERA",
+    "logo": null
+  },
+  {
+    "id": 186,
+    "name": "PECHINEY ALUMINIUM METAL",
+    "logo": null
+  },
+  {
+    "id": 451,
+    "name": "PIERRE FABRE SA",
+    "logo": null
+  },
+  {
+    "id": 188,
+    "name": "PILOTE SA",
+    "logo": null
+  },
+  {
+    "id": 205,
+    "name": "POSTE IMMO",
+    "logo": null
+  },
+  {
+    "id": 198,
+    "name": "PSA Peugeot Citroën",
+    "logo": null
+  },
+  {
+    "id": 453,
+    "name": "SABENA Technics",
+    "logo": null
+  },
+  {
+    "id": 211,
+    "name": "SAFRAN / HISPANO-SUIZA",
+    "logo": null
+  },
+  {
+    "id": 199,
+    "name": "SAFRAN / SAGEM DS",
+    "logo": null
+  },
+  {
+    "id": 452,
+    "name": "SAFRAN ELECTRICAL & POWER",
+    "logo": null
+  },
+  {
+    "id": 202,
+    "name": "SAINT GOBAIN",
+    "logo": null
+  },
+  {
+    "id": 160,
+    "name": "SCHNEIDER ELECTRIC",
+    "logo": "schneider-electric.gif"
+  },
+  {
+    "id": 201,
+    "name": "SERAP Industries",
+    "logo": null
+  },
+  {
+    "id": 395,
+    "name": "SOLYSTIC",
+    "logo": null
+  },
+  {
+    "id": 204,
+    "name": "SPERIAN PROTECTION",
+    "logo": null
+  },
+  {
+    "id": 252,
+    "name": "SYNUTRA FRANCE",
+    "logo": null
+  },
+  {
+    "id": 207,
+    "name": "THALES MICROELECTRONICS",
+    "logo": null
+  },
+  {
+    "id": 394,
+    "name": "THALES SIX GTS France",
+    "logo": null
+  },
+  {
+    "id": 195,
+    "name": "THOMSON MULTIMEDIA",
+    "logo": null
+  },
+  {
+    "id": 183,
+    "name": "TOTAL SA",
+    "logo": null
+  },
+  {
+    "id": 444,
+    "name": "URGO Group",
+    "logo": null
+  },
+  {
+    "id": 206,
+    "name": "Univers NOZ",
+    "logo": null
+  }
 ]

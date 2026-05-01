@@ -9,12 +9,25 @@ const props = defineProps({
 
 const open = ref(false)
 
+const hasLogo = computed(() => !!props.client?.logo)
+
 const logoStyle = computed(() => {
-  if (props.client?.logo) {
+  if (hasLogo.value) {
     return { backgroundImage: `url('/assets/images/${props.client.logo}')` }
   }
-  return { opacity: '0.3' }
+  return {}
 })
+
+const initials = computed(() => {
+  const name = props.client?.name || '?'
+  return name
+    .split(/[\s\-\/]+/)
+    .filter(w => w.length > 0 && !/^(SA|SAS|SNC|GROUP|GROUPE|FRANCE|EUROPE)$/i.test(w))
+    .slice(0, 2)
+    .map(w => w[0].toUpperCase())
+    .join('')
+})
+
 
 const missionDomaines = computed(() =>
   props.domaines.filter(d => props.mission.domaines.includes(d.name))
@@ -49,7 +62,8 @@ function formatEndDate(dateStr) {
     <div class="round"></div>
     <div class="desc" @click="open = !open">
       <div class="top">
-        <div class="logo" :style="logoStyle"></div>
+        <div v-if="hasLogo" class="logo" :style="logoStyle"></div>
+        <div v-else class="logo logo-initials">{{ initials }}</div>
         <div class="title">
           <h2 class="type_mission">{{ mission.title }}</h2>
           <div class="subtitle">
@@ -93,6 +107,19 @@ function formatEndDate(dateStr) {
 </template>
 
 <style scoped>
+.logo-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: none !important;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
 .slide-enter-active {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }

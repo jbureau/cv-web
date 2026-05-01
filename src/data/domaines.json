@@ -1,7 +1,37 @@
 [
-  { "id": 9,  "name": "CA-DMS", "color": "#d6e87c" },
-  { "id": 10, "name": "CS",     "color": "#7b8692" },
-  { "id": 20, "name": "LO-WTY","color": "#e5f1ad" },
-  { "id": 7,  "name": "PM",    "color": "#6e97be" },
-  { "id": 8,  "name": "QM",    "color": "#c9d8e7" }
+  {
+    "id": 9,
+    "name": "CA-DMS",
+    "color": "#d6e87c"
+  },
+  {
+    "id": 10,
+    "name": "CS",
+    "color": "#7b8692"
+  },
+  {
+    "id": 20,
+    "name": "LO-WTY",
+    "color": "#e5f1ad"
+  },
+  {
+    "id": 7,
+    "name": "PM",
+    "color": "#6e97be"
+  },
+  {
+    "id": 25,
+    "name": "PS",
+    "color": "#f0c080"
+  },
+  {
+    "id": 8,
+    "name": "QM",
+    "color": "#c9d8e7"
+  },
+  {
+    "id": 28,
+    "name": "Débuts",
+    "color": "#b8b8b8"
+  }
 ]

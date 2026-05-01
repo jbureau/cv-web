@@ -1,39 +1,661 @@
 [
   {
-    "id": 161,
-    "title": "Schneider Electric Juin 2016",
-    "contexte": "",
-    "mission": "<p>Localisation de la solution Bridge, formation des Key users, assistance aux reprises de données sur le site de Limoges (87).</p>",
-    "solution": "",
-    "bilan": "",
-    "domaines": ["CS", "PM", "QM"],
-    "types": ["Déploiement"],
+    "id": 457,
+    "title": "SABENA Technics (Projet ISIS)",
+    "contexte": "SABENA Technics est une société du Groupe TAT, spécialisée dans la Maintenance aéronautique des avions du secteur public ou militaire. SABENA Technics fait appel à l’intégrateur APPLIUM pour mener son projet <em>Brownfield</em> de migration ECC vers S/4 Hana. En parallèle de cette migration, le projet est élargi en incluant des lots fonctionnels pour faire évoluer la solution d’origine.",
+    "mission": "Ma mission au sein de l’équipe APPLIUM, est d’animer chez le client, l’un des lots fonctionnels relatif à la Gestion des Outillages. L’objectif est de remplacer le système de gestion des magasins outillages par une solution SAP, et de l’intégrer dans la solution migrée.",
+    "solution": "Toute la gestion des magasins Outillages reçoit une solution basée sur SAP/PM, en version S/4 Hana, avec frontend FIORI. Gestion du parc, Correctif, Préventif, Servitudes et Transferts magasins, location d’outillages d’un fournisseur, ou vers un client.",
+    "bilan": "Sur ce projet mené en méthode SAP Activate, je n’ai assuré que les phases d’exploration et de réalisation. Pour ma part, ce fut mon premier projet avec cette méthodologie, et avec des outils dédiés, notamment Clickup pour le suivi et la documentation. Pour la solution, finalement j’ai fait du <em>Greenfield</em> dans du <em>Brownfield</em>, car il a fallu concevoir de nouveaux flux et implémenter de nouvelles fonctionnalités … pas toujours facile en méthode Agile ! Sinon, la particularité au niveau métier, ce sont les dispositions anti-FOD (Foreign Object Damage) qui ont dicté bon nombre de points de besoin (User stories). La chasse aux corps étrangers ou aux outillages perdus, a ainsi modelé certains aspects de la solution SAP/PM.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2023-05-01",
+    "eDate": "2023-09-01",
+    "clientId": 453
+  },
+  {
+    "id": 456,
+    "title": "SAFRAN ELECTRICAL & POWER (Projet NPG)",
+    "contexte": "Les systèmes d’information SAFRAN sont dans un cycle de Maintenance évolutive perpétuel. Chez SAFRAN E&amp;P (SEP), le projet NPG (New Power Generation) suscite quelques évolutions à effectuer sur le SI.",
+    "mission": "Assistance et conseil sur quelques évolutions demandées dans la gestion de la Qualité, sur les sites Américains, Mexicains et Français de SEP. Je rapporte au Leader QM basé au Mexique.",
+    "solution": "Plusieurs sujets, comme le FAIR Process (First Article Inspection Required) initiant les sites aux <em>Fiches Info Qualité</em> (QM-PT-RP-PRC), la <em>détermination automatique des interventions</em> d’avis (QM-QN-NM), implémentation de la <em>dynamisation</em> dans les contrôles, etc … Système SAP en version ECC7.",
+    "bilan": "Après cette mission exclusivement à distance, maintenant c’est sûr : le télétravail, ce n’est pas pour moi !",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Expertise"
+    ],
+    "bDate": "2023-01-01",
+    "eDate": "2023-05-01",
+    "clientId": 452
+  },
+  {
+    "id": 455,
+    "title": "PIERRE FABRE SA (Projet HARMONIE Lot3)",
+    "contexte": "PIERRE FABRE SA lance en 2018 un gros projet HARMONIE de transformation de son SI, ayant pour squelette la migration de toutes ses solutions SAP de ECC7 vers S/4. La MOE est assurée par l’intégrateur ACCENTURE pour la construction de la solution cible. Les déploiements sur les sites sont assurés en interne. J’arrive sur la fin du dernier lot du projet (Lot3), en renfort dans les équipes internes PIERRE FABRE en charge de la Migration.",
+    "mission": "Déployer la solution S/4 de SAP/QM sur les sites de Production Dermo-cosmétique Castres(81) et Avène(34).",
+    "solution": "La solution est construite par ACCENTURE, sur la base de SAP/QM implémenté presque en totalité (Planification, quasi-totalité des données de base, contrôle en EM, Production, non-conformité, …), avec la plupart des flux de contrôle en gestion d’échantillons physiques (QM-IM-SM) et intégration avec EWM pour les transferts. Je n’interviens pas sur la construction de la solution, ni son paramétrage. J’ai un rôle exclusivement de migration et de traitement de données.",
+    "bilan": "Laisser l’intégrateur concevoir la solution et ne pas toucher au paramétrage, n’est pas vraiment mon souhait et mes habitudes. Mais chez PIERRE FABRE, j’ai trouvé ma motivation dans ce gigantesque volume de données qu’il a fallu migrer, à l’issue de plusieurs phases de test. Et autour de moi, une équipe Qualité interne PIERRE FABRE à qui je n’ai presque rien appris de SAP/QM, tellement elle était rôdée au module depuis de nombreuses années. Coup de cœur pour cette mission, qui pourtant au départ ne m’attirait qu’à moitié !",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Déploiement",
+      "Migration"
+    ],
+    "bDate": "2022-05-01",
+    "eDate": "2022-12-01",
+    "clientId": 451
+  },
+  {
+    "id": 454,
+    "title": "AIRBUS (Projet E2E)",
+    "contexte": "Il s’agit du projet E2E mené par SOPRASTERIA chez AIRBUS, pour la mise en place d’une solution pour la gestion des Plans de surveillance.",
+    "mission": "Assistance et conseil à l’équipe SOPRASTERIA en tant que Consultant SAP Qualité QM. Formation Overview SAP QM pour l’équipe AIRBUS Toulouse.",
+    "solution": "Il s’agissait d’une solution full spécifique pour la gestion des plans de surveillance.",
+    "bilan": "Sur cette mission, je suis resté en soutien chez l’intégrateur. Au travers des exigences AIRBUS, la solution ne pouvait pas être autre chose que du « sur mesure ». Donc dans ce contexte, le discours du fonctionnel que je suis, prônant le standard SAP avec les solutions <em>Control Plan</em> ou <em>FMEA</em>, avait bien peu de poids.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Expertise",
+      "Formation"
+    ],
+    "bDate": "2022-02-01",
+    "eDate": "2022-05-01",
+    "clientId": 450
+  },
+  {
+    "id": 446,
+    "title": "LVMH \"Parfums & Cosmétiques\"",
+    "contexte": "<strong>LVMH</strong> est un grand groupe de l’industrie du Luxe. Il couvre 6 secteurs d’activités assurés par 75 maisons. Dans ce contexte sanitaire, le groupe bénéficie d’une frénésie de consommation de la part de la population mondiale, et l’amène à afficher un résultat économique supérieur aux attentes.",
+    "mission": "Mon client est le Département informatique du secteur « Parfums et Cosmétiques » (PCIS : Perfumes &amp; Cosmetics Information Systems). Ma mission est de tenir un poste de responsable du domaine Qualité SAP/QM au sein du Bench P2P (Procure To Produce) de PCIS. Il s’agit d’une TMA de niveau 2 et 3 avec projets d’amélioration.",
+    "solution": "Maintenance applicative du domaine QM, sur système SAP actuel ECC6 EHP7.",
+    "bilan": "A part les aspects purement maintenance du système QM, je retiens en particulier une étude effectuée sur la gestion des échantillons physiques. Pour rassurer le client demandeur sur cette nouvelle fonctionnalité, nous avons fait de cette étude, une Conception générale afin de poser les premiers principes de la future solution, en terme d’échantillons et de conséquence sur la gestion des laboratoires (problématiques LIMS / LES).",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "TMA"
+    ],
+    "bDate": "2021-07-01",
+    "eDate": "2022-02-04",
+    "clientId": 445
+  },
+  {
+    "id": 443,
+    "title": "URGO Group (Projet LEGO)",
+    "contexte": "<strong>URGO</strong> est un groupe pharmaceutique international ayant pour mission la cicatrisation des plaies et la santé responsable. Il est composé de 3 sociétés : URGO, JUVA SANTE et SUPERDIET. Il lance en 2019 un projet d’envergure de transformation digitale, pour harmoniser et simplifier les processus et les outils (Programme LEGO). Cette démarche s’accompagne d’un projet de refonte du système d’information du groupe, mettant en œuvre l’ERP SAP en version S/4 HANA.",
+    "mission": "AUGUSTA REEVES, le prestataire en charge de la Maitrise d’œuvre SAP, fait appel à mes services pour renforcer l’équipe Qualité pour la Conception détaillée, et assurer des ateliers de travail à distance en méthode AGILE, pour l’implémentation du domaine QM.",
+    "solution": "En conception détaillée, le métier URGO a sollicité presque toutes les fonctionnalités SAP/QM (Homologation des fournisseurs, Contrôles Qualité en réception, production discrète et répétitive, traitement des non-conformités, double-check des résultats d’analyse, Etudes de stabilité, …).",
+    "bilan": "Ma mission s’est arrêté brutalement suite à un report de plusieurs mois de la Conception Détaillée. Le client a eu besoin de marquer un temps d’arrêt pour se recentrer sur ses objectifs et se faire aider dans l’expression de ses besoins. Mon bilan personnel est donc limité. Contexte sanitaire oblige, je retiens les difficultés d’animer à distance des ateliers de Conception détaillée. Ces réunions généralement très participatives, perdent de leur efficacité lorsqu’une Webcam s’interpose entre les participants.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2021-04-01",
+    "eDate": "2022-07-01",
+    "clientId": 444
+  },
+  {
+    "id": 417,
+    "title": "NUTRI'Babig (ex-SYNUTRA, Filiale du Groupe SODIAAL)",
+    "contexte": "Le 12 Mars 2019, la coopérative laitière SODIAAL rachète à SYNUTRA la partie « séchage de lait » de son usine de Carhaix (29). Rien ne change sur l’outil de Production, si ce n’est que le Process est désormais partagé par deux entreprises : l’une, la nouvelle filiale NUTRI’Babig du groupe SODIAAL, sèche le lait et le revend à l’autre, SYNUTRA, qui traite la poudre de lait (mélange à sec) et effectue les remplissages de contenants. La DSI passe entièrement côté NUTRI’Babig, et gère les systèmes d’informations des deux sociétés.",
+    "mission": "Comme du temps de chez SYNUTRA, la DSI de NUTRI’Babig me confie la gestion des systèmes d’information de la Qualité et de la Maintenance, en termes de TMA et de projets d’évolution.",
+    "solution": "Evolution de la solution SAP/QM et SAP/PM pour coller aux objectifs du groupe SODIAAL. Mise en place d’un nouveau flux QM-IM pour le contrôle réception des ingrédients. Nouveaux flux de contrôles Qualité et de Maintenance, à mettre en place pour une nouvelle organisation interne.",
+    "bilan": "On retrouve les mêmes qu’en 2018 du temps de SYNUTRA, et on continue dans un contexte différent : nouvelle Direction, nouvelles idées, et un nouveau client : notre ancienne entité SYNUTRA. Tout cela agrémenté de nouveautés venant du groupe repreneur : un nouvel outil de réception des matières liquides qu’il faut désormais interfacer au système NUTRI’Babig, et le déploiement de la solution SAP sur une nouvelle entité de Production.",
+    "domaines": [
+      "PM",
+      "QM"
+    ],
+    "types": [
+      "Expertise",
+      "Formation",
+      "Implémentation"
+    ],
+    "bDate": "2019-05-01",
+    "eDate": "2021-02-01",
+    "clientId": 415
+  },
+  {
+    "id": 419,
+    "title": "Groupe SODIAAL (Projet INFOQUAL)",
+    "contexte": "<strong>SODIAAL</strong> (<strong>SO</strong>ciété de <strong>D</strong>iffusion <strong>I</strong>nternationale <strong>A</strong>gro-<strong>AL</strong>imentaire) est un groupe spécialisé dans la transformation de produits laitiers. Il est composé d’entreprises regroupant notamment les marques Yoplait, Candia, Entremont, Monts &amp; Terroirs, Nutribio, Eurosérum, Régilait, etc … Le groupe est déjà sous SAP au travers de plusieurs systèmes indépendants, diversité de marques et filiales oblige. Le 12 Mars 2019, il rachète la partie « séchage de lait » de l’usine SYNUTRA à Carhaix (29) et créé sa filiale NUTRI’Babig.",
+    "mission": "Déjà en place chez NUTRI’Babig, je prends presque naturellement un rôle de maitrise d’œuvre dans le déploiement de la solution INFOQUAL, dans le cadre d’un projet du même nom, sur le site EUROSERUM de Port-sur-Saône (70). La mission consiste à localiser la solution sur le site Franc-Comtois, et à la compléter des fonctionnalités inhérentes au métier Qualité de la Business Unit EUROSERUM.",
+    "solution": "La solution INFOQUAL a été mise en place sur la filiale NUTRIBIO en 2017. Elle est composée de fonctionnalités SAP/QM pour la gestion de la Qualité, interfacées avec un outil LIMS Abbott/STARLIMS pour les analyses en Laboratoire. QM-IM pour les Contrôles Qualité en post-production, QM-IM-SM pour la gestion des échantillons physiques interfacée avec STARLIMS, QM-QC pour la gestion des Non-Conformités, QM-IT (PM-EQT et PM-PRM) pour les contrôles calendaires de type HACCP ou environnementaux.",
+    "bilan": "A notre arrivée, le rôle attribué généralement à la Qualité, était assuré par le Laboratoire. Ce dernier, en plus de produire les résultats d’analyse, libérait les produits dans la foulée, puisqu’il était lui-même rattaché à la Qualité. Pour coller à la solution, il a fallu revenir aux fondamentaux, à savoir qu’un Service Qualité est, en tant que garant de la Qualité des produits, le client du Laboratoire, et le Laboratoire, le fournisseur de la Qualité pour les résultats d’analyses. Les rôles ont dû être redistribués, tout en maintenant le contrôle Qualité et le Laboratoire, sous une même Direction Qualité.\r\n\r\nSinon côté système, ce qui m’a plu et passionné, c’est d’avoir conçu une solution originale pour respecter un principe essentiel dans la méthode HACCP (Hazard Analysis Critical Control Point) : Un Produit doit être considéré comme « bon », lorsque sa Qualité intrinsèque est « bonne », mais aussi lorsque son environnement est « bon ». L’originalité de notre solution vient du fait d’associer sur SAP QM et PM, le contrôle du produit, avec le contrôle des environnements qu’il traverse durant son élaboration, ainsi que le contrôle des environnements que ses composants traversent.",
+    "domaines": [
+      "PM",
+      "QM"
+    ],
+    "types": [
+      "Conseil métier",
+      "Déploiement",
+      "Implémentation",
+      "Ré-engineering"
+    ],
+    "bDate": "2019-05-01",
+    "eDate": "2020-04-01",
+    "clientId": 416
+  },
+  {
+    "id": 399,
+    "title": "THALES SIX GTS France",
+    "contexte": "Ancien nom : THALES Communication &amp; Sécurité. Société du groupe Thalès spécialisée dans les systèmes de communication sécurisés, destinés aux applications militaires, à la sécurité et aux transports terrestres.",
+    "mission": "Il s’agissait d’une mission AMOA, pour assister les gestionnaires du service réparation du site de Cholet, dans le traitement de leurs dossiers clients (réclamations, échanges standard, réparations, gestion de stock de rechange, sous-traitance, etc …), et dans un contexte post-bascule longue durée (Golive de la solution un an auparavant).",
+    "solution": "Parc technique des numéros de série fabriqués et livrés CS-BD. Gammes de Maintenance CS-AG. Exécution des ordres de service CS-SE. Avis de service CS-SN. Intégration importante SD et MM (Commandes de réparation, commandes de retour, commande de sous-traitance, facturation, etc …).",
+    "bilan": "De l’AMOA pure … immersion totale dans l’équipe des gestionnaires de flux. Revers de la médaille : système SAP hyper protégé (Secteur Défense oblige). Donc sur le site, pas d’autorisation pour voir le paramétrage de la solution, ou consulter des tables SAP. Donc la résolution de problème était d’autant plus difficile (voir impossible) et frustrante. Le Consultant SAP que je suis, n’y a pas trouvé son compte.",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Conseil métier",
+      "Formation"
+    ],
+    "bDate": "2018-07-01",
+    "eDate": "2018-09-30",
+    "clientId": 394
+  },
+  {
+    "id": 396,
+    "title": "Groupe LACTALIS (Projets MERCURE et LIS)",
+    "contexte": "LACTALIS est une entreprise française spécialisée dans la transformation laitière, et répartie à ce jour sur 240 sites mondiaux. Tout comme le lait, le système d’information du Groupe subit également des transformations importantes.",
+    "mission": "Le Centre de compétences SAP de la DSI à Laval, souhaite aider le Département Qualité du site de Craon, à appréhender la nouvelle solution SAP (Projet MERCURE). Il me confie cette assistance. Ma mission est élargie en Janvier 2019, dans le cadre de la Conception générale du futur SI Groupe (Projet LIS), en tant que Consultant AMOA sur SAP/QM.",
+    "solution": "Les applications internes Lactalis sont nombreuses, et la solution SAP doit s’interfacer. De fait, la saisie du contrôle Qualité pur est réduit, et est consacré à un outil périphérique. Donc QM-IM mineur, à l’opposé de QM-PT qui reste prépondérant : Gammes de contrôle, spécifications multiples, avec intégration MM, WM et HUM. Flux de contrôle en Post-production, avec une gestion des Non-Conformité sous QM-QN (Avis Qualité). Gestion par lot, traçabilité.",
+    "bilan": "Même si je fus un peu en dehors de mon périmètre fonctionnel, cette mission m’a permis de travailler plus en amont avec des concepteurs et analystes hors SAP : beaucoup de problématiques d’interfaçage avec les outils externes (Fichiers XML, TIBCO, Web services, etc …). Côté AMOA locale sur le site de Craon, le temps qu’un outil de gestion normatif des denrées alimentaires soit interfacé avec les gammes de contrôle, il a fallu mettre en place une mécanique Excel pour les agents méthodes Qualité, et faciliter leur travail de conception des spécifications multiples. Oui … du temps passé sur Excel, mais au profit d’une transaction CWBQM désormais plus digeste pour créer et traiter des spécifications multiples",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Conseil métier",
+      "Expertise"
+    ],
+    "bDate": "2018-05-01",
+    "eDate": "2019-03-29",
+    "clientId": 393
+  },
+  {
+    "id": 397,
+    "title": "SOLYSTIC",
+    "contexte": "SOLYSTIC est concepteur et fabricant de solution pour le traitement des courriers et des colis. Il est l’un des leaders mondiaux de cette activité. Le site de Valence, lieu de ma prestation, produit des machines de tri postal.",
+    "mission": "Ma mission fut d’abord une mission de cadrage, ayant pour objectif de démontrer via un POC (Proof Of Concept), la faisabilité d’un projet de refonte de la solution QM existante, tout en prenant en compte le remplacement d’outils obsolètes (Deux outils de gestion des PV de contrôle). Ensuite, après validation du POC par le client, mon rôle a été de concevoir et de conseiller le client sur le paramétrage à effectuer sur la solution QM, ainsi que les développements à prévoir.",
+    "solution": "Dans un contexte FI, CO, MM, WM, PP et SD, la solution s’est basée sur une refonte de QM-PT (Données de base) et QM-IM (flux de contrôle Qualité), sur les processus de contrôle réception, contrôle en production, et contrôle des produits sous-traités. Une bonne part des travaux ont été consacrés à la gestion des avis QM-QN, pour assurer la traçabilité des non-conformités éventuelles, dans un contexte de numéros de série (Domaine électronique prépondérant).",
+    "bilan": "Le cadrage, avec un POC comme livrable, est bien une démarche efficace. Le client peut avoir une idée représentative de ce que sera sa future solution. De plus, la phase conceptuelle a été d’autant plus rapide, puisque le cadrage avait déjà posé les briques principales du paramétrage, des développements, ainsi que de la conduite du changement à appréhender.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Cadrage",
+      "Expertise",
+      "Implémentation"
+    ],
+    "bDate": "2018-01-01",
+    "eDate": "2018-03-01",
+    "clientId": 395
+  },
+  {
+    "id": 253,
+    "title": "SYNUTRA France (Projet LOTUS BLEU phase 2)",
+    "contexte": "SYNUTRA est groupe alimentaire d’origine Chinoise créé en 1998, spécialisé dans la production de lait infantile. Mais l’usine française à Carhaix est toute neuve : construction en 2014 et 2015, et premières productions en Avril 2016. Le système SAP de base a été implémenté en même temps que les murs de l’entreprise, sur la base d’un pré-paramétré (Solution CADEXPRESS de l’ESN CADEXPERT). De fait, beaucoup d’hypothèses ont été émises pour monter la solution, puisque tous les processus étaient à écrire avant même de produire.",
+    "mission": "La DSI du site confie à HYPE Consulting un projet de stabilisation de la solution SAP, accompagné de nouvelles sessions de formation utilisateurs, d’évolutions SAP pour appréhender les Processus qui évoluent depuis leur mise en place, de conduite du changement, de réécriture de documents, puis de business consulting. HYPE me confie la Gestion de la Qualité, tant sur le plan SAP/QM que sur l’aspect métier Qualité.",
+    "solution": "Evolution de la solution SAP/QM pour le Contrôle Production avec interfaçage QM-IDI (Résultats d’analyse provenant d’un LIMS) et mise en place des Certificats d’analyses via QM-QC - Requalification des lots produits via une nouvelle gestion QM-IM intégrée à la planification PP-PI (MRP) et avec impact sur les commandes/livraisons SD - Implémentation des avis qualité QM-QN pour les réclamations Client et les Non-Conformités en Production",
+    "bilan": "C’est la 1<sup>ère</sup> fois que j’exerce mon métier de Consultant dans une usine aussi jeune ! Quand j’arrive en Février 2017, les plus anciens participants à mes réunions de travail n’ont même pas 2 ans d’ancienneté ! Surprenant, mais passionnant : tout est à ajuster, corriger ou à reconstruire, car les flux se dessinent au fur et à mesure qu’ils sont exécutés. La règlementation impose, les agréments s’acquièrent, l’objectif de productivité grandit, les méthodes s’adaptent, et la nourriture infantile est une corde tellement sensible au niveau mondial, que bien souvent de nouvelles directives tombent du jour au lendemain ! Nos solutions SAP doivent suivre …",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Conseil métier",
+      "Formation",
+      "Implémentation",
+      "Ré-engineering",
+      "TMA"
+    ],
+    "bDate": "2017-02-01",
+    "eDate": "2018-12-01",
+    "clientId": 252
+  },
+  {
+    "id": 250,
+    "title": "COUGNAUD Constructions",
+    "contexte": "COUGNAUD construit des produits d’habitation modulaire (locaux de chantier, bureaux, extensions d’habitation, et même habitat à étage). L’intégrateur MANESSENS fait appel à mes services pour aider le chef de projet DSI à construire une solution de Maintenance industrielle sur SAP/PM.",
+    "mission": "Assistance MOE à la DSI et expertise ponctuelle pour la mise en place de la Maintenance industrielle.",
+    "solution": "Solution standard SAP/PM pour la Maintenance curative et préventive (calendaire et à compteur). Parc machine PM-EQT, Ordre de travail PM-WOC et avis de Maintenance PM-WOC-MN, problématique de sous-traitance sous contrat annuel.",
+    "bilan": "Prestation plaisante puisque mon seul livrable contractuel se résume au conseil verbal que j’ai dû donner. Moi qui laisse toujours une trace écrite de mon passage en clientèle, l’absence de livrable documentaire ou système m’a laissé un goût d’inachevé, malgré la satisfaction du client.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Expertise",
+      "Implémentation"
+    ],
+    "bDate": "2016-11-01",
+    "eDate": "2017-03-01",
+    "clientId": 213
+  },
+  {
+    "id": 249,
+    "title": "SCHNEIDER ELECTRIC (Projet BRIDGE P34)",
+    "contexte": "Après un long et complexe projet de construction d’un core model, SCHNEIDER ELECTRIC déploie depuis 2008/2009 la solution « BRIDGE » en France. Le Département IPO basé à Grenoble, en charge de ces déploiements, me sollicite pour la partie Maintenance industrielle.",
+    "mission": "Ma mission consistait à déployer la solution SAP/PM du Core Model BRIDGE, sur le site identifié pour le sous-projet P34 : Limoges (87). Activités : localisation de la solution Bridge, formation des Key users, assistance aux reprises de données et Business transformation sur les 3 sites. Déploiement devant être mené en conformité avec les directives métier SPS (Système de Production Schneider), et dans le respect de l’outil avec la Core Team de Rueil-Malmaison (siège).",
+    "solution": "Parc technique PM-EQT, gestion des Ordres de travail PM-WOC, gestion des gammes de maintenance et des plans de maintenance PM-PRM, pour un préventif calendaire et un préventif à compteur (comptage des heures et des pièces fabriquées sur les OF). Indicateurs PMIS et spécifiques.",
+    "bilan": "Toujours cette même frustration de ne pas pouvoir faire évoluer la solution, qui plus est sur des sujets déjà identifiés lors du projet P7.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Déploiement"
+    ],
     "bDate": "2016-06-01",
-    "eDate": "en cours",
+    "eDate": "2016-11-01",
     "clientId": 160
   },
   {
+    "id": 247,
+    "title": "ASL - AIRBUS SAFRAN LAUNCHERS (Projet HERO)",
+    "contexte": "A mon arrivée, le client s’appelait HERAKLES, filiale du groupe SAFRAN. A mon départ, il s’appelait ASL, filiale partagée entre les deux groupes SAFRAN et AIRBUS. Le projet HERO qui m’a fait venir a donc traversé la <em>Joint-Venture</em>, ce qui reste une traversée périlleuse pour un ERP en cours de bascule. Je fus appelé en cours de projet pour implémenter la Qualité sur SAP.",
+    "mission": "Mise en place de plusieurs solutions QM dans le cadre du projet global HERO (FI, CO, PS, MM, WM, SD, PP-PI, PM) pour le contrôle Qualité en réception et en production, contrôle répétitif des lots matière, Dérogations, DVI, traitement des anomalies, cartes de contrôle. Système SAP ECC6 DIMP EHP6.",
+    "solution": "La solution a été recomposée sur la solution QM Aircelle considérée comme base de départ. Tous les flux ont été revus et ajustés aux besoins ASL (Ex SAFRAN-HERAKLES) : QM-PT, QM-IM et QM-QC pour les flux de contrôle en Réception, en Production de process PP-PI, en post-production (entrée stock sur OF), et en expédition. QM-QN pour 12 types d’avis mis en place (litiges, réclamations, non-conformités, permis de produire, DVI, dérogations, etc …). Mise en place de cartes de contrôle Shewart`X et s sur la plupart des caractéristiques évaluées en Production (QM-QC-AQC-CHT).",
+    "bilan": "Projet qui marque ma carrière, par sa dimension et sa variété. Je n’ai jamais passé autant de temps sur QM chez un client ! Presque tout y est passé : Contrôle Qualité en Réception, en Production de Process PP-PI, en sortie de Production, en transfert de magasin à magasin, parfois d’une Division à une autre, Contrôle répétitif des lots, 13 types d’avis Qualité implémentés pour 13 flux de traitement particuliers (Réclamations, litiges, non-conformités, dérogations, DVI, etc …), cartes de contrôles, documents joints, et une reprise d’historique d’avis Qualité à inscrire dans les annales par son volume et son temps de chargement. Un seul reproche toutefois : la solution SAP de chez AIRCELLE considérée comme Core model dès le début du projet. Un choix audacieux qui a rendu la mise en œuvre difficile : une solution SAP construite pour une société X qui fabrique des produits X, n’est pas implicitement déployable sur une société Y qui fabrique des produits Y.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2015-05-01",
+    "eDate": "2017-02-01",
+    "clientId": 212
+  },
+  {
+    "id": 246,
+    "title": "SAFRAN / HISPANO-SUIZA",
+    "contexte": "Je reviens en prestation dans le groupe SAFRAN, mais le contexte est différent par rapport à 2006-2007. Le client final est une filiale du groupe, et non plus l’un des centres de compétences de SAFRAN, qui reste malgré tout acteur et responsable dans l’administration des systèmes SAP. Par contre, c’est le site HISPANO-SUIZA (fabrication de transmission de puissance pour avion) basé à Colombes (92) qui fait appel à SOPRAGROUP pour mener un projet Qualité global (Projet de modernisation du SI de la production industrielle). Ces derniers me confient les activités MOE sur SAP/QM.",
+    "mission": "Mise en place, sur le système SAP actuel en ECC6 DIMP EHP6, de solutions QM pour les processus Méthodes et Qualité du site. Trois gros sujets sont à traiter : la gestion des Dérogations, les DVI - Dossiers de Validations Industrielles (Processus de mise en série de nouvelles pièces ou de nouvelles configurations de pièces), gestion des Non conformités Appro.  Les travaux sont à mener conjointement avec un expert métier aéronautique pour l’aspect MOA, au sein de l’équipe de Consultants SOPRAGROUP (SOPRAGROUP deviendra SOPRASTERIA en cours de projet).",
+    "solution": "Mon client demandeur direct étant plus une entité de Qualité centrale (Règles, obligations et normes Qualité), que de contrôle Qualité (Inspections, contrôles), aucun de ces 3 sujets n’est lié de manière dynamique aux OF ou aux lots de contrôle. Chacun dispose désormais d’une solution à base d’avis Qualité (QM-QN), dans lesquels l’objectif était de documenter les dossiers en informations et en suivis. Une prépondérance aux numéros de série a été donnée aux 3 solutions (Traçabilité aéronautique oblige) via les objets affectés (Nouveauté sur versions ≥ ECC6 EHP4). Plusieurs barres d’activités ont été implémentées, notamment pour piloter au mieux les statuts d’avancement, et lancer quelques spécifiques inévitables. Gestion documentaire CA-DMS également.",
+    "bilan": "Structure complexe des types d’avis, notamment celui des DVI où un poste représentait l’un des 12 volets d’instruction du dossier. Beaucoup de difficulté à emmener les utilisateurs sur ces nouvelles solutions SAP, et leur faire abandonner Lotusnote.",
+    "domaines": [
+      "CA-DMS",
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2014-05-01",
+    "eDate": "2015-07-01",
+    "clientId": 211
+  },
+  {
+    "id": 245,
+    "title": "ETAM Lingerie",
+    "contexte": "Le groupe ETAM va lancer en Septembre 2014 le premier magasin témoin de leur nouvelle activité Cosmétique. Cette activité dépend de la marque ETAM Lingerie. Quand ils font appel à mes services pour mettre en place le contrôle réception sur SAP, nous sommes au printemps 2014, et le 1<sup>er</sup> rayon cosmétique dans le magasin témoin, est lancé dans à peine 6 mois. Lieu d’exécution de la prestation : Siège ETAM à Clichy (92).",
+    "mission": "Mise en place du Contrôle réception QM en prévision de la nouvelle activité Cosmétique d’ETAM Lingerie. Intégration dans le système SAP ECC6 Retail existant. Formation des Utilisateurs.",
+    "solution": "Solution SAP QM-QC pour un Contrôle des réceptions avec gammes simplifiées, et échantillons à tailles fixes (objectif de simplification dans un premier temps). Saisie des résultats fournis par les laboratoires extérieurs. Décision d’utilisation, puis relais à une interface de gestion d’entrepôt.",
+    "bilan": "Le regret d’avoir été précipité. Nous aurions pu faire plus précis en termes de gestion Qualité, et donc pour des coûts de contrôle optimisés. Mais il fallait assurer le respect de la date de lancement de cette nouvelle activité chez ETAM, et donc laisser le métier parer au plus pressé. Je respecte ce choix du moment.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2014-04-01",
+    "eDate": "2014-06-02",
+    "clientId": 210
+  },
+  {
+    "id": 243,
+    "title": "ALBEA Group",
+    "contexte": "Le groupe ALBEA est spécialisé dans le packaging pour la pharmacie, cosmétique, incluant les produits de luxe (tubes, pompes, diffuseurs, etc …). Lorsque j’arrive, VISEO est l’intégrateur pour différents sujets SAP au sein du centre de compétence de Gennevilliers (92). Je suis appelé pour les aider à mettre en place QM pour le contrôle réception de l’un des sites du groupe.",
+    "mission": "Implémentation d’une solution QM light pour le contrôle réception sur le site pilote de Sainte-Ménehould (51) – Division Tubes Europe. Intégration dans la solution SAP existante, au sein de l’équipe VISEO du centre de compétence SAP.",
+    "solution": "Mise en place d’une solution QM light sur une base QM-QC simple, pour des lots de contrôle qui n’attendent qu’une DU. Processus de réception revu complètement, avec une interface SAP vis-à-vis de l’outil de réception et de rangement magasin géré par le prestataire stockiste. Dynamisation et niveaux Qualité pour la notion d’AQP. Les gammes de contrôle restent en périphérie du système SAP, car il n’est pas dans mes objectifs de migrer les instructions de contrôle existantes.",
+    "bilan": "Fonctionnalités SAP/QM réduites, mais ajustées au strict besoin du moment.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation",
+      "Intégration"
+    ],
+    "bDate": "2012-09-01",
+    "eDate": "2012-11-01",
+    "clientId": 209
+  },
+  {
+    "id": 244,
+    "title": "SCHNEIDER ELECTRIC (Projets BRIDGE P14 et P18)",
+    "contexte": "Après un long et complexe projet de construction d’un core model, SCHNEIDER ELECTRIC déploie depuis 2008/2009 la solution « BRIDGE » en France. Le Département IPO basé à Grenoble, en charge de ces déploiements, me sollicite pour la partie Maintenance industrielle.",
+    "mission": "Ma mission consistait à déployer la solution SAP/PM du Core Model BRIDGE, sur le site identifié pour le sous-projet P14 : Carros (06) et ceux du sous-projet P18 : Angoulême (16) réparti en 2 sites : Espagnac et Les Agriers. Activités : localisation de la solution Bridge, formation des Key users, assistance aux reprises de données et Business transformation sur les 3 sites. Déploiement devant être mené en conformité avec les directives métier SPS (Système de Production Schneider), et dans le respect de l’outil avec la Core Team de Rueil-Malmaison (siège).",
+    "solution": "Parc technique PM-EQT, gestion des Ordres de travail PM-WOC, gestion des gammes de maintenance et des plans de maintenance PM-PRM, pour un préventif calendaire et un préventif à compteur (comptage des heures et des pièces fabriquées sur les OF). Indicateurs PMIS et spécifiques.",
+    "bilan": "Toujours cette même frustration de ne pas pouvoir faire évoluer la solution, qui plus est sur des sujets déjà identifiés lors du projet P7.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Déploiement"
+    ],
+    "bDate": "2012-06-01",
+    "eDate": "2013-12-01",
+    "clientId": 160
+  },
+  {
+    "id": 240,
+    "title": "MAISON RICHARD",
+    "contexte": "SAP est implémenté dans le groupe MAISON RICHARD lorsque le responsable SAP de la DSI me contacte. Je dois mettre en place une solution particulière et inhabituelle, pour parfaire la solution SAP/CS déjà en place pour le SAV de la filiale CAFES RICHARD.",
+    "mission": "Mise en place du Préventif à compteur, en complément de la solution SAV existante (SAP/CS en ECC6), pour la société « Cafés RICHARD ».",
+    "solution": "Il s’agit d’un préventif à compteur (CS-AG ou PM-PRM) que j’ai greffé sur la solution SAP/CS existante. Le comptage est basé sur la quantité de café, en Kg, achetée par le client propriétaire ou locataire de la machine à café. Le compteur de la machine enregistre les quantités commandées par le client, au fur et à mesure des commandes SD. Le déclenchement des OS se fait classiquement à échéance des plans d’entretien concernés.",
+    "bilan": "Un SAV préventif original, obligeant à faire force d’imagination. Cas de figure vraiment intéressant.",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2012-03-01",
+    "eDate": "2012-03-31",
+    "clientId": 208
+  },
+  {
+    "id": 238,
+    "title": "THALES MICROELECTRONICS",
+    "contexte": "THALES MICROELECTRONICS est une filiale du groupe THALES. Son site d’Etrelles en Ille-et-Vilaine prépare un projet de transformation de son SI. L’intégrateur MANESSENS est sollicité pour une étude de cadrage, et je suis convié à y participer pour des sujets transverses.",
+    "mission": "Récolte des besoins, analyse de l’existant et rédaction du cahier des charges pour la future consultation, sur la Gestion d’affaires (PS), le Service et Support Client SSC (CS), et la Gestion de la Qualité (QM).",
+    "solution": "",
+    "bilan": "",
+    "domaines": [
+      "PM",
+      "PS",
+      "QM"
+    ],
+    "types": [
+      "Cadrage"
+    ],
+    "bDate": "2011-05-01",
+    "eDate": "2011-05-31",
+    "clientId": 207
+  },
+  {
+    "id": 239,
+    "title": "SCHNEIDER ELECTRIC (Projet BRIDGE P7)",
+    "contexte": "Après un long et complexe projet de construction d’un core model, SCHNEIDER ELECTRIC déploie depuis 2008/2009 la solution « BRIDGE » en France. Le Département IPO basé à Grenoble, en charge de ces déploiements, me sollicite pour la partie Maintenance industrielle.",
+    "mission": "Ma mission consistait à déployer la solution SAP/PM du Core Model BRIDGE, sur les sites identifiés pour le sous-projet P7 : Beaumont le Roger (27), Le Vaudreuil (27), Chasseneuil (86), Longvic (21), Epirey (21). Activités : localisation de la solution Bridge, formation des Key users, assistance aux reprises de données et Business transformation sur les 5 sites. Déploiement devant être mené en conformité avec les directives métier SPS (Système de Production Schneider), et dans le respect de l’outil avec la Core Team de Rueil-Malmaison (siège).",
+    "solution": "Parc technique PM-EQT, gestion des Ordres de travail PM-WOC, gestion des gammes de maintenance et des plans de maintenance PM-PRM, pour un préventif calendaire et un préventif à compteur (comptage des heures et des pièces fabriquées sur les OF). Indicateurs PMIS et spécifiques.",
+    "bilan": "La découverte d’une méthodologie de déploiement propre au client, très structurée et bien rôdée. Un peu de frustration de ne pas pouvoir obtenir certaines évolutions pourtant conformes aux règles métiers (Solution BRIDGE hyper protégée pour une meilleure homogénéité groupe). L’implication des équipes locales et leur professionnalisme … heureusement, car pour couvrir 5 sites en même temps toutes les semaines pendant 1 an, on apprécie d’être secondé par des gens efficaces.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Déploiement"
+    ],
+    "bDate": "2011-05-01",
+    "eDate": "2012-02-01",
+    "clientId": 160
+  },
+  {
+    "id": 237,
+    "title": "UNIVERS NOZ",
+    "contexte": "UNIVERS NOZ est une société qui revalorise les invendus, au travers d’un réseau de 300 magasins de vente grand public. Sur SAP depuis quelques années, elle ne dispose pas d’outil informatique pour gérer le SAV au sein du réseau. La responsable ADV me fait appel directement pour traiter le sujet.",
+    "mission": "Construction d’une solution SAP pour la gestion du SAV dans le réseau de magasins du groupe. Intégration au système existant SAP ECC6 Retail.",
+    "solution": "Pourquoi une solution SAP/CS : Un magasin NOZ est considéré comme un client, chez qui le siège à mis en place des infrastructures et des équipements. De fait, une maintenance sur l’un de ces équipements est considérée comme une intervention SAV du siège envers le magasin.\r\n\r\nCS-BD pour la création d’un parc magasin et de ses équipements, CS-SN la gestion d’un avis de service par les SVP commerciaux, PM-PRM pour gérer des instructions de maintenance renvoyant à une opération d’achat de sous-traitance, gestion des coûts.",
+    "bilan": "Beau challenge d’implémenter CS, alors qu’on aurait compris que ce soit plutôt PM (pas de vente, pas de facturation, pas de livraison), sur une multitude de Divisions SAP (un magasin est une Division, 178 magasins à l’époque, plus de 280 maintenant), et qui plus est, avec le métier ADV comme donneur d’ordre, et non la DSI …",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2011-03-01",
+    "eDate": "2011-04-01",
+    "clientId": 206
+  },
+  {
+    "id": 236,
+    "title": "POSTE IMMO",
+    "contexte": "En Octobre 2010, CAPGEMINI me confie cette mission auprès de son client, la DSI de POST IMMO. La Direction des projets informatiques liés à la gestion immobilière est localisée sur Nantes, en lien avec le reste des activités DSI implanté sur Paris.",
+    "mission": "Cadrage, formation des équipes, et préparation de projet pour la gestion de la Maintenance immobilière. Prototypage en lien avec SAP/REFX et PS.",
+    "solution": "Pas de solution proprement dite, puisqu’il s’agit d’une phase préparatoire. Le mode de fonctionnement était plus orienté « conseil méthodologique », que « solution préconisée ». Le module PM a été présentée au client comme solution pour la maintenance immobilière, avec démonstration à l’appuie sur le prototype PM - RE/FX – PS.",
+    "bilan": "Je n’ai pas assez travaillé directement avec le client. Mes activités étaient essentiellement des activités de préparation, et qui plus est, pour un grand groupe. Donc beaucoup de temps passé chez l’intégrateur pour formaliser un cadrage et une formation que j’ai dû restituer sur la fin. Mars 2011, c’est confirmé : je n’avance bien, que si j’ai le client en face de moi.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Cadrage"
+    ],
+    "bDate": "2010-10-01",
+    "eDate": "2011-03-01",
+    "clientId": 205
+  },
+  {
+    "id": 235,
+    "title": "SPERIAN PROTECTION (Projet SRPF)",
+    "contexte": "SPERIAN PROTECTION (Maintenant HONEYWELL SAFETY) est spécialisé dans la fabrication d’équipements de protection individuelle. En Septembre 2009, la DSI basée au siège à Villepinte (95), lance un projet SAP pour le site de Production de Villers-Cotterêts (02) et décide de le mener en interne sans intégrateur. Je suis appelé pour mener les sujets relatifs à la Qualité et au SAV.",
+    "mission": "Mission double :\r\n\r\nConstruction d’une solution SAP pour le SAV des matériels de protection respiratoire (Réparation, échange standard, reconditionnement et entretien préventif). Formation des utilisateurs.\r\n\r\nConstruction d’une solution SAP pour le Contrôle Qualité en Réception, Gestion des non-conformités, Dérogations, et Audits. Formation des utilisateurs.",
+    "solution": "Pour la partie SAV, construction d’un parc de matériels PM-EQT (Un n° de série produit prend place dans le parc), avec gestion des ordres de service CS-SE pour les réparations et les échanges standard, intégration avec la Qualité QM-QN pour la prise en compte des réclamations clients.\r\n\r\nPour la partie Qualité, mise en place du contrôle Qualité dans les réceptions des marchandises, gammes de contrôle QM-PT, Gestion des avis Qualité QM-QN pour les processus de traitement des Non-Conformités en Réception et Production, dérogations, réclamations clients, gestion des audits internes.",
+    "bilan": "Phase Conceptuelle peaufinée, ce qui a permis de mener une réalisation sans ambiguïté, et ce sur les deux domaines à ma charge. Satisfaction d’avoir été considéré comme membre de la DSI, au même titre que tous les autres membres internes.",
+    "domaines": [
+      "CS",
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2009-09-01",
+    "eDate": "2010-09-01",
+    "clientId": 204
+  },
+  {
+    "id": 234,
+    "title": "ARCELORMITTAL (Projet OPERA)",
+    "contexte": "En 2006, ARCELOR devient ARCELORMITTAL SA, et décide en 2008 basculer sa gestion sur SAP. Le projet est mené par SOPRA (A l’époque SOPRA Group, maintenant SOPRASTERIA), qui fait appel à mes services en milieu de projet (phase de réalisation), sur le siège ARCELORMITTAL de Saint-Denis (93).",
+    "mission": "Mise en place des certificats Qualité, et assistance aux consultants QM sur les Avis Qualité, dans le cadre d’un projet FI, CO, SD en version ECC6.",
+    "solution": "Il s’agit en fait d’une construction spécifique d’un formulaire SAP, à déclencher à la livraison client. La solution standard QM-QC (Quality Certificate) a été étudiée, mais s’est révélée inadaptée au contexte en raison de la complexité du certificat à émettre, avec toutes les analyses effectuées sur la matière (CCPU : Certificat de Contrôle de Production en Usine). Tout cela intégré au configurateur SAP (les clients commandent des teneurs précises).",
+    "bilan": "Ma 1<sup>ère</sup> mission en tant que Consultant indépendant. Un petit regret d’être arrivé un peu tard, car privé de toute souplesse dans le réglage de la solution (Fin de phase de réalisation).",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2008-09-01",
+    "eDate": "2009-06-01",
+    "clientId": 203
+  },
+  {
+    "id": 233,
+    "title": "SAINT GOBAIN",
+    "contexte": "Le groupe SAINT GOBAIN est sous SAP depuis plusieurs années. Le site de Sully-sur-Loire (45) est spécialisé dans la fabrication de verres spéciaux et hautement résistants. La DSI du site souhaite repenser la solution SAP actuellement en place pour le SAV.",
+    "mission": "Refonte du processus SAV sur le site de Sully-sur-Loire (SGS), et construction de la nouvelle solution SAP version 4.6c.",
+    "solution": "Le processus a été complètement refondu sur une base CS-SN (Service Notification). L’avis de service est désormais central dans les activités de SAV. Il déclenche les mouvements de réception et de retour, l’expertise technique avec la saisie des résultats, la création d’offres puis de commandes client SD, la création des Ordres de services CS-CM pour les activités de réparation, la prise en compte de la notion de garantie, la livraison et la facturation.",
+    "bilan": "La volonté de simplifier le flux en allégeant les documents de vente, avec cette particularité d’avoir géré un retour client, sans commande de retour SD.\r\n\r\nLa mise en place de l’indicateur TAT cher aux clients aéronautiques (Turn Around Time), ainsi que du SPT sur les différents postes critiques de la Production Saint-Gobain (Shortest Processing Time).",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Implémentation",
+      "Ré-engineering"
+    ],
+    "bDate": "2008-01-01",
+    "eDate": "2008-08-01",
+    "clientId": 202
+  },
+  {
     "id": 189,
-    "title": "PILOTE SA – Projet ISI",
-    "contexte": "<p>Le groupe PILOTE produit des véhicules de loisirs (camping-cars), dont la maison-mère et le site de production principal est à la LIMOUZINIERE (44), avec un 2<sup>ème</sup> site de Production à MEMBROLLE-sur-LONGUENEE (49). Il lance en 2007 un projet SAP global pour la refonte de son système d'information.</p>",
-    "mission": "<p>Mission double pour ma part, pour cette prestation menée au sein d'une équipe projet T-SYSTEM, dans le cadre d'une implémentation d'un pré-paramétré (T-Solution) :</p>\n<p>Construction d'une solution SAP pour la Qualité Fournisseur</p>\n<p>Construction d'une solution SAP pour le SAV des Camping-cars, et pour les flux de traitement des demandes de garantie entre PILOTE et ses concessionnaires</p>",
-    "solution": "<p>Pour la Qualité Fournisseur : SAP/QM-QN Gestion des avis XXXXX A REVOIR XXXXX</p>\n<p>Pour le SAV : SAP/CS avec la gestion de parc technique CS-EQT soumis à une exigence forte de traçabilité (impact avec la gestion des numéros de série PM-EQT). Flux d'activité construit sans Ordre de service, uniquement avec des avis de service CS-CM-SN, mais en y intégrant la gestion des demandes de garantie LO-WTY.</p>",
-    "bilan": "<p>La découverte d'un cas d'application LO-WTY (Warranty Management), pour assurer le traitement des garanties, entre un client (émetteur de réclamation), le concessionnaire (vendeur du camping-car), et le fabricant (PILOTE SA). Implémentation pointue, débogage complexe avec SAP et sa communauté, mais aventure technico-fonctionnelle fort sympathique.</p>",
-    "domaines": ["CS", "LO-WTY", "QM"],
-    "types": ["Implémentation"],
+    "title": "PILOTE SA (Projet ISI)",
+    "contexte": "Le groupe PILOTE produit des véhicules de loisirs (camping-cars), dont la maison-mère et le site de production principal est à la LIMOUZINIERE (44), avec un 2<sup>ème</sup> site de Production à MEMBROLLE-sur-LONGUENEE (49). Il lance en 2007 un projet SAP global pour la refonte de son système d’information",
+    "mission": "Mission double pour ma part, pour cette prestation menée au sein d’une équipe projet T-SYSTEM, dans le cadre d’une implémentation d’un pré-paramétré (T-Solution) :\r\n\r\nConstruction d’une solution SAP pour les Non-Conformités en Réception et en Production.\r\n\r\nConstruction d’une solution SAP pour le SAV des Camping-cars, et pour les flux de traitement des demandes de garantie entre PILOTE et ses concessionnaires",
+    "solution": "Pour la Qualité : SAP/QM-QN Gestion des avis Qualité pour les réclamations fournisseur, ainsi que les flux de traitement des défauts détectés en Production. Intégration de documents CA-DMS, et mise en place de plans d’actions.\r\n\r\nPour le SAV : SAP/CS avec la gestion de parc technique CS-BD avec problématique de maitrise des stocks en concession. Forte exigence de traçabilité sur la gestion des numéros de série PM-EQT) et la gestion des véhicules. Flux d’activité construit sans Ordre de service, uniquement avec des avis de service CS-CM-SN, mais en y intégrant la gestion des demandes de garantie LO-WTY.",
+    "bilan": "La découverte d’un cas d’application LO-WTY (Warranty Management), pour assurer le traitement des garanties, entre un client (émetteur de réclamation), le concessionnaire (vendeur du camping-car), et le fabricant (PILOTE SA). Implémentation pointue, débogage complexe avec SAP et sa communauté, mais aventure technico-fonctionnelle fort sympathique",
+    "domaines": [
+      "CS",
+      "LO-WTY",
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
     "bDate": "2007-09-01",
     "eDate": "2008-08-01",
     "clientId": 188
   },
   {
+    "id": 231,
+    "title": "LACROIX ÉLECTRONIQUE (Projet NSI)",
+    "contexte": "LACROIX ELECTRONICS représente la Département Electronique du groupe LACROIX. Un Core Sytem SAP a été mis en place sur le site de Saint-Pierre-Montlimart, et l’objectif était de le déployer sur le site Polonais basé à Kwidzin. J’ai pris cette mission en cours, étant nouvellement arrivé chez T-SYSTEM, l’intégrateur du Core Model.",
+    "mission": "Interventions ponctuelles pour assister LACROIX dans le déploiement ECC5 de ses solutions QM (Qualité en Réception) et GMAO PM sur son site Polonais de Kwydzin. Finalisation des travaux de paramétrage, et formation des utilisateurs sur la Qualité et la Maintenance industrielle.",
+    "solution": "Déploiement et localisation du paramétrage SAP/QM et SAP/PM, sur la base d’une solution pré-paramétrée (T-Solution).\r\n\r\nQM-IM pour les Contrôles en Réception (Contrôle avec gamme QM-PT, Plans d’échantillonnage) et avant livraison SD (Lots de contrôle simples), Avis Qualité QM-QN pour les réclamations fournisseurs et les problèmes internes.\r\n\r\nPM-EQT pour le parc machines, PM-PRM pour la mise en place du préventif (calendaire et à compteur), PM-WOC et PM-MN pour toutes activités curatives et préventives sur les OT de Maintenance et leur gestion d’avis.",
+    "bilan": "Client Polonais très exigeant sur des fonctionnalités plus pointues que le Core System n’en proposait. Les festivités de fin de projet sont un peu dangereuses en Pologne …",
+    "domaines": [
+      "PM",
+      "QM"
+    ],
+    "types": [
+      "Déploiement",
+      "Formation"
+    ],
+    "bDate": "2007-09-01",
+    "eDate": "2008-01-01",
+    "clientId": 200
+  },
+  {
+    "id": 232,
+    "title": "SERAP Industries (Projet SIGROUP)",
+    "contexte": "Le groupe SERAP est répertorié dans les activités de Chaudronnerie fine inoxydable. Le site de GORRON (53), la maison mère, produit des tanks à lait pour l’agro-alimentaire, intégrant les systèmes de refroidissement. Le groupe lance un projet SAP global pour la refonte de son système d’information. Le périmètre inclut également une filiale spécialisée dans les équipements de vinification, Moreau TMS à MOUZILLON (44), actuellement fermée depuis 2010.",
+    "mission": "Construction d’une solution SAP pour la gestion des projets d’affaires spécifiques et des projets de développement internes, dans le cadre d’une 1ère implémentation SAP ECC6.",
+    "solution": "Solution SAP/PS logistique, intégrée dans l’environnement du pré-paramétré de T-System (T-Solution), et incluant les domaines MM, PP, SD et FICO. Eléments mis en place : Structure de projet, dont les OTP sont créés automatiquement depuis une commande de vente SD. Réseau d’activités PS pour la réalisation de la Main d’œuvre. La partie PS-Finance était hors périmètre. Le client de cette nouvelle gestion d’affaire sur SAP, était le Bureau d’Etude, composé essentiellement de concepteurs et dessinateurs.",
+    "bilan": "Mission très difficile, ayant dû être menée face à un client très exigeant et difficile à canaliser. Réunions de travail rythmées par les sonneries des téléphones des participants … une bonne occasion pour appliquer les règles de management de groupe. Mais le plaisir d’assurer un rôle de conseil en clientèle, est réduit à néant.",
+    "domaines": [
+      "PS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2007-09-01",
+    "eDate": "2008-08-01",
+    "clientId": 201
+  },
+  {
+    "id": 230,
+    "title": "SAFRAN / SAGEM DS (Projet SAV PTS Light)",
+    "contexte": "Projet mené entre la DSI centrale du groupe SAFRAN à MALAKOFF (92), et le site pilote de la filiale SAGEM DEFENSE SECURITE à POITIERS (86). Deux Directions de Projet (l’une MOA centrale, l’autre MOA locale), puis deux responsabilités MOE (L’une DSI centrale, et l’autre côté Capgemini).",
+    "mission": "Construction d’un core system SAP, version 4.6c, pour la gestion du SAV dans les unités de services clients des sites SAGEM Défense Sécurité.",
+    "solution": "Solution montée sur SAP/CS, pour les activités d’expertise, de préparation de devis, échange standard, réparation, remise en état, livraison, réforme éventuelle. Parties implémentées : Gestion d’avis de service CS-CM-SN, ordre de service CS-SE, parc technique CS-BD, problématique de numéros de série et traçabilité associée.",
+    "bilan": "Un intéressant cas de gestion du SAV sous responsabilité locale (le site de Poitiers est responsable su SAV qu’il doit à ses clients), alors que les flux Commerciaux et ADV sont de responsabilité centrale (siège Paris). Les flux ont pu être décrits avec précision, ce qui a permis de fédérer les utilisateurs dans leurs rôles et responsabilités.",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2006-05-01",
+    "eDate": "2007-04-01",
+    "clientId": 199
+  },
+  {
+    "id": 229,
+    "title": "NTN TRANSMISSION EUROP",
+    "contexte": "Un site industriel dans lequel je suis déjà passé en 2002 pour implémenter PM. Cette fois ci, le client me rappelle pour un tout autre sujet : la gestion d’affaire.",
+    "mission": "Construction d’une solution SAP version 4.6c pour les projets de conception de transmissions de véhicules, en remplacement de Microsoft Project.",
+    "solution": "Le besoin était de remplacer le diagramme de Gandt géré sous Microsoft Project, par une solution SAP/PS (Diagramme de Gandt PS, réseau d’activités). J’ai implémenté PS dans une configuration particulière, que j’oserais qualifier de « anti-ERP », non pour blesser le client qui pourrait un jour lire ces quelques lignes, mais pour marquer l’indépendance de ma solution par rapport aux autres domaines SAP : une solution PS autonome, sans impact FICO, ni MM, ni PP ! Mon client direct était la Direction des études (Bureau d’étude, dessinateurs, méthodistes), qui souhaitait réaliser ses suivis d’affaire, du premier croquis, jusqu’à la validation du prototype série.",
+    "bilan": "L’absence d’intégration de la solution pèse lourd sur la crédibilité de ma solution. Au final, client satisfait, oui, mais le prestataire que je suis …",
+    "domaines": [
+      "PS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2005-09-01",
+    "eDate": "2006-04-01",
+    "clientId": 194
+  },
+  {
+    "id": 228,
+    "title": "PSA PEUGEOT CITROEN",
+    "contexte": "Il s’agissait du site PSA de POISSY (95), pour lequel nous étions dans le cadre d’une réponse à appel d’offre, pour le compte de Capgemini. PSA souhaitait préparer un projet SAP important de transformation de leur GMAO Fabrication.",
+    "mission": "Conseil AMOA pour la modélisation des processus de Maintenance industrielle en vue du futur système GMAO SAP. L’objectif était de réaliser une mission de cadrage, dont le livrable technique qui en ressortait, devait argumenter la réponse commerciale. Les travaux ont été menés au sein de l’équipe Méthode Maintenance du groupe PSA, pour modéliser les flux existants, et y donner des réponses ou des opportunités SAP/PM.",
+    "solution": "",
+    "bilan": "L’équipe client a été un vrai contributeur à ce cadrage projet. Une grande envie de réaliser une nouvelle GMAO SAP avec eux, avant d’être confronté à une grande déception : nous avons perdu le projet !",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Cadrage"
+    ],
+    "bDate": "2005-06-01",
+    "eDate": "2005-07-01",
+    "clientId": 198
+  },
+  {
+    "id": 227,
+    "title": "AJINOMOTO FOODS EUROPE",
+    "contexte": "AJINOMOTO est un grand groupe agro-alimentaire Japonais. En France, le site de Nesle en Picardie, produit des additifs sous forme d’arômes ou exhausseurs de goût, destinés aux industries pharmaceutiques et agro-alimentaires. Le site disposait déjà d’une solution SAP.",
+    "mission": "Refonte du processus de Maintenance préventive sur le site de Nesle, et construction de la nouvelle solution SAP en version 4.7. Le client disposait déjà d’une solution pour la Maintenance préventive, mais celle-ci était inadaptée au besoin du moment.",
+    "solution": "Nous avons reconstruit une solution préventive de A à Z, sous forme d’un projet rapide en trois phases <em>Conception – Réalisation – Bascule/Golive</em>, en un petit comité très impliqué, composé d’un utilisateur-clé, de la responsable DSI, et d’un développeur. Le sujet : Maintenance préventive calendaire PM, avec des documents joints CA-DMS, et le système d’information PM (PM-IS) proposé comme outil principal de consultation d’indicateurs de Maintenance.",
+    "bilan": "Mission très courte, mais très dense. Malgré cela, des livrables complets fournis en temps et en heure (je précise cela, car bien souvent, rapidité et documentation ne font malheureusement pas bon ménage). Ce qui m’a marqué : le paramétrage d’un ratio spécifique que j’ai dû faire dans PM-IS, afin de construire un indicateur de reporting (données agrégées), pouvant se comporter comme un indicateur de pilotage (données détaillées, Ordre de travail PM).",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Implémentation",
+      "Ré-engineering"
+    ],
+    "bDate": "2005-04-01",
+    "eDate": "2005-06-01",
+    "clientId": 197
+  },
+  {
+    "id": 319,
+    "title": "ARMOR SA (Projet OMEGA)",
+    "contexte": "<span style=\"color: #000000; font-family: Calibri;\">Trois ans après son projet GOLD, ARMOR décide de mettre en place sa GMAO sur SAP. Nous montons chez Capgemini une petite équipe projet, composée d’un chef de projet, d’un Consultant technique, et de moi-même comme Consultant fonctionnel SAP/PM.</span>",
+    "mission": "<span style=\"color: #000000; font-family: Calibri;\">Nous devions traiter deux mondes bien distincts dans cette GMAO : les Moyens de Production, et les Outillages. Un impact particulier était à considérer en termes de gestion des coûts de la Maintenance répartis par moyen et par technologie, ainsi qu’une prise en compte des achats de prestation.</span>",
+    "solution": "<span style=\"color: #000000; font-family: Calibri;\">Dans un environnement SAP R/3 version 4.6C : PM-EQT pour le parc des Moyens industriels et outillages, avec la documentation machine sous CA-DMS. Gestion des flux curatifs PM-WOC et préventifs PM-PRM, ainsi qu’une gestion d’avis de Maintenance PM-MN. Nous avons également mis en place une solution pour un préventif conditionnel basé sur l’usure des billes de frottement de certains outillages rotatifs. Intégration avec les achats et stocks MM, et une intégration peaufinée avec le contrôle de gestion, notamment lors des changements d’outillages sur lignes de production. Gestion d’affaire (sans PS), avec intégration FI-AA pour la gestion des immobilisations (exemple : rétrofit machine). </span>",
+    "bilan": "Nous avons retrouvé ARMOR avec cette même passion de mener un projet SAP à bout. Je retiens une forte implication de la Direction de la Production, notamment pour favoriser l’adhésion des équipes à la future solution, et des utilisateurs clés particulièrement motivés et efficaces.",
+    "domaines": [
+      "CA-DMS",
+      "PM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2004-05-01",
+    "eDate": "2005-02-01",
+    "clientId": 191
+  },
+  {
+    "id": 226,
+    "title": "GAZ DE FRANCE (Projet GMAO Stockage)",
+    "contexte": "Réseau de stockage et de compression du gaz. Plusieurs sites existent en France, et doivent respecter la cohérence imposée par le groupe. Cette cohérence regroupe les règles métier, mais aussi celles du système d’information, avec toutes les données inhérentes à la GMAO du groupe qui était en cours de déploiement SAP/PM.",
+    "mission": "J’y ai assuré deux missions distinctes. L’une typée AMOA (Assistance à Maitrise d’Ouvrage), dans laquelle j’y tenais un rôle d’expert métier, afin de guider le client sur la mise en place du Cadre de Cohérence National (CCN) de la GMAO Stockage/Compression Gaz, ainsi qu’un rôle de conseil méthodologique pour le futur déploiement de cette GMAO sur les sites. L’autre typée MOE (Maitrise d’œuvre) en tant que Consultant PM sur le projet de déploiement du Core system GMAO sur le site de stockage Gaz de Beynes (78).",
+    "solution": "Solution SAP/PM classique, curatif, préventif. L’originalité de la solution, et des déploiements qui s’en sont suivis, résidait dans son cadre d’application très structuré et obligatoire : le cadre du CCN (l’autorité Maintenance, garante du métier), et le cadre DSI (L’autorité informatique, garante de l’applicatif).",
+    "bilan": "Ce que j’en ai retenu : la conception du CCN avec les ingénieurs de l’équipe centrale GDF. Méthode de travail constructive, en calant les contraintes SAP/PM au sein des règles métier. Côté déploiement, une petite frustration de ne pas avoir un droit de regard sur le paramétrage de la solution GMAO, en raison des règles de sécurité imposées par la DSI sur les systèmes. Un déploiement ne doit pas modifier une solution, certes, mais un « déployeur » doit pouvoir comprendre ce qu’il déploie.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Conseil métier",
+      "Déploiement"
+    ],
+    "bDate": "2004-01-01",
+    "eDate": "2005-02-01",
+    "clientId": 196
+  },
+  {
     "id": 184,
-    "title": "TOTAL SA – Projet TER",
-    "contexte": "<p>Alors que la Maintenance industrielle est souvent un service connexe dans les entreprises que je côtoie, dans une raffinerie pétrolière, elle est une fonction centrale. Un site de raffinage est en fait une grosse machine qu'il faut constamment maintenir, de sorte à ce qu'elle puisse assurer un service continu, avec du pétrole en entrée, et des produits en sortie. Sur SAP, le module PM est donc central, et supporte la presque totalité des activités du site.</p>",
-    "mission": "<p>Cette mission était l'une des composantes du projet TER, Template Europ Refinery, dans laquelle je suis intervenu comme Consultant PM et comme coordinateur de déploiement des sites Français. Nous y avons assuré une phase conceptuelle (Gap analysis) dans un contexte de protection stricte du Core model. La méthodologie rigoureuse que l'on a dû appliquer, faisait que les écarts recensés devaient être défendus devant une équipe centrale (Core Team), pour qu'ils soient approuvés ou bien souvent écartés, par un Comité de Direction.</p>",
-    "solution": "<p>Le Core model TER était une solution PM complète, intégrée à FI, CO, et MM, et proposant les aspects courants de Maintenance curative et préventive. Les liens avec la gestion des immobilisations FI-AA ont été activés. Importante activité de sous-traitance gérée sur les OT SAP. Par rapport à la raffinerie de Grandpuits, peu d'écarts ont reçu l'aval de la Core Team. Le site a donc été livré d'une solution TER au standard de l'époque.</p>",
-    "bilan": "<p>Une désagréable impression d'avoir piétiné les besoins particuliers des sites, pour le respect du Core Model. Cette mission me révèlera pour l'avenir, plus concepteur, que « déployeur ». Néanmoins, les particularités de la solution que j'ai retenues : La planification des arrêts et la mise en place associée des magasins de pièces des sous-traitants.</p>",
-    "domaines": ["PM"],
-    "types": ["Déploiement", "Migration"],
+    "title": "TOTAL SA (Projet TER)",
+    "contexte": "Alors que la Maintenance industrielle est souvent un service connexe dans les entreprises que je côtoie, dans une raffinerie pétrolière, elle est une fonction centrale. Un site de raffinage est en fait une grosse machine qu’il faut constamment maintenir, de sorte à ce qu’elle puisse assurer un service continu, avec du pétrole en entrée, et des produits en sortie. Sur SAP, le module PM est donc central, et supporte la presque totalité des activités du site.",
+    "mission": "Cette mission était l’une des composantes du projet TER, Template Europ Refinery, dans laquelle je suis intervenu comme Consultant PM et comme coordinateur de déploiement des sites Français. Nous y avons assuré une phase conceptuelle (Gap analysis) dans un contexte de protection stricte du Core model. La méthodologie rigoureuse que l’on a dû appliquer, faisait que les écarts recensés devaient être défendus devant une équipe centrale (Core Team), pour qu’ils soient approuvés ou bien souvent écartés, par un Comité de Direction.",
+    "solution": "Le Core model TER était une solution PM complète, intégrée à FI, CO, et MM, et proposant les aspects courants de Maintenance curative et préventive. Les liens avec la gestion des immobilisations FI-AA ont été activés. Importante activité de sous-traitance gérée sur les OT SAP. Par rapport à la raffinerie de Grandpuits, peu d’écarts ont reçu l’aval de la Core Team. Le site a donc été livré d’une solution TER au standard de l’époque. Les travaux de déploiement ont été essentiellement de la localisation de la solution TER sur la Division du site. Une particularité toutefois, même si elle n’a pas été au bout sur Grandpuits : une étude et une maquette montée sur de la gestion des déconnexions PM-WCM, appliquée au très surveillé secteur Alkylation.",
+    "bilan": "Une désagréable impression d’avoir piétiné les besoins particuliers des sites, pour le respect du Core Model. Cette mission me révèlera pour l’avenir, plus concepteur, que « déployeur ». Néanmoins, les particularités de la solution que j’ai retenues : La planification des arrêts et la mise en place associée des magasins de pièces des sous-traitants.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Déploiement",
+      "Migration"
+    ],
     "bDate": "2002-11-01",
     "eDate": "2004-04-01",
     "clientId": 183
@@ -41,25 +663,152 @@
   {
     "id": 187,
     "title": "PECHINEY ALUMINIUM METAL",
-    "contexte": "<p>Le client était un site PECHINEY, basé à Voreppe au nord de Grenoble. Déjà à l'époque, le client était un habitué des projets SAP, et particulièrement rôdé sur l'organisation des projets informatiques. J'ai été appelé pour aider une Chef de Projet sur des besoins spécifiques au Département Qualité.</p>",
-    "mission": "<p>Une petite mission QM, pour un sujet très ciblé : la Gestion des Audits internes chez PECHINEY AMT (Maintenant ALCAN ALUMINIUM PECHINEY ALUVAL).</p>",
-    "solution": "<p>Même si en version 4.6C, SAP R/3 disposait déjà d'un ensemble de fonctionnalités sur la Gestion des audits, le choix de la solution s'est maintenu sur QM, au travers d'une gestion d'Avis Qualité. La motivation essentielle de ce choix, fut de disposer d'un outil de planification des audits. De fait, l'avis Qualité se prêtait mieux à la situation, tant pour ses fonctionnalités calendaires, que pour ces capacités à supporter un questionnaire ainsi que les réponses pouvant y être rapportées.</p>",
-    "bilan": "<p>Techniquement je n'ai pas eu besoin de mettre en place des fonctions complexes. Je suis resté dans le standard de la gestion des avis. Mais devant un besoin qui m'a été émis en termes de planning d'audits, j'ai eu cette idée de convaincre le client, qu'une liste de dates pouvait être utilisée comme un planning, tout en restant plus simple qu'un planning.</p>",
-    "domaines": ["QM"],
-    "types": ["Implémentation"],
+    "contexte": "Le client était un site PECHINEY, basé à Voreppe au nord de Grenoble. Déjà à l’époque, le client était un habitué des projets SAP, et particulièrement rôdé sur l’organisation des projets informatiques. J’ai été appelé pour aider une Chef de Projet sur des besoins spécifiques au Département Qualité.",
+    "mission": "Une petite mission QM, pour un sujet très ciblé : la Gestion des Audits internes chez PECHINEY AMT (Maintenant ALCAN ALUMINIUM PECHINEY ALUVAL).",
+    "solution": "Même si en version 4.6C, SAP R/3 disposait déjà d’un ensemble de fonctionnalités sur la Gestion des audits, le choix de la solution s’est maintenu sur QM, au travers d’une gestion d’Avis Qualité QM-QN. La motivation essentielle de ce choix, fut de disposer d’un outil de planification des audits. De fait, l’avis Qualité se prêtait mieux à la situation, tant pour ses fonctionnalités calendaires, que pour ces capacités à supporter un questionnaire ainsi que les réponses pouvant y être rapportées. Dans ce contexte, une liste d’avis telle la transaction QM10, devenait un planning pour les auditeurs. Quant à la réalisation d’un audit, elle s’effectuait par des statuts d’avancement, et des rapports sous forme de documents CA-DMS joints aux Avis QM.",
+    "bilan": "Techniquement je n’ai pas eu besoin de mettre en place des fonctions complexes. Je suis resté dans le standard de la gestion des avis. Mais devant un besoin qui m’a été émis en termes de planning d’audits, j’ai eu cette idée de convaincre le client, qu’une liste de dates pouvait être utilisée comme un planning, tout en restant plus simple qu’un planning.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
     "bDate": "2002-06-01",
-    "eDate": "2003-07-01",
+    "eDate": "2002-07-01",
     "clientId": 186
+  },
+  {
+    "id": 224,
+    "title": "THOMSON MULTIMEDIA",
+    "contexte": "Un peu avant que THOMSON MULTIMEDIA cède ses activités TELEVISEURS au groupe chinois TCL, nous avons mené, depuis le site d’Angers, un projet SAP en version 4.5B de déploiement d’un Core model.",
+    "mission": "Déployer la solution relative au Contrôle Réception sur SAP/QM.",
+    "solution": "QM-IM pour l’implémentation du Contrôle Qualité en réception. Mise en place de l’évaluation fournisseur SAP.",
+    "bilan": "",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Déploiement"
+    ],
+    "bDate": "2002-06-01",
+    "eDate": "2003-02-01",
+    "clientId": 195
+  },
+  {
+    "id": 223,
+    "title": "NTN TRANSMISSIONS EUROPE",
+    "contexte": "Voici ma première mission assurée en dehors d’un projet global de transformation de Système d’Information ! Le projet SAP global avait été mené par mon employeur Capgemini en 2000 ou 2001. Je n’y ai pas été convié, étant donné que le build restait sur un périmètre classique FI, FI-AA, CO, MM, PP, SD.",
+    "mission": "Je suis donc venu plus tard, seul sur la partie PM avec une Consultante <em>Junior</em>, que j’avais en charge de faire évoluer en <em>confirmé</em>. La Maintenance industrielle fait partie des composantes vitales chez un équipementier automobile tel que NTN. <em>Cadences</em> et <em>délais</em>, combinés avec <em>risque de panne</em> sur des grosses machines mécaniques, font de la Maintenance et de sa GMAO, une entité vitale pour l’entreprise.",
+    "solution": "Mise en place du parc machine PM-EQT. PM-PRM pour un Préventif était prépondérant dans l’entreprise. A l’époque, il s’agissait surtout de Préventif calendaire, et très peu à compteur, avec une obligation de service en 2 x 8. Nous avons également activé les liens FI-AA sur le parc d’objets techniques PM, afin qu’une machine puisse être créée dans le parc PM, dès son acquisition, par la Comptabilité des immobilisations.",
+    "bilan": "Une belle petite mission, avec une collègue Consultante pétillante de motivation, et un pilote métier réactif, et disposant d’une notoriété reconnue dans le Département Maintenance … ça aide ! Mais quelle déception quelques années plus tard lorsque je suis revenu chez le client : Microsoft Excel a eu raison de la Maintenance préventive SAP, pourtant bien adaptée au contexte. De mon point de vue, une seule raison à cela : un départ en retraite, suivi d’une continuité SAP non assurée, puis un nouveau responsable Maintenance avec des idées nouvelles … Conclusion : il faut toujours surveiller sa clientèle afin de l’aider dans ses choix.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2002-03-01",
+    "eDate": "2002-10-01",
+    "clientId": 194
+  },
+  {
+    "id": 222,
+    "title": "AÉROPORTS DE PARIS (Projet GMAO/SP)",
+    "contexte": "J’ai un très bon souvenir de cette mission, que j’oserais qualifier de « mission casse coup » ! Pourquoi ? Pour deux raisons. D’une part, parce qu’ADP a été un client particulièrement exigeant. Cette exigence était d’autant plus vive, qu’elle était véhiculée par de fortes personnalités, et il n’était pas rare d’assister à des comités de pilotage animés par de hauts niveaux de décibels. D’autre part, parce que j’ai dû prendre mon poste de Consultant PM en lieu et place de mon prédécesseur défaillant, ce qui m’a valu d’être <em>attendu au virage</em> avec une flagrante méfiance du client.",
+    "mission": "Implémentation complète de PM (Parc d’équipements sur les 3 aéroports Parisiens, curatif, préventif calendaire, indicateurs PM-IS et indicateurs spécifiques).",
+    "solution": "Au niveau de la solution SAP, le plus extraordinaire était d’y faire rentrer des équipements allant du petit robinet des Toilettes hommes du Terminal B d’Orly, à l’imposante passerelle passagers du Terminal 2A de Roissy ! L’axe <em>contrôle de gestion</em> a été également prépondérant pour maîtriser au mieux les coûts de Maintenance, ainsi que les nombreux indicateurs de pilotage d’activité.",
+    "bilan": "Je pense que c’est sur cette mission que j’ai appris à maitriser mon stress, et à gérer les débordements à mes ateliers de Conception … ! Mais avec le recul, c’est devant les clients les plus durs qu’on peut réaliser les plus belles prestations.\r\n\r\nSinon, je retiens un indicateur de pilotage, impossible à faire rentrer dans SAP … il est resté gravé dans ma mémoire tellement je l’ai trouvé insolite dans un tableau de bord de patron de la Maintenance : Le nombre de lapins tués par mois sur le tarmac !",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2001-06-01",
+    "eDate": "2002-03-01",
+    "clientId": 193
+  },
+  {
+    "id": 220,
+    "title": "ARMOR SA (Projet GOLD)",
+    "contexte": "Que mes trois clients précédents ne m’en veuillent pas, mais il faut bien admettre qu’avec ARMOR, les choses sérieuses commencent ! Ma carrière de Consultant commence à prendre forme, et ce superbe projet nommé « GOLD » est un tournant, pour moi, certes, mais un tournant également pour nous tous chez Capgemini.",
+    "mission": "Dans cette mission, j’avais à ma charge de mettre en place le Contrôle Qualité en Réception des marchandises, dans un projet global FI, CO, MM, WM, PP, SD, QM, en SAP R/3 version 4.6C.",
+    "solution": "QM-PT et QM-IM pour le contrôle en Réception uniquement (Caractéristiques de contrôle typées « laboratoire de Chimie », échantillonnage simple, certification des fournisseurs). QM-QN pour les flux de réclamations fournisseur et client, et de gestion des anomalies en Production.",
+    "bilan": "Les outils chers à notre employeur, et chers à son SAP skill center de l’Ouest, ont été utilisés avec passion par chacun d’entre nous (Brownpaper, BPR, TB-TS-TD, RACI, etc ...). Tout cela emmené par une Direction de Projet infaillible et tout aussi passionnée ... Bref ! Un régal de projet ! J’en ai retenu un Processus Qualité parfaitement décrit en Conception générale, ce qui nous valut une relative facilité en phase de réalisation, avec des problématiques anticipées, et donc bien appréhendées.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2001-01-01",
+    "eDate": "2001-12-01",
+    "clientId": 191
+  },
+  {
+    "id": 221,
+    "title": "FENWICK-LINDE (Projet R2R3)",
+    "contexte": "Voici mon premier cas d’application du module CS, pour traiter un sujet type « SAV » sur les chariots élévateurs produits et vendus par FENWICK-LINDE. Cette intervention menée dans le cadre d’une migration SAP R/2 → R/3, m’a identifié un peu comme « membre à part » au sein de l’équipe projet.",
+    "mission": "Pourquoi à part ? Simplement parce qu’il s’agissait d’un projet de migration (donc essentiellement basé sur des reprises de données et non sur des nouvelles fonctions à mettre en place) dans lequel seul un nouveau module était implémenté : le mien, SAP/CS ! Il a donc fallu mener des ateliers de Conception, alors que tous mes autres collègues étaient déjà immergés dans les programmes de reprise et les mapping R/2 - R/3, sur FI, CO, MM, PP et SD.",
+    "solution": "Je n’ai donc pas touché à un seul cheveu de R/2, contrairement aux autres. Sur le sujet SAV, le périmètre était très restreint, volonté du client oblige. Même avec force propositions et maquettes sur les flux de service, FENWICK n’a jamais voulu aller au-delà de son absolu nécessité de gérer un « parc chariots » via CS-BD (PM-EQT). L’implémentation de CS s’est donc limitée aux objets techniques (postes techniques et équipements), avec de grosses problématiques de classification (CA-CL).",
+    "bilan": "J’étais dans un autre rythme que mes collègues (je concevais, et mes collègues reprenais). Mais il n’y avait pas de déphasage de l’un ou des autres. La non-réalisation immédiate des flux de service a été un manque de mon côté.",
+    "domaines": [
+      "CS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2001-01-01",
+    "eDate": "2002-02-01",
+    "clientId": 192
+  },
+  {
+    "id": 219,
+    "title": "DAHER LHOTELLIER",
+    "contexte": "Un an avant, lorsque je suis arrivé sur mon 1<sup>er</sup> projet SAP chez ce même client, ce dernier s’appelait LHOTELLIER-MONTRICHARD. Il fut racheté par le groupe DAHER, et pris le nom de DAHER-LHOTELLIER. Dans une opération comme celle-ci, la structure de la société d’origine est bien évidemment impactée, et ce, bien au-delà de sa raison sociale.",
+    "mission": "Je suis donc revenu sur le site de Montrichard dans ce projet type « Migration de données », afin d’ajuster la solution QM, et de la rendre viable dans sa nouvelle structure organisationnelle.\r\n\r\nEn parallèle, nous avions pour consigne de profiter de notre présence sur ce site, pour réaliser une étude de risque pour le futur passage à l’an 2000.",
+    "solution": "Idem LHOTELLIER Juin 1999 – Juillet 1999",
+    "bilan": "Il n’y avait pas vraiment de grosses difficultés sur le domaine de la Qualité. Les seuls objets impactés furent ceux gérés au niveau Division, à savoir les gammes de contrôle, les caractéristiques de base, et les ensembles de sélection relatifs aux Décisions d’utilisation. Cette migration s’est opérée, sur QM comme sur les autres domaines du périmètre, à iso-fonctionnalités.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Migration"
+    ],
+    "bDate": "2000-09-01",
+    "eDate": "2000-12-01",
+    "clientId": 218
+  },
+  {
+    "id": 216,
+    "title": "AUTO CHÂSSIS INTERNATIONAL (Projet RACINE)",
+    "contexte": "Pour cette filiale de Renault spécialisée dans la fabrication de pièces de chassis automobiles, il s’agissait de migrer le SI dans une solution SAP FI, CO, MM, PP, SD, PS, dans le cadre du projet RACINE animé par Capgemini Ouest.",
+    "mission": "Prendre en charge la gestion d’affaires au travers du module SAP/PS. Intégration aux autres modules du projet.",
+    "solution": "",
+    "bilan": "Pour tout vous dire, même si le projet global a été un succès, cette mission me concernant a été un échec. A l’époque, j’avais déjà un profil plus logistique que financier. Sur PS, je disposais d’une sensibilité et d’une vision essentiellement réduite aux aspects d’activités, de ressources, de jalons, d’outillages ou de matières premières. Comment travailler avec un Contrôleur de gestion, qui ne raisonnait qu’en termes de coûts et de profits, alors que je n’avais à lui proposer que des PERT ou des diagrammes de Gantt ? Mon sujet a été abandonné, laissant mon interlocuteur avec ses fichiers EXCEL. Il aurait fallu un profil CO-PS (contrôleur de gestion d’affaire), profil rare à l’époque.",
+    "domaines": [
+      "PS"
+    ],
+    "types": [
+      "Implémentation"
+    ],
+    "bDate": "2000-02-01",
+    "eDate": "2000-06-01",
+    "clientId": 190
   },
   {
     "id": 171,
     "title": "ITALCEMENTI",
-    "contexte": "",
-    "mission": "<p>Pour cette mission, je fus appelé par l'entité Parisienne de Capgemini à La défense, pour participer à la mise en place de la future équipe de TMA (Tierce Maintenance Applicative) pour le compte d'ITALCEMENTI, grand groupe de l'industrie cimentière. L'objectif était, pour l'équipe, de récupérer la solution SAP/PM relative à la Maintenance industrielle du site, et de mettre en place la future hotline SAP. Les Processus furent réécrits sur l'outil de modélisation des flux SAP, Livemodel. Cette description fut nécessaire pour s'assurer de notre prise en compte totale du patrimoine applicatif, dans un contexte difficile où nous remplacions l'un de nos concurrents intégrateurs.</p>",
-    "solution": "",
-    "bilan": "",
-    "domaines": ["PM"],
-    "types": ["TMA"],
+    "contexte": "Pour cette mission, je fus appelé par l’entité Parisienne de Capgemini à La défense, pour participer à la mise en place de la future équipe de TMA (Tierce Maintenance Applicative) pour le compte d’ITALCEMENTI, grand groupe de l’industrie cimentière. L’objectif était, pour l’équipe, de récupérer la solution SAP/PM relative à la Maintenance industrielle du site, et de mettre en place la future hotline SAP.",
+    "mission": "Me concernant, l’enjeu de la mission était de délivrer une expertise complète du système PM en place, avec des opportunités d’amélioration, tout en respectant nos prédécesseurs ainsi que les précédents choix du client.",
+    "solution": "Les Processus furent récrits sur l’outil de modélisation des flux SAP, Livemodel. Cette description fut nécessaire pour s’assurer de notre prise en compte totale du patrimoine applicatif, dans un contexte difficile où nous remplacions l’un de nos concurrents intégrateurs.",
+    "bilan": "La grande difficulté de cet exercice fut d’emmener le client dans la description de ses propres processus, et d’imposer notre équipe comme l’entité experte de la future hotline SAP.",
+    "domaines": [
+      "PM"
+    ],
+    "types": [
+      "TMA"
+    ],
     "bDate": "1999-09-01",
     "eDate": "1999-11-04",
     "clientId": 169
@@ -67,14 +816,69 @@
   {
     "id": 167,
     "title": "LHOTELLIER-MONTRICHARD",
-    "contexte": "",
-    "mission": "<p>Ce fut ma 1ère expérience de Consultant SAP. Pas facile après 11 ans dans l'industrie, de se lever de son siège confortable et protégé d'une grande entreprise d'Aéronautique, pour arpenter les routes et jouer les experts d'un domaine qui pourtant m'était familier : La Qualité et SAP/QM ! D'ailleurs, chez ce client anciennement nommé LHOTELIER Montrichard, maintenant DAHER-LHOTELIER, je n'y ai pas vraiment fait de prouesse ! Curieux, ne trouvez-vous pas, de placer cela dans un CV ? Pourtant, nous avons tous à gagner de nos erreurs, et j'assume pleinement mon inexpérience chez ce premier client.</p>",
-    "solution": "",
-    "bilan": "",
-    "domaines": ["QM"],
-    "types": ["Implémentation"],
+    "contexte": "Ce fut ma 1ère expérience de Consultant SAP. Pas facile après 11 ans dans l’industrie, de se lever de son siège confortable et protégé d’une grande entreprise d’Aéronautique, pour arpenter les routes et jouer les experts d’un domaine qui pourtant m’était familier : La Qualité et SAP/QM ! D’ailleurs, chez ce client anciennement nommé LHOTELIER Montrichard, maintenant DAHER-LHOTELIER, je n’y ai pas vraiment fait de prouesse ! Voir SAP depuis chez son employeur, fait de vous un expert, et vous ambitionne à de plus grandes choses du côté « Conseil ». Mais lorsque vous y êtes, la vision de SAP qui s’offre à vous, fait que vous ne connaissez plus rien ! Curieux … ne trouvez-vous pas … de placer cela dans un CV ? Pourtant, j’assume pleinement mon inexpérience chez ce premier client, car nous avons tous à gagner de nos débuts laborieux. L’essentiel, c’est de rebondir dessus à la mission d’après.",
+    "mission": "Le sujet à traiter était la mise en place du contrôle Qualité dans les réceptions. Je suis arrivé en cours de projet, et la phase de réalisation était quasiment terminée. Le Consultant senior qui m’avait accueilli, m’a délégué les tests unitaires et de recettes sur les avis Qualité (Réclamations fournisseur essentiellement). Tout le reste de la solution, à savoir, le contrôle Qualité, l’échantillonnage, et l’évaluation fournisseur, je l’ai acquis par transfert de compétences et auto-formation.",
+    "solution": "QM-PT, QM-IM et QM-QC pour un contrôle réception avec gammes, dynamisation et plan d’échantillonnage. Avis Qualité QM-QN pour les réclamations fournisseurs. Environnement système SAP R/3 4.0B, tout cela dans le cadre d’un projet FI, CO, MM, PP, SD.",
+    "bilan": "Mission d’apprentissage dans une équipe Capgemini (mon employeur de l’époque). Ce fut mes débuts de consultant",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Implémentation"
+    ],
     "bDate": "1999-06-09",
     "eDate": "1999-06-16",
     "clientId": 168
+  },
+  {
+    "id": 346,
+    "title": "Aérospatiale",
+    "contexte": "Repéré par mes activités informatiques du petit jeune que j’étais encore, je me vois confié le poste d’organisateur informatique pour le Département de la Qualité, toujours sur le site de Nantes. Un rôle qui m’extrait du service Qualité Composite, pour aller sur celui de la Qualité Centrale, puis un an après, sur celui du Génie Industriel. J’ai désormais vue sur les systèmes de l’entreprise. Je ne suis plus l’utilisateur Qualité qui développait pour son service, des applications plus ou moins approuvées par la DSI. Je dois désormais travailler dans le cadre d’un schéma Directeur d’entreprise.",
+    "mission": "Assurer un rôle d’expert sur les systèmes d’information des métiers de la Qualité, de la Maintenance industrielle, et certaines applications pour la Production. Le métier d’organisateur informatique n’est reconnu que dans les grands groupes. Il fait le lien entre un métier qui exprime le besoin, et l’informatique qui couvre sa réalisation. J’intègre un petit réseau d’homologues inter-sites (Méaulte – Saint Nazaire – Toulouse – Nantes), dans lequel sont régulièrement présentées et négociées, les ambitions de chaque site, toujours dans un cadre global d’entreprise. Ce petit réseau devient beaucoup plus grand, et les problématiques deviennent conséquentes, lorsque courant 1996, la Direction nous annonce son investissement sur un produit modestement connu à l’époque … SAP !",
+    "solution": "",
+    "bilan": "Incontestablement, le plus important de ces cinq années passées dans ces fonctions informatiques centrales, c’est d’avoir travaillé sur cet immense projet SAP, aux premières loges, puisque j’y étais l’un des utilisateurs-clés. Seulement les deux dernières années sur les cinq … mais quelles années ! Des ateliers de conception générale sur plusieurs semaines, des post-it partout sur les murs de l’usine, des réunions de conception détaillée sur Toulouse, des séances plénières de restitution, de douloureuses recherches de solution avec SAP Consulting, etc … Bref, le projet de transformation de tout un groupe, qui me donna l’idée de franchir le pas du Conseil.",
+    "domaines": [
+      "Débuts"
+    ],
+    "types": [
+      "Organisateur Informatique"
+    ],
+    "bDate": "1994-07-01",
+    "eDate": "1999-05-01",
+    "clientId": 343
+  },
+  {
+    "id": 345,
+    "title": "Aérospatiale",
+    "contexte": "Une décision rapidement prise depuis l’ONERA. Partir de Paris et revenir dans sa province natale, pour être accueilli par un nouvel employeur désireux de rajeunir son effectif : une campagne de 130 embauches sur le site Nantais d’Aérospatiale, dans laquelle je me suis immiscé en appelant furtivement le DRH de l’époque. Un coup de fil magique, qui au final, m’a permis d’intégrer le service Qualité de l’unité de Production des pièces d’avion en matériaux composites.",
+    "mission": "Etudier et mettre en œuvre les nouvelles techniques CND (Contrôle Non Destructif) afin d’appréhender les nouvelles configurations de pièces des futurs avions ou versions d’avion. Informatiser ces techniques pour améliorer la productivité des contrôles Qualité. Participer aux contrôles Qualité série de l’unité, ainsi qu’aux missions de contrôle (CND par ultrasons) sur site d’assemblage final à Toulouse.",
+    "solution": "",
+    "bilan": "Une expérience inoubliable qui continue de marquer ma carrière. Ma connaissance du métier de la Qualité … celle que je prône dans l’exercice de mes fonctions actuelles, vient de là. Je ne peux pas la renier, et je ne veux pas la renier, car elle me sert et j’y fais référence à chaque fois que j’implémente SAP QM chez un client de l’Aéronautique ou de tout autre activité. Comme résultat, je garde principalement en mémoire, la mise en place de mon système GEODE (GEstion Organisée Des Epaisseurs) pour automatiser les mesures par ultrasons, des épaisseurs de composite sur voilures d’avion. Comme souvenir opérationnel, ce sont les difficiles missions de contrôle final, avec mes collègues, tous à plat ventre sur les ailes d’un ATR72, capteur à ultrason en main, les yeux rivés sur un oscilloscope, à la recherche de défauts éventuels.",
+    "domaines": [
+      "Débuts"
+    ],
+    "types": [
+      "Agent Technique Qualité"
+    ],
+    "bDate": "1989-01-01",
+    "eDate": "1994-06-01",
+    "clientId": 343
+  },
+  {
+    "id": 342,
+    "title": "ONERA (Office National d'Etudes et de recherches Aérospatiales)",
+    "contexte": "Mon premier « véritable » emploi, après une vaine tentative de commencer ma carrière comme Commercial dans les capteurs à ultrasons. Par crainte de perdre mes connaissances techniques acquises à l’IUT, je quitte la société en question au bout de 11 jours, pour le plaisir de retrouver les sciences et techniques, dans un centre de recherche appliquée, plus à même d’exploiter ce pour quoi j’ai été formé : l’ONERA à Chatillon. J’arrive tout jeunot dans le Département « Matériaux », au sein d’une équipe d’ingénieurs et chercheurs dans les Matériaux Composites céramiques.",
+    "mission": "Effectuer les essais en Laboratoire pour traiter deux sujets distincts : l’un sur la cristallisation du verre LAS (Litho-Alumino Silicate) pour en étudier les propriétés mécaniques, et l’autre sur la tenue à la combustion de tuyères expérimentales sur banc de simulation (statoréacteur). Rédaction des rapports techniques pour les autorités demandeuses.",
+    "solution": "",
+    "bilan": "Il n’y avait pas mieux pour commencer une carrière de Technicien Supérieur … passage en douceur dans le monde du travail, en restant sur la lancée des acquis et méthodes universitaires : du laboratoire, des tests, des formules, et un peu de rédaction pour présenter les résultats. Par contre, au bout d’un an, il fallait changer : dans un grand laboratoire de recherche, un Technicien n’a pas beaucoup de liberté face aux Docteurs et Ingénieurs. L’appel de l’industrie me tente … là-bas, il parait que les objectifs de Production donnent des ailes aux Techniciens … !",
+    "domaines": [
+      "Débuts"
+    ],
+    "types": [
+      "Technicien de laboratoire"
+    ],
+    "bDate": "1987-11-01",
+    "eDate": "1988-12-01",
+    "clientId": 340
   }
 ]
