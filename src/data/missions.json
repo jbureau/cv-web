@@ -1,0 +1,80 @@
+[
+  {
+    "id": 161,
+    "title": "Schneider Electric Juin 2016",
+    "contexte": "",
+    "mission": "<p>Localisation de la solution Bridge, formation des Key users, assistance aux reprises de données sur le site de Limoges (87).</p>",
+    "solution": "",
+    "bilan": "",
+    "domaines": ["CS", "PM", "QM"],
+    "types": ["Déploiement"],
+    "bDate": "2016-06-01",
+    "eDate": "en cours",
+    "clientId": 160
+  },
+  {
+    "id": 189,
+    "title": "PILOTE SA – Projet ISI",
+    "contexte": "<p>Le groupe PILOTE produit des véhicules de loisirs (camping-cars), dont la maison-mère et le site de production principal est à la LIMOUZINIERE (44), avec un 2<sup>ème</sup> site de Production à MEMBROLLE-sur-LONGUENEE (49). Il lance en 2007 un projet SAP global pour la refonte de son système d'information.</p>",
+    "mission": "<p>Mission double pour ma part, pour cette prestation menée au sein d'une équipe projet T-SYSTEM, dans le cadre d'une implémentation d'un pré-paramétré (T-Solution) :</p>\n<p>Construction d'une solution SAP pour la Qualité Fournisseur</p>\n<p>Construction d'une solution SAP pour le SAV des Camping-cars, et pour les flux de traitement des demandes de garantie entre PILOTE et ses concessionnaires</p>",
+    "solution": "<p>Pour la Qualité Fournisseur : SAP/QM-QN Gestion des avis XXXXX A REVOIR XXXXX</p>\n<p>Pour le SAV : SAP/CS avec la gestion de parc technique CS-EQT soumis à une exigence forte de traçabilité (impact avec la gestion des numéros de série PM-EQT). Flux d'activité construit sans Ordre de service, uniquement avec des avis de service CS-CM-SN, mais en y intégrant la gestion des demandes de garantie LO-WTY.</p>",
+    "bilan": "<p>La découverte d'un cas d'application LO-WTY (Warranty Management), pour assurer le traitement des garanties, entre un client (émetteur de réclamation), le concessionnaire (vendeur du camping-car), et le fabricant (PILOTE SA). Implémentation pointue, débogage complexe avec SAP et sa communauté, mais aventure technico-fonctionnelle fort sympathique.</p>",
+    "domaines": ["CS", "LO-WTY", "QM"],
+    "types": ["Implémentation"],
+    "bDate": "2007-09-01",
+    "eDate": "2008-08-01",
+    "clientId": 188
+  },
+  {
+    "id": 184,
+    "title": "TOTAL SA – Projet TER",
+    "contexte": "<p>Alors que la Maintenance industrielle est souvent un service connexe dans les entreprises que je côtoie, dans une raffinerie pétrolière, elle est une fonction centrale. Un site de raffinage est en fait une grosse machine qu'il faut constamment maintenir, de sorte à ce qu'elle puisse assurer un service continu, avec du pétrole en entrée, et des produits en sortie. Sur SAP, le module PM est donc central, et supporte la presque totalité des activités du site.</p>",
+    "mission": "<p>Cette mission était l'une des composantes du projet TER, Template Europ Refinery, dans laquelle je suis intervenu comme Consultant PM et comme coordinateur de déploiement des sites Français. Nous y avons assuré une phase conceptuelle (Gap analysis) dans un contexte de protection stricte du Core model. La méthodologie rigoureuse que l'on a dû appliquer, faisait que les écarts recensés devaient être défendus devant une équipe centrale (Core Team), pour qu'ils soient approuvés ou bien souvent écartés, par un Comité de Direction.</p>",
+    "solution": "<p>Le Core model TER était une solution PM complète, intégrée à FI, CO, et MM, et proposant les aspects courants de Maintenance curative et préventive. Les liens avec la gestion des immobilisations FI-AA ont été activés. Importante activité de sous-traitance gérée sur les OT SAP. Par rapport à la raffinerie de Grandpuits, peu d'écarts ont reçu l'aval de la Core Team. Le site a donc été livré d'une solution TER au standard de l'époque.</p>",
+    "bilan": "<p>Une désagréable impression d'avoir piétiné les besoins particuliers des sites, pour le respect du Core Model. Cette mission me révèlera pour l'avenir, plus concepteur, que « déployeur ». Néanmoins, les particularités de la solution que j'ai retenues : La planification des arrêts et la mise en place associée des magasins de pièces des sous-traitants.</p>",
+    "domaines": ["PM"],
+    "types": ["Déploiement", "Migration"],
+    "bDate": "2002-11-01",
+    "eDate": "2004-04-01",
+    "clientId": 183
+  },
+  {
+    "id": 187,
+    "title": "PECHINEY ALUMINIUM METAL",
+    "contexte": "<p>Le client était un site PECHINEY, basé à Voreppe au nord de Grenoble. Déjà à l'époque, le client était un habitué des projets SAP, et particulièrement rôdé sur l'organisation des projets informatiques. J'ai été appelé pour aider une Chef de Projet sur des besoins spécifiques au Département Qualité.</p>",
+    "mission": "<p>Une petite mission QM, pour un sujet très ciblé : la Gestion des Audits internes chez PECHINEY AMT (Maintenant ALCAN ALUMINIUM PECHINEY ALUVAL).</p>",
+    "solution": "<p>Même si en version 4.6C, SAP R/3 disposait déjà d'un ensemble de fonctionnalités sur la Gestion des audits, le choix de la solution s'est maintenu sur QM, au travers d'une gestion d'Avis Qualité. La motivation essentielle de ce choix, fut de disposer d'un outil de planification des audits. De fait, l'avis Qualité se prêtait mieux à la situation, tant pour ses fonctionnalités calendaires, que pour ces capacités à supporter un questionnaire ainsi que les réponses pouvant y être rapportées.</p>",
+    "bilan": "<p>Techniquement je n'ai pas eu besoin de mettre en place des fonctions complexes. Je suis resté dans le standard de la gestion des avis. Mais devant un besoin qui m'a été émis en termes de planning d'audits, j'ai eu cette idée de convaincre le client, qu'une liste de dates pouvait être utilisée comme un planning, tout en restant plus simple qu'un planning.</p>",
+    "domaines": ["QM"],
+    "types": ["Implémentation"],
+    "bDate": "2002-06-01",
+    "eDate": "2003-07-01",
+    "clientId": 186
+  },
+  {
+    "id": 171,
+    "title": "ITALCEMENTI",
+    "contexte": "",
+    "mission": "<p>Pour cette mission, je fus appelé par l'entité Parisienne de Capgemini à La défense, pour participer à la mise en place de la future équipe de TMA (Tierce Maintenance Applicative) pour le compte d'ITALCEMENTI, grand groupe de l'industrie cimentière. L'objectif était, pour l'équipe, de récupérer la solution SAP/PM relative à la Maintenance industrielle du site, et de mettre en place la future hotline SAP. Les Processus furent réécrits sur l'outil de modélisation des flux SAP, Livemodel. Cette description fut nécessaire pour s'assurer de notre prise en compte totale du patrimoine applicatif, dans un contexte difficile où nous remplacions l'un de nos concurrents intégrateurs.</p>",
+    "solution": "",
+    "bilan": "",
+    "domaines": ["PM"],
+    "types": ["TMA"],
+    "bDate": "1999-09-01",
+    "eDate": "1999-11-04",
+    "clientId": 169
+  },
+  {
+    "id": 167,
+    "title": "LHOTELLIER-MONTRICHARD",
+    "contexte": "",
+    "mission": "<p>Ce fut ma 1ère expérience de Consultant SAP. Pas facile après 11 ans dans l'industrie, de se lever de son siège confortable et protégé d'une grande entreprise d'Aéronautique, pour arpenter les routes et jouer les experts d'un domaine qui pourtant m'était familier : La Qualité et SAP/QM ! D'ailleurs, chez ce client anciennement nommé LHOTELIER Montrichard, maintenant DAHER-LHOTELIER, je n'y ai pas vraiment fait de prouesse ! Curieux, ne trouvez-vous pas, de placer cela dans un CV ? Pourtant, nous avons tous à gagner de nos erreurs, et j'assume pleinement mon inexpérience chez ce premier client.</p>",
+    "solution": "",
+    "bilan": "",
+    "domaines": ["QM"],
+    "types": ["Implémentation"],
+    "bDate": "1999-06-09",
+    "eDate": "1999-06-16",
+    "clientId": 168
+  }
+]
