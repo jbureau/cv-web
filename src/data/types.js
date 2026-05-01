@@ -1,0 +1,15 @@
+export const MissionType = Object.freeze({
+  AgentTechniqueQualite: 'Agent Technique Qualité',
+  Cadrage:               'Cadrage',
+  ConseilMetier:         'Conseil métier',
+  Deploiement:           'Déploiement',
+  Expertise:             'Expertise',
+  Formation:             'Formation',
+  Implementation:        'Implémentation',
+  Integration:           'Intégration',
+  Migration:             'Migration',
+  OrganisateurInfo:      'Organisateur Informatique',
+  Reengineering:         'Ré-engineering',
+  Tma:                   'TMA',
+  TechnicienLabo:        'Technicien de laboratoire',
+})

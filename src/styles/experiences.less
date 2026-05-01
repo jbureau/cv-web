@@ -84,28 +84,39 @@
 
                         & > .subtitle {
                             display: flex;
+                            align-items: center;
+                            gap: 4px;
                             font-size: 0.8em;
                             line-height: 1.8em;
 
-                            & > .domaines {
-                                & > div.little_domaine:first-child {
-                                    margin-left: 0;
-                                }
+                            @tag-style: {
+                                display: inline-block;
+                                padding: 1px 11px;
+                                border-radius: 20px;
+                                font-family: @title-font;
+                                font-size: 1em;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                letter-spacing: 0.04em;
+                                margin: 0 3px;
+                                line-height: 1.8;
+                                white-space: nowrap;
+                            };
 
+                            & > .domaines {
+                                & > div.little_domaine:first-child { margin-left: 0; }
                                 & > div.little_domaine {
-                                    display: inline-block;
-                                    padding: 1px 11px;
-                                    border-radius: 20px;
+                                    @tag-style();
                                     background-color: rgb(225, 234, 243);
                                     color: rgb(55, 75, 95);
-                                    font-family: @title-font;
-                                    font-size: 1em;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    letter-spacing: 0.04em;
-                                    margin: 0 3px;
-                                    line-height: 1.8;
-                                    white-space: nowrap;
+                                }
+                            }
+
+                            & > .types {
+                                & > div.little_type {
+                                    @tag-style();
+                                    background-color: rgb(237, 244, 193);
+                                    color: rgb(60, 100, 50);
                                 }
                             }
                         }

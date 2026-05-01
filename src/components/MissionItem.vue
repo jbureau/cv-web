@@ -1,5 +1,8 @@
 <script setup>
 import { ref, computed } from 'vue'
+import { MissionType } from '../data/types.js'
+
+const KNOWN_TYPES = new Set(Object.values(MissionType))
 
 const props = defineProps({
   mission: Object,
@@ -74,7 +77,13 @@ function formatEndDate(dateStr) {
                 class="little_domaine"
               >{{ d.name }}</div>
             </div>
-            | {{ mission.types.join(', ') }}
+            <div class="types">
+              <div
+                v-for="t in mission.types.filter(t => KNOWN_TYPES.has(t))"
+                :key="t"
+                class="little_type"
+              >{{ t }}</div>
+            </div>
           </div>
         </div>
       </div>
