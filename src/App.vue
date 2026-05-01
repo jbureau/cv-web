@@ -10,11 +10,13 @@ import domainesData from './data/domaines.json'
 const missions = ref(missionsData)
 const clients = ref(clientsData)
 const domaines = ref(domainesData)
-const selectedDomaine = ref('*')
+const selectedDomaines = ref([])
 
 const filteredMissions = computed(() => {
-  if (selectedDomaine.value === '*') return missions.value
-  return missions.value.filter(m => m.domaines.includes(selectedDomaine.value))
+  if (selectedDomaines.value.length === 0) return missions.value
+  return missions.value.filter(m =>
+    selectedDomaines.value.some(d => m.domaines.includes(d))
+  )
 })
 </script>
 
@@ -27,8 +29,12 @@ const filteredMissions = computed(() => {
         <div class="card">
           <DomaineFilter
             :domaines="domaines"
-            :selected="selectedDomaine"
-            @select="selectedDomaine = $event"
+            :selected="selectedDomaines"
+            @toggle="name => {
+              const i = selectedDomaines.indexOf(name)
+              i === -1 ? selectedDomaines.push(name) : selectedDomaines.splice(i, 1)
+            }"
+            @clear="selectedDomaines = []"
           />
           <MissionList
             :missions="filteredMissions"

@@ -1,25 +1,9 @@
 <script setup>
-const props = defineProps({
+defineProps({
   domaines: Array,
-  selected: String,
+  selected: Array,
 })
-defineEmits(['select'])
-
-function tagColors(hex) {
-  const r = parseInt(hex.slice(1, 3), 16)
-  const g = parseInt(hex.slice(3, 5), 16)
-  const b = parseInt(hex.slice(5, 7), 16)
-  return {
-    idle: {
-      backgroundColor: `rgb(${Math.round(r * 0.45 + 255 * 0.55)}, ${Math.round(g * 0.45 + 255 * 0.55)}, ${Math.round(b * 0.45 + 255 * 0.55)})`,
-      color: `rgb(${Math.round(r * 0.5)}, ${Math.round(g * 0.5)}, ${Math.round(b * 0.5)})`,
-    },
-    active: {
-      backgroundColor: `rgb(${r}, ${g}, ${b})`,
-      color: '#fff',
-    },
-  }
-}
+defineEmits(['toggle', 'clear'])
 </script>
 
 <template>
@@ -27,16 +11,15 @@ function tagColors(hex) {
     <span class="filter-label">Filtrer</span>
     <button
       class="filter-tag"
-      :class="{ active: selected === '*' }"
-      @click="$emit('select', '*')"
+      :class="{ active: selected.length === 0 }"
+      @click="$emit('clear')"
     >Tous</button>
     <button
       v-for="domaine in domaines"
       :key="domaine.id"
       class="filter-tag"
-      :style="selected === domaine.name ? tagColors(domaine.color).active : tagColors(domaine.color).idle"
-      :class="{ active: selected === domaine.name }"
-      @click="$emit('select', domaine.name)"
+      :class="{ active: selected.includes(domaine.name) }"
+      @click="$emit('toggle', domaine.name)"
     >{{ domaine.name }}</button>
   </div>
 </template>
@@ -46,42 +29,43 @@ function tagColors(hex) {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  padding: 12px 16px;
+  gap: 6px;
+  padding: 10px 16px;
   border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
 .filter-label {
-  font-size: 0.75em;
+  font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #999;
+  color: #aaa;
   margin-right: 4px;
 }
 
 .filter-tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 2px 9px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.9em;
-  font-weight: bold;
+  font-size: 0.78em;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   white-space: nowrap;
-  background-color: rgba(0,0,0,0.07);
-  color: rgba(0,0,0,0.35);
-  transition: all 0.15s ease;
+  background-color: rgb(225, 234, 243);
+  color: rgb(55, 75, 95);
+  transition: opacity 0.15s ease;
 }
 
 .filter-tag:hover {
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 .filter-tag.active {
-  background-color: rgba(0,0,0,0.12);
-  color: rgba(0,0,0,0.55);
+  background-color: rgb(110, 151, 190);
+  color: #fff;
+  font-weight: 500;
 }
 </style>
