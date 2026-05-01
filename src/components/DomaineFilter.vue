@@ -68,4 +68,15 @@ defineEmits(['toggle', 'clear'])
   color: #fff;
   font-weight: 500;
 }
+
+@media (max-width: 750px) {
+  .filter {
+    padding: 8px 12px;
+    gap: 5px;
+  }
+  .filter-tag {
+    font-size: 0.72em;
+    padding: 2px 8px;
+  }
+}
 </style>

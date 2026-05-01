@@ -152,43 +152,79 @@
     }
 }
 
-@media screen {
-    @media (max-device-width: @sm) {
-        #experiences {
+@media (max-width: @sm) {
+    #experiences {
+        .content {
+            padding: 0;
+            margin: 0;
+        }
 
-            .content > li {
-                margin: 0 0 0 145px;
+        .content > li {
+            margin: 0;
+            flex-direction: column;
+            padding: 16px 12px;
+            box-sizing: border-box;
+            width: 100%;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            border-bottom: 1px solid rgba(0,0,0,0.07);
+
+            &:before { display: none; }
+            .round   { display: none; }
+
+            & > .dates {
+                margin: 0 0 4px 0;
+                padding-top: 0;
+                min-width: unset;
+                text-align: left;
+                font-size: 0.8em;
+                color: lighten(@color, 30%);
                 display: flex;
+                gap: 6px;
+                align-items: baseline;
 
-                & > .dates {
-                    margin: 0 0 0 -155px;
-                    font-size: 2.6vw;
-                    min-width: 130px;
+                & > .date_fin {
+                    font-weight: bold;
                 }
+            }
 
-                & > .desc {
-                    margin-right: 2vw;
-                    text-align: justify;
+            & > .desc {
+                margin: 0;
 
-                    & > .top {
-                        & > .title {
-                            & > h2.type_mission {
-                                font-size: 3.5vw;
-                            }
-                            & > .subtitle {
-                                font-size: 2.1vw;
+                & > .top {
+                    margin: 0;
+                    gap: 10px;
+                    align-items: flex-start;
 
-                                & > .domaines div.little_domaine {
-                                    height: 30px;
-                                    line-height: 30px;
-                                }
+                    & > .logo {
+                        width: 32px;
+                        height: 32px;
+                        flex-shrink: 0;
+                    }
+
+                    & > .title {
+                        & > h2.type_mission {
+                            font-size: 1.1em;
+                        }
+                        & > .subtitle {
+                            font-size: 0.75em;
+                            flex-wrap: wrap;
+                            gap: 6px;
+                            row-gap: 6px;
+
+                            & > .domaines, & > .types {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: 4px;
+                                & > div { margin: 0; }
                             }
                         }
                     }
+                }
 
-                    & > .more {
-                        font-size: 2.3vw;
-                    }
+                & > .more {
+                    margin: 8px 0 0;
+                    font-size: 0.85em;
                 }
             }
         }
