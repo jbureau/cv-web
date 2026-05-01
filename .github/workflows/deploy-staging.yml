@@ -36,4 +36,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /cvweb.${{ secrets.SSH_HOST }}/
+          server-dir: /cvweb.orchisconseil.fr/
