@@ -22,8 +22,12 @@ body {
 
 		h2.title {
 			font-family: @title-font;
+			font-weight: 600;
 			text-transform: uppercase;
-			font-size: 1.9em;
+			font-size: 1.1em;
+			letter-spacing: 0.12em;
+			color: @muted;
+			margin-bottom: 8px;
 		}
 
 		#competences {
@@ -45,37 +49,46 @@ body {
 		display: flex;
 		flex-direction: column;
 		flex: 2;
-		padding: 30px 10px 10px 25px;
+		padding: 36px 20px 24px;
+		background: @surface;
+		border-right: 1px solid @border;
+		min-height: 100vh;
+		box-sizing: border-box;
 
 		.logo {
-			width: 27%;
-			height: 100px;
+			width: 56px;
+			height: 56px;
 			background-image: url('/assets/images/logo.png');
 			background-repeat: no-repeat;
 			background-size: contain;
-			background-position: top;
-			margin: 0 auto;
+			background-position: center;
+			margin: 0 auto 24px;
+			opacity: 0.85;
 		}
 
 		.circlePhoto {
-			width: 53%;
-			height: 300px;
+			width: 120px;
+			height: 120px;
 			background-image: url('/assets/images/poune.jpg');
 			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-			margin: 0 auto;
+			background-size: cover;
+			background-position: center top;
+			margin: 0 auto 20px;
+			border-radius: 50%;
+			border: 2px solid @border;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 		}
 
 		.bar {
-
 			.name {
-				text-transform: uppercase;
 				font-family: @title-font;
+				font-weight: 600;
+				text-transform: uppercase;
 				text-align: center;
 				color: @main-color2;
-				margin: 30px 0 10px;
-				font-size: 2.5em;
+				margin: 0 0 20px;
+				font-size: 1.4em;
+				letter-spacing: 0.06em;
 			}
 
 			.logo {
@@ -84,27 +97,28 @@ body {
 		}
 
 		.desc {
-			text-align: justify;
-			font-style: italic;
 			font-size: 0.8em;
-			margin: 10px 15px 20px;
-			quotes: "\201C" "\201D";
-			position: relative;
-			padding: 0 0 0 42px;
-			line-height: 20px;
+			line-height: 1.7;
+			color: @muted;
+			margin: 0 0 16px;
+			padding: 12px 14px;
+			background: @surface;
+			border-left: 3px solid @border;
+			border-radius: 0 8px 8px 0;
+			font-style: italic;
+
+			strong {
+				font-style: normal;
+				font-weight: 600;
+				color: @color;
+				display: block;
+				margin-bottom: 6px;
+				font-size: 1.05em;
+			}
 		}
+
 		.desc:before {
-			font-family: Georgia, serif;
-			content: open-quote;
-			position: absolute;
-			left: -22px;
-			top: 30px;
-			color: darken(@bg-color, 10%);
-			font-size: 8em;
-		}
-		.desc strong {
-			font-size: 1.1em;
-			line-height: 2em;
+			display: none;
 		}
 	}
 
@@ -124,47 +138,48 @@ body {
 		.header {
 			flex-direction: column;
 			flex: none;
-			padding: 16px;
+			padding: 20px 16px 16px;
 			box-sizing: border-box;
 			width: 100%;
 			align-items: center;
+			min-height: unset;
+			border-right: none;
+			border-bottom: 1px solid @border;
 
 			.logo {
-				width: 60px;
-				height: 60px;
+				width: 44px;
+				height: 44px;
+				margin-bottom: 12px;
 			}
 
 			.bar .name {
-				font-size: 1.8em;
+				font-size: 1.2em;
 				text-align: center;
-				margin: 8px 0 4px;
+				margin: 0 0 12px;
 			}
 
 			.circlePhoto {
-				width: 120px;
-				height: 140px;
-				margin: 8px auto;
+				width: 88px;
+				height: 88px;
+				margin: 0 auto 16px;
 			}
 
 			.desc {
-				font-size: 0.8em;
-				margin: 8px 0;
-				padding: 0;
+				font-size: 0.78em;
+				margin: 0;
 				width: 100%;
 				box-sizing: border-box;
-				line-height: 1.5;
-			}
-			.desc:before {
-				display: none;
 			}
 		}
 
 		.main {
 			padding: 0 12px;
 			box-sizing: border-box;
+
 			h2.title {
-				font-size: 1.5em;
+				font-size: 0.95em;
 			}
+
 			#experiences {
 				padding: 0;
 			}

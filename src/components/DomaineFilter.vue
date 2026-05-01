@@ -30,43 +30,47 @@ defineEmits(['toggle', 'clear'])
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 10px 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
 }
 
 .filter-label {
-  font-size: 0.7em;
+  font-size: 0.68em;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #aaa;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
   margin-right: 4px;
+  font-weight: 500;
 }
 
 .filter-tag {
   display: inline-block;
-  padding: 2px 9px;
+  padding: 3px 11px;
   border-radius: 20px;
-  border: none;
+  border: 1px solid #e2e8f0;
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.78em;
-  font-weight: 400;
+  font-size: 0.75em;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   white-space: nowrap;
-  background-color: rgb(225, 234, 243);
-  color: rgb(55, 75, 95);
-  transition: opacity 0.15s ease;
+  background: #ffffff;
+  color: #64748b;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
 .filter-tag:hover {
-  opacity: 0.75;
+  border-color: #d6e87c;
+  color: #5a6e1a;
 }
 
 .filter-tag.active {
-  background-color: rgb(110, 151, 190);
-  color: #fff;
-  font-weight: 500;
+  background: #d6e87c;
+  color: #3d4f0e;
+  border-color: #d6e87c;
+  font-weight: 600;
 }
 
 @media (max-width: 750px) {
@@ -75,8 +79,8 @@ defineEmits(['toggle', 'clear'])
     gap: 5px;
   }
   .filter-tag {
-    font-size: 0.72em;
-    padding: 2px 8px;
+    font-size: 0.7em;
+    padding: 2px 9px;
   }
 }
 </style>

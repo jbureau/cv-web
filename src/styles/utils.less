@@ -1,11 +1,19 @@
 /* ---------- COLORS ---------- */
-@color: #333;
-@md-color: darken(@bg-color, 25%);
-@bg-color: #fafafa;
-@even-color: #3594cb;
-@odd-color: #6cbfee;
-@main-color1: #d6e87c;
-@main-color2: #2c3e50;
+@bg-color:    #f8fafc;
+@surface:     #ffffff;
+@color:       #1e293b;
+@muted:       #64748b;
+@border:      #e2e8f0;
+@main-color2: #1e293b;
+
+// Accent principal — changer ici pour changer partout
+// Alternative sobre : #2563eb (bleu), #a3bc4a (vert désaturé)
+@accent:      #d6e87c;
+@accent-dark: darken(@accent, 40%);
+@accent-bg:   lighten(@accent, 18%);
+@type-bg:     #f0fdf4;
+@type-text:   #15803d;
+
 @sm: 750px;
 
 /* ---------- FONTS --------- */
@@ -25,71 +33,18 @@
 	font-weight: 500;
 }
 @font-face {
-	font-family: 'Marvel';
-	src: url('/assets/fonts/marvel/Marvel-Regular.ttf');
-	font-weight: normal;
-}
-@font-face {
-	font-family: 'Roboto';
-	src: url('/assets/fonts/roboto/Roboto-Regular.ttf');
-	font-weight: normal;
-}
-@global-font: "Montserrat", "Calibri", "arial";
-@title-font: "Marvel", @global-font;
-
-/* ---------- SCREEN SIZE ---------- */
-
-.curve {
-	&:before {
-		top: 52px;
-		left: 5px;
-		transform: rotate(-5deg);
-		box-shadow: 7px 6px 15px @color;
-	}
-	&:after {
-		top: 52px;
-		right: 5px;
-		transform: rotate(5deg);
-		box-shadow: -7px 6px 15px @color;
-	}
+	font-family: 'Montserrat';
+	src: url('/assets/fonts/montserrat/Montserrat-SemiBold.ttf');
+	font-weight: 600;
 }
 
+@global-font: "Montserrat", system-ui, sans-serif;
+@title-font:  @global-font;
 
-@shadow-key-umbra-opacity: 0.2;
-@shadow-key-penumbra-opacity: 0.14;
-@shadow-ambient-shadow-opacity: 0.12;
-.whiteframe-shadow-1dp {
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+/* ---------- SHADOWS ---------- */
+.shadow-sm {
+	box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
 }
-.whiteframe-shadow-2dp {
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-.whiteframe-shadow-8dp {
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-@keyframes spinner {
-	to { transform: rotate(360deg); }
-}
-
-.spinner:before {
-	content: '';
-	box-sizing: border-box;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 50px;
-	height: 50px;
-	margin-top: -10px;
-	margin-left: -10px;
-	border-radius: 50%;
-	border: 2px solid darken(@bg-color, 2%);
-	border-top-color: @main-color2;
-	animation: spinner 2s linear infinite;
-
-	@media screen {
-		@media (max-device-width: @sm) {
-			top: 70%;
-		}
-	}
+.shadow-md {
+	box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
 }
