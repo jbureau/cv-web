@@ -1,3 +1,7 @@
+<script setup>
+import CompetencesList from './CompetencesList.vue'
+</script>
+
 <template>
   <div class="header">
     <div class="bar">
@@ -13,6 +17,7 @@
       retenu. Merci à ma fille Julie pour la réalisation de ce CV interactif,
       et pour avoir répondu au besoin d'un « Papa–client » particulièrement exigeant !
     </blockquote>
+    <CompetencesList />
     <div class="logo"></div>
   </div>
 </template>

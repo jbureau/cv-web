@@ -1,0 +1,25 @@
+[
+  {
+    "category": "Métier",
+    "skills": [
+      { "name": "Qualité", "level": 5 },
+      { "name": "Maintenance industrielle", "level": 5 },
+      { "name": "Services & SAV", "level": 4 },
+      { "name": "Production", "level": 3 },
+      { "name": "Achats & Stocks", "level": 3 },
+      { "name": "Contrôle de Gestion", "level": 2 }
+    ]
+  },
+  {
+    "category": "SAP",
+    "skills": [
+      { "name": "Quality Management QM", "level": 5 },
+      { "name": "Plant Maintenance PM (EAM)", "level": 5 },
+      { "name": "Customer Services CS", "level": 4 },
+      { "name": "Project System PS", "level": 3 },
+      { "name": "Document Management CA-DMS", "level": 3 },
+      { "name": "Inspection Data QM-IDI", "level": 3 },
+      { "name": "Warranty Management LO-WTY", "level": 2 }
+    ]
+  }
+]
