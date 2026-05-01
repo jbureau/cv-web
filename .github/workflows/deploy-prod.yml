@@ -32,4 +32,4 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ jfdo9483@${{ secrets.SSH_HOST }}:/home/jfdo9483/public_html/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/public_html/

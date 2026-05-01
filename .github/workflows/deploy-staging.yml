@@ -31,4 +31,4 @@ jobs:
 
       - name: Deploy via rsync
         run: |
-          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ jfdo9483@${{ secrets.SSH_HOST }}:/home/jfdo9483/cvweb.jfdo9483.odns.fr/
+          rsync -avz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/cvweb.${{ secrets.SSH_USER }}.odns.fr/
