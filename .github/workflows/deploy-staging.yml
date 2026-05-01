@@ -3,6 +3,9 @@ name: Deploy Staging (cvweb.orchisconseil.fr)
 on:
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
