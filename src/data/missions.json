@@ -1,5 +1,40 @@
 [
   {
+    "id": 419,
+    "title": "Groupe SODIAAL (Projets d'optimisation)",
+    "mission": "Ma mission au sein de la DSI basée à Lyon, est d'optimiser et de stabiliser les solutions SAP Qualité installées sur les différentes sociétés de la Coopérative\". Ces travaux sur les systèmes existants sont prévus pour préparer au mieux le futur projet S/4 HANA.",
+    "solution": "Cadrage d'une solution Qualité pour les Fromageries Occitanes (SAP/QM global avec interfaçage LIMS). Planification et chiffrage de deux projets pour la refonte des Réclamations Fournisseurs, et des Réclamations Clients (Gestion d'Avis QM)", 
+    "bilan": "Expérience de courte durée pour moi. Le projet SAP/QM sur les Fromageries Occitanes ne devait pas commençer avant 2026, et mes deux projets n'ont pas été validés pour des raisons budgétaires.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "TMA",
+	    "Expertise"
+    ],
+    "bDate": "2025-05-19",
+    "eDate": "2025-10-31",
+    "clientId": 453
+  },
+  {
+    "id": 1,
+    "title": "AUBERT&DUVAL (Projet ADONIS)",
+    "contexte": "AUBERT&DUVAL est une entreprise qui conçoit, développe et fabrique des matériaux et pièces métalliques haute performance (aciers spéciaux, superalliages, titane, aluminium) . Elle fait appel à l’intégrateur SOPRASTERIA pour mener son projet SAP <em>Greenfieldfield</em> en version S/4 HANA Private Cloud.",
+    "mission": "Ma mission au sein de l’équipe SOPRASTERIA est d’assurer le lead du domaine Qualité en phase de Cadrage et de Conception Générale, puis de transmettre le lead à un Domain Leader de l'intégrateur, afin de me consacrer entièrement à la Conception de la future solution Qualité.",
+    "solution": "Les sujets Qualité sont nombreux et conçus sur SAP/QM. Les flux de contrôle sont fortement intégrés aux Processus d'élaboration du métal et de la Fabrication des pièces\". Le contrôle Réception est également activé, dans une surveillance continue du niveau de Qualification des fournisseurs. Les traitements de non-Conformités sont des processus critiques, et proposés sur différents types d'avis Qualité.",
+    "bilan": "Nous avons mené les travaux conceptuels en Fit-To-Standard de la méthode SAP Activate. Cela m'a permis d'utiliser SAP Signavio pour formaliser les flux Qualité insuffisamment représentés sur des Best Practices SAP. Le Fit-To-Standard a donc été exécuté sur des flux BPMN et EPC préparés en amont au regard des bonnes pratiques déjà vécues. J'ai retenu de ce projet la technologie pointue et particulièrement exigente, mise en oeuvre dans les différents flux industriels, principalement l'élaboration du métal.",
+    "domaines": [
+      "QM"
+    ],
+    "types": [
+      "Greenfield",
+	    "Implémentation"
+    ],
+    "bDate": "2023-12-01",
+    "eDate": "2025-05-31",
+    "clientId": 1
+  },
+  {
     "id": 457,
     "title": "SABENA Technics (Projet ISIS)",
     "contexte": "SABENA Technics est une société du Groupe TAT, spécialisée dans la Maintenance aéronautique des avions du secteur public ou militaire. SABENA Technics fait appel à l’intégrateur APPLIUM pour mener son projet <em>Brownfield</em> de migration ECC vers S/4 Hana. En parallèle de cette migration, le projet est élargi en incluant des lots fonctionnels pour faire évoluer la solution d’origine.",
@@ -10,6 +45,7 @@
       "PM"
     ],
     "types": [
+      "Brownfield",
       "Implémentation"
     ],
     "bDate": "2023-05-01",
@@ -44,7 +80,7 @@
       "QM"
     ],
     "types": [
-      "Déploiement",
+      "Brownfield",
       "Migration"
     ],
     "bDate": "2022-05-01",

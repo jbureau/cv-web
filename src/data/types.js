@@ -12,4 +12,6 @@ export const MissionType = Object.freeze({
   Reengineering:         'Ré-engineering',
   Tma:                   'TMA',
   TechnicienLabo:        'Technicien de laboratoire',
+  Greenfield:            'Greenfield',
+  Brownfield:            'Brownfield'
 })

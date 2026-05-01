@@ -2,37 +2,61 @@
 defineProps({
   domaines: Array,
   selected: Array,
+  types: Array,
+  selectedTypes: Array,
 })
-defineEmits(['toggle', 'clear'])
+defineEmits(['toggle', 'clear', 'toggle-type', 'clear-type'])
 </script>
 
 <template>
-  <div class="filter">
-    <span class="filter-label">Filtrer</span>
-    <button
-      class="filter-tag"
-      :class="{ active: selected.length === 0 }"
-      @click="$emit('clear')"
-    >Tous</button>
-    <button
-      v-for="domaine in domaines"
-      :key="domaine.id"
-      class="filter-tag"
-      :class="{ active: selected.includes(domaine.name) }"
-      @click="$emit('toggle', domaine.name)"
-    >{{ domaine.name }}</button>
+  <div class="filters-wrap">
+    <div class="filter-row">
+      <span class="filter-label">Domaine</span>
+      <button
+        class="filter-tag"
+        :class="{ active: selected.length === 0 }"
+        @click="$emit('clear')"
+      >Tous</button>
+      <button
+        v-for="domaine in domaines"
+        :key="domaine.id"
+        class="filter-tag"
+        :class="{ active: selected.includes(domaine.name) }"
+        @click="$emit('toggle', domaine.name)"
+      >{{ domaine.name }}</button>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Type</span>
+      <button
+        class="filter-tag type-tag"
+        :class="{ active: selectedTypes.length === 0 }"
+        @click="$emit('clear-type')"
+      >Tous</button>
+      <button
+        v-for="type in types"
+        :key="type"
+        class="filter-tag type-tag"
+        :class="{ active: selectedTypes.includes(type) }"
+        @click="$emit('toggle-type', type)"
+      >{{ type }}</button>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.filter {
+.filters-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 12px 16px;
-  border-bottom: 1px solid #e2e8f0;
-  background: #ffffff;
 }
 
 .filter-label {
@@ -42,6 +66,7 @@ defineEmits(['toggle', 'clear'])
   color: #94a3b8;
   margin-right: 4px;
   font-weight: 500;
+  min-width: 52px;
 }
 
 .filter-tag {
@@ -56,7 +81,7 @@ defineEmits(['toggle', 'clear'])
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
-  background: #ffffff;
+  background: transparent;
   color: #64748b;
   transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
@@ -73,14 +98,28 @@ defineEmits(['toggle', 'clear'])
   font-weight: 600;
 }
 
+.filter-tag.type-tag:hover {
+  border-color: #93c5fd;
+  color: #1a6295;
+}
+
+.filter-tag.type-tag.active {
+  background: rgba(53, 148, 203, 0.15);
+  color: #1a6295;
+  border-color: #93c5fd;
+}
+
 @media (max-width: 750px) {
-  .filter {
-    padding: 8px 12px;
-    gap: 5px;
+  .filters-wrap {
+    padding: 10px 12px;
+    gap: 6px;
   }
   .filter-tag {
     font-size: 0.7em;
     padding: 2px 9px;
+  }
+  .filter-label {
+    min-width: 46px;
   }
 }
 </style>

@@ -24,8 +24,8 @@ const logoStyle = computed(() => {
 const initials = computed(() => {
   const name = props.client?.name || '?'
   return name
-    .split(/[\s\-\/]+/)
-    .filter(w => w.length > 0 && !/^(SA|SAS|SNC|GROUP|GROUPE|FRANCE|EUROPE)$/i.test(w))
+    .split(/[\s\-\/&]+/)
+    .filter(w => w.length > 0 && /^[a-zA-ZÀ-ÿ]/.test(w) && !/^(SA|SAS|SNC|GROUP|GROUPE|FRANCE|EUROPE)$/i.test(w))
     .slice(0, 2)
     .map(w => w[0].toUpperCase())
     .join('')
