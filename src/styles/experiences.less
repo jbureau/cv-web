@@ -2,54 +2,6 @@
 
 #experiences {
 
-    /* ---------- EXPERIENCES SORTING ---------- */
-    .sorting {
-        &:extend(.whiteframe-shadow-1dp);
-
-        width: 100%;
-        background-color: @main-color2;
-        border-radius: 3px 3px 0 0;
-        padding: 5px;
-
-        .btn {
-            text-align: center;
-            font-family: @title-font;
-            background-color: darken(@main-color2, 1%);
-            border-radius: 50%;
-            border: 0;
-            color: #fff;
-            display: inline-block;
-            cursor: pointer;
-            min-height: 55px;
-            min-width: 55px;
-            vertical-align: middle;
-            box-sizing: border-box;
-            margin: 6px 8px;
-            text-transform: uppercase;
-            font-size: 1em;
-            font-variant: inherit;
-            text-decoration: none;
-            overflow: hidden;
-            -webkit-transition: all 0.5s ease;
-            -moz-transition: all 0.5s ease;
-            -o-transition: all 0.5s ease;
-            transition: all 0.5s ease, all 0.3s cubic-bezier(.25,.8,.25,1);
-
-            &:hover {
-                background-color: darken(@main-color2, 5%);
-            }
-        }
-
-        .filter-selected {
-            background-color: darken(@bg-color, 1%);
-            color: @color;
-            cursor: default;
-            &:hover {
-                background-color: darken(@bg-color, 1%);
-            }
-        }
-    }
-
     /* ---------- EXPERIENCES CONTENT ---------- */
     .content {
         & > li {
@@ -141,22 +93,17 @@
                                 }
 
                                 & > div.little_domaine {
-                                    @ltl-domaine-fs: 23px;
-                                    height: @ltl-domaine-fs;
-                                    background: darken(@bg-color, 5%);
-                                    border-left: 10px solid black;
-                                    padding: 0 5px;
-                                    font-family: @title-font;
-                                    vertical-align: middle;
-                                    text-align: center;
                                     display: inline-block;
-                                    box-sizing: border-box;
-                                    margin: 0 6px;
+                                    padding: 3px 10px;
+                                    border-radius: 20px;
+                                    font-family: @title-font;
+                                    font-size: 0.95em;
+                                    font-weight: bold;
                                     text-transform: uppercase;
-                                    font-variant: inherit;
-                                    text-decoration: none;
-                                    overflow: hidden;
-                                    line-height: @ltl-domaine-fs;
+                                    letter-spacing: 0.04em;
+                                    margin: 0 4px;
+                                    line-height: 1.8;
+                                    white-space: nowrap;
                                 }
                             }
                         }
@@ -193,16 +140,6 @@
 @media screen {
     @media (max-device-width: @sm) {
         #experiences {
-
-            .sorting .btn {
-                font-size: 3vw;
-                width: 10vw;
-                height: 10vw;
-
-                &.filter-selected {
-                    opacity: 0.9;
-                }
-            }
 
             .content > li {
                 margin: 0 0 0 145px;

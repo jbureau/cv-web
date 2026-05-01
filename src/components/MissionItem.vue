@@ -29,8 +29,19 @@ const initials = computed(() => {
 })
 
 
+function tagColors(hex) {
+  const r = parseInt(hex.slice(1, 3), 16)
+  const g = parseInt(hex.slice(3, 5), 16)
+  const b = parseInt(hex.slice(5, 7), 16)
+  const bg   = `rgb(${Math.round(r * 0.45 + 255 * 0.55)}, ${Math.round(g * 0.45 + 255 * 0.55)}, ${Math.round(b * 0.45 + 255 * 0.55)})`
+  const text = `rgb(${Math.round(r * 0.5)}, ${Math.round(g * 0.5)}, ${Math.round(b * 0.5)})`
+  return { bg, text }
+}
+
 const missionDomaines = computed(() =>
-  props.domaines.filter(d => props.mission.domaines.includes(d.name))
+  props.domaines
+    .filter(d => props.mission.domaines.includes(d.name))
+    .map(d => ({ ...d, ...tagColors(d.color) }))
 )
 
 const shortDesc = computed(() => {
@@ -72,7 +83,7 @@ function formatEndDate(dateStr) {
                 v-for="d in missionDomaines"
                 :key="d.name"
                 class="little_domaine"
-                :style="{ borderLeft: `10px solid ${d.color}` }"
+                :style="{ backgroundColor: d.bg, color: d.text }"
               >{{ d.name }}</div>
             </div>
             | {{ mission.types.join(', ') }}
